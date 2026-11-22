@@ -1,0 +1,29 @@
+{
+  "entryId": "T4-02",
+  "slot": 0,
+  "promptSha": "7f985416039ea8665255e0983d8d6a35adaa3bc865624c62d0d0b52c7d21891c",
+  "recordedAt": "2026-11-22T16:45:40.318Z",
+  "output": {
+    "score": 4,
+    "errors": [
+      {
+        "quote": "de la miel",
+        "problem": "A „miel” hímnemű szó, ezért a partitív névelő „du”, nem „de la”.",
+        "fix": "du miel",
+        "category": "nyelvtan"
+      }
+    ],
+    "summary": "A válasz megoldja a feladatot: jelen időben írja le a hétköznapi reggelit, és világosan megmutatja, mi más hétvégén. A szókincs is jól illik a témához. Egy hibát érdemes kijavítani: a „miel” hímnemű, ezért „du miel” a helyes. Következő lépésként figyelj jobban a főnevek nemére, mert ettől függ a partitív névelő."
+  },
+  "meta": {
+    "durationMs": 5951,
+    "costUsd": 0.0249814,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 2186,
+    "outputTokens": 351
+  }
+}

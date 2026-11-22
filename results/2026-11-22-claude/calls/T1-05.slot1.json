@@ -1,0 +1,29 @@
+{
+  "entryId": "T1-05",
+  "slot": 1,
+  "promptSha": "1f798c10a7f9634f09870aac0dd661ab2c704d7bb8873656d300f75d7007ea1d",
+  "recordedAt": "2026-11-22T16:43:52.843Z",
+  "output": {
+    "score": 4,
+    "errors": [
+      {
+        "quote": "une café",
+        "problem": "A „café” hímnemű főnév, ezért a névelője „un”, nem „une”.",
+        "fix": "un café",
+        "category": "nyelvtan"
+      }
+    ],
+    "summary": "Udvariasan és helyesen rendeltél: a „je voudrais… s'il vous plaît” szerkezet pont ide illik. Egy dologra figyelj: a „café” hímnemű, ezért „un café”. Érdemes a főnevek nemét a névelővel együtt megtanulni."
+  },
+  "meta": {
+    "durationMs": 4503,
+    "costUsd": 0.0212214,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 1946,
+    "outputTokens": 259
+  }
+}

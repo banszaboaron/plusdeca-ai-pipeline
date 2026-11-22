@@ -1,0 +1,29 @@
+{
+  "entryId": "T2-05",
+  "slot": 0,
+  "promptSha": "d7259dae94243deea8710a4ebddcb312264a7e712f5181d304dfd93adef454da",
+  "recordedAt": "2026-11-22T16:44:29.010Z",
+  "output": {
+    "score": 4,
+    "errors": [
+      {
+        "quote": "Je en",
+        "problem": "Magánhangzó előtt kötelező az elízió: a „je” „j'”-re rövidül az „en” előtt.",
+        "fix": "J'en",
+        "category": "helyesírás"
+      }
+    ],
+    "summary": "Jól használtad az „en” névmást, és a szórend is helyes: „en prends deux”. Egy dologra figyelj még: magánhangzó előtt a „je” rövidül, ezért a helyes alak „J'en prends deux.”"
+  },
+  "meta": {
+    "durationMs": 5507,
+    "costUsd": 0.0222054,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 1924,
+    "outputTokens": 317
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "entryId": "T1-01",
+  "slot": 1,
+  "promptSha": "751c3d4bd7bc8158406d94e227104e4d0c2b5dafe7c3d8917943bddf97c34b8a",
+  "recordedAt": "2026-11-22T16:43:37.069Z",
+  "output": {
+    "score": 5,
+    "errors": [],
+    "summary": "Hibátlan, udvarias rendelés: a „je voudrais” és a „s'il vous plaît” is a helyén van. Következő lépésként próbáld ki a „Pourrais-je avoir…” szerkezetet is, vagy rendelj mennyiséggel, például „J'en voudrais deux”."
+  },
+  "meta": {
+    "durationMs": 6184,
+    "costUsd": 0.0200294,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 1942,
+    "outputTokens": 201
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "entryId": "T3-04r",
+  "slot": 1,
+  "promptSha": "3853ee429bf02b848c0307de53bf7384975823f34549db646e7ce1419be4753d",
+  "recordedAt": "2026-11-22T16:45:19.564Z",
+  "output": {
+    "score": 5,
+    "errors": [],
+    "summary": "Hibátlan, természetes hangvételű, tegeződő üzenet. Benne van a hely („au Café du Marché, à côté de la gare”), az időpont („à dix heures”) és a rendelés is, a névelők pedig jók („un café au lait”, „du beurre”, „de la confiture”). Következő lépésként próbáld ki a leckében szereplő „en” névmást is, például: „Ils ont des croissants, j'en prends un.”"
+  },
+  "meta": {
+    "durationMs": 7876,
+    "costUsd": 0.0302014,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 2311,
+    "outputTokens": 562
+  }
+}

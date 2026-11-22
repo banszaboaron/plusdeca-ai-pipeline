@@ -1,0 +1,22 @@
+{
+  "entryId": "T3-05r",
+  "slot": 1,
+  "promptSha": "e2e4cbda0d23ed15f5a6de9959ea492d9d10e4f009f79e492c2bdac5d98c539e",
+  "recordedAt": "2026-11-22T16:45:30.334Z",
+  "output": {
+    "score": 5,
+    "errors": [],
+    "summary": "Hibátlan, baráti hangú üzenet: tegeződsz („tu”), és megadod a helyet („au Café du Marché”), az időpontot („à dix heures”) és azt is, mit rendelsz („un café au lait et des croissants”). A névelőket is jól használod. Következő lépésként próbáld ki az „en” névmást mennyiséggel, például: „des croissants… j'en prends deux”."
+  },
+  "meta": {
+    "durationMs": 7436,
+    "costUsd": 0.0293014,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 2301,
+    "outputTokens": 521
+  }
+}

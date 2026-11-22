@@ -1,0 +1,5 @@
+node_modules/
+results/live-*/
+teacher-packet/ratings/
+.env
+*.local.json

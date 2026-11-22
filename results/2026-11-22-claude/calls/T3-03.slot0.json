@@ -1,0 +1,29 @@
+{
+  "entryId": "T3-03",
+  "slot": 0,
+  "promptSha": "0f30719274eff192d60973125d47183c590eb43ce8ae9b8b48ae7520324d4083",
+  "recordedAt": "2026-11-22T16:44:52.089Z",
+  "output": {
+    "score": 4,
+    "errors": [
+      {
+        "quote": "du confiture",
+        "problem": "A „confiture” nőnemű főnév, ezért a partitív névelője „de la”, nem „du”.",
+        "fix": "de la confiture",
+        "category": "nyelvtan"
+      }
+    ],
+    "summary": "Kedves, tegező üzenet, minden kért elemmel: megvan a hely, az időpont és a rendelés is, és a terjedelem is megfelelő. Következő lépésként figyelj a főnevek nemére a partitív névelő előtt: hímnemű szónál „du”, nőneműnél „de la”, magánhangzó előtt „de l'”."
+  },
+  "meta": {
+    "durationMs": 8648,
+    "costUsd": 0.0303374,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 2288,
+    "outputTokens": 578
+  }
+}

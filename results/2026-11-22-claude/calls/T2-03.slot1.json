@@ -1,0 +1,29 @@
+{
+  "entryId": "T2-03",
+  "slot": 1,
+  "promptSha": "531b3003b038d7d1bc322d7a5f37aa89003bb0ee33ea6afd61d8120d8d01d0de",
+  "recordedAt": "2026-11-22T16:44:20.786Z",
+  "output": {
+    "score": 2,
+    "errors": [
+      {
+        "quote": "Je prends deux croissants.",
+        "problem": "A feladat kifejezetten azt kérte, hogy az „en” névmást használd. Az „en” helyettesíti a „croissants” főnevet, ezért a főnév kimarad, az „en” pedig az ige elé kerül.",
+        "fix": "J'en prends deux.",
+        "category": "feladat-teljesítés"
+      }
+    ],
+    "summary": "A mondatod nyelvileg helyes, és a mennyiséget is jól adtad meg. A feladat lényege viszont az „en” névmás volt: a főnév helyett „en” áll az ige előtt, a szám a végén marad, tehát „J'en prends deux.” Gyakorold ezt a szerkezetet más főnevekkel is, például „J'en veux trois.”"
+  },
+  "meta": {
+    "durationMs": 7913,
+    "costUsd": 0.024541399999999998,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 1931,
+    "outputTokens": 431
+  }
+}

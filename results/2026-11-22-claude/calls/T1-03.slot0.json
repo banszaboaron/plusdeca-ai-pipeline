@@ -1,0 +1,29 @@
+{
+  "entryId": "T1-03",
+  "slot": 0,
+  "promptSha": "f1b957e7103fb7b77446ea6d81fc9d7433c7f127b2241d36c6a27921b347e385",
+  "recordedAt": "2026-11-22T16:43:44.317Z",
+  "output": {
+    "score": 4,
+    "errors": [
+      {
+        "quote": "cafe",
+        "problem": "Hiányzik az ékezet: a „café” szóban az „é” kötelező.",
+        "fix": "café",
+        "category": "helyesírás"
+      }
+    ],
+    "summary": "A rendelés udvarias és helyes: a „je voudrais…” és a „s'il vous plaît” jól szerepel. Egyetlen hiba van benne: a „café” szóból hiányzik az ékezet, ezért figyelj az ékezetekre."
+  },
+  "meta": {
+    "durationMs": 4455,
+    "costUsd": 0.0208574,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 1943,
+    "outputTokens": 242
+  }
+}

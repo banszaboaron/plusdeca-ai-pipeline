@@ -1,0 +1,47 @@
+{
+  "entryId": "T4-04",
+  "slot": 1,
+  "promptSha": "e1194df4a6d6b89c121eda6d2acc2278cc9fdb2455c59d33bc41310453c3d90d",
+  "recordedAt": "2026-11-22T16:45:54.373Z",
+  "output": {
+    "score": 2,
+    "errors": [
+      {
+        "quote": "des pain",
+        "problem": "A „pain” itt megszámlálhatatlan, egyes számú hímnemű főnév, ezért a „du” partitív névelő kell. A „des” többes számú alak, és a „pain” sem többes számban áll.",
+        "fix": "du pain",
+        "category": "nyelvtan"
+      },
+      {
+        "quote": "de le beurre",
+        "problem": "A „de + le” kötelezően összevonódik: „du”. A „de le” alak a franciában nem létezik.",
+        "fix": "du beurre",
+        "category": "nyelvtan"
+      },
+      {
+        "quote": "de la café",
+        "problem": "A „café” hímnemű, ezért „du café” a helyes alak. A „de la” nőnemű főnév elé kerül.",
+        "fix": "du café",
+        "category": "nyelvtan"
+      },
+      {
+        "quote": "pas des fruits",
+        "problem": "Tagadásban a partitív névelő „de” (magánhangzó előtt „d'”) lesz: „pas de fruits”.",
+        "fix": "pas de fruits",
+        "category": "nyelvtan"
+      }
+    ],
+    "summary": "Tartalmilag minden megvan: leírtad a hétköznapi reggelit jelen időben, és azt is, mi más hétvégén. A „des croissants” és a „du jus d'orange” is jó. A partitív névelőket viszont gyakorolnod kell: „du” hímnem, „de la” nőnem, „des” többes szám, tagadásban pedig mindig „de”."
+  },
+  "meta": {
+    "durationMs": 10360,
+    "costUsd": 0.0359574,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 2148,
+    "outputTokens": 915
+  }
+}

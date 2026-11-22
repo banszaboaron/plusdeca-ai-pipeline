@@ -1,0 +1,22 @@
+{
+  "entryId": "T4-04r",
+  "slot": 0,
+  "promptSha": "6f33d9e75ebe679864b4d4d3981a42db5f53f7e00c4619c2900edf19ec3e21c2",
+  "recordedAt": "2026-11-22T16:46:05.116Z",
+  "output": {
+    "score": 5,
+    "errors": [],
+    "summary": "Hibátlan válasz: jelen időben írod le a hétköznapi reggelit, és megmondod, mi változik hétvégén. A partitív névelőket („du pain”, „du beurre”, „pas de fruits”, „des croissants”) is helyesen használod. Következő lépésként próbáld ki a „en” névmást is, például: „Des croissants ? J'en mange deux.”"
+  },
+  "meta": {
+    "durationMs": 7348,
+    "costUsd": 0.0269934,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 2150,
+    "outputTokens": 466
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "entryId": "T1-05",
+  "slot": 0,
+  "promptSha": "1f798c10a7f9634f09870aac0dd661ab2c704d7bb8873656d300f75d7007ea1d",
+  "recordedAt": "2026-11-22T16:43:52.636Z",
+  "output": {
+    "score": 4,
+    "errors": [
+      {
+        "quote": "une café",
+        "problem": "A „café” hímnemű főnév, ezért hímnemű névelő kell elé: „un”.",
+        "fix": "un café",
+        "category": "nyelvtan"
+      }
+    ],
+    "summary": "Udvarias és jól felépített rendelés: a „je voudrais” és a „s'il vous plaît” is a helyén van. A következő lépés, hogy a főnevekkel együtt a nemüket is megtanuld (pl. „un café”, „un thé”, „un chocolat”)."
+  },
+  "meta": {
+    "durationMs": 4230,
+    "costUsd": 0.0211654,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 1944,
+    "outputTokens": 257
+  }
+}

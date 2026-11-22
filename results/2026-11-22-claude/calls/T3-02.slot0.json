@@ -1,0 +1,22 @@
+{
+  "entryId": "T3-02",
+  "slot": 0,
+  "promptSha": "b0c812be80a0db83797b3df6e6358d4e90a9e2339a6a6e41ab216518f11e66d6",
+  "recordedAt": "2026-11-22T16:44:42.796Z",
+  "output": {
+    "score": 5,
+    "errors": [],
+    "summary": "Hibátlan, baráti hangú üzenet: megvan a hely („Café de la Paix, rue Victor-Hugo”), az időpont („à neuf heures”) és a rendelés is, a névelők és a „dis-le-moi” forma is helyesek. Következő lépésként kipróbálhatod a lecke „en” névmását, például: „Ils ont des croissants, j'en prendrai deux.”"
+  },
+  "meta": {
+    "durationMs": 7247,
+    "costUsd": 0.031969399999999995,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 2312,
+    "outputTokens": 650
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "entryId": "T1-06r",
+  "slot": 1,
+  "promptSha": "a71f9fabc33576cc9f2354d2ffe937812e5f426eb28334bea88293b179e0bba8",
+  "recordedAt": "2026-11-22T16:44:00.411Z",
+  "output": {
+    "score": 5,
+    "errors": [],
+    "summary": "Hibátlan, udvarias rendelés: a „Je voudrais…, s'il vous plaît” szerkezet helyes, és a meleg ital is szerepel benne. A croissant nem volt kérve, de nem baj. Következő lépésként gyakorold a „Pourrais-je avoir…” fordulatot és a mennyiséget kifejező „en” névmást is („J'en voudrais deux”)."
+  },
+  "meta": {
+    "durationMs": 4341,
+    "costUsd": 0.0207454,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 1949,
+    "outputTokens": 234
+  }
+}

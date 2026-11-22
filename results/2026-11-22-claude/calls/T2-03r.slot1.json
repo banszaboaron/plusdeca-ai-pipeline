@@ -1,0 +1,22 @@
+{
+  "entryId": "T2-03r",
+  "slot": 1,
+  "promptSha": "73e95b52494379769fbb3b6ac78260971020d4101dcb63fc241adb72c3125417",
+  "recordedAt": "2026-11-22T16:44:30.172Z",
+  "output": {
+    "score": 5,
+    "errors": [],
+    "summary": "Hibátlan válasz: az „en” névmás jó helyen áll, a „deux” szerepel, és az „s'il vous plaît” udvariassá teszi a rendelést. Következő lépésként gyakorold az „en” használatát tagadó mondatban is, például: „Je n'en veux pas.”"
+  },
+  "meta": {
+    "durationMs": 4436,
+    "costUsd": 0.0199654,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 1939,
+    "outputTokens": 199
+  }
+}

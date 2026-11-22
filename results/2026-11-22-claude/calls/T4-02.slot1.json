@@ -1,0 +1,29 @@
+{
+  "entryId": "T4-02",
+  "slot": 1,
+  "promptSha": "7f985416039ea8665255e0983d8d6a35adaa3bc865624c62d0d0b52c7d21891c",
+  "recordedAt": "2026-11-22T16:45:40.524Z",
+  "output": {
+    "score": 4,
+    "errors": [
+      {
+        "quote": "de la miel",
+        "problem": "A „miel” hímnemű főnév, ezért a partitív névelője „du”, nem „de la”.",
+        "fix": "du miel",
+        "category": "nyelvtan"
+      }
+    ],
+    "summary": "A válaszod jelen időben írja le a hétköznapi reggelit, világosan elmondja, mi változik hétvégén, és a hosszúsága is megfelelő. Egyetlen hibát találtam: a „miel” hímnemű, ezért „du miel” a helyes. Érdemes a nemével együtt megtanulni minden új főnevet, mert a partitív névelő a nemtől függ."
+  },
+  "meta": {
+    "durationMs": 5712,
+    "costUsd": 0.024721400000000004,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 2181,
+    "outputTokens": 340
+  }
+}

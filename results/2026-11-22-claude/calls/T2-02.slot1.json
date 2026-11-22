@@ -1,0 +1,22 @@
+{
+  "entryId": "T2-02",
+  "slot": 1,
+  "promptSha": "4bbf51321c2b79ed6e5e82a97fdde701a6074ce75976529794d20620f6cb86b7",
+  "recordedAt": "2026-11-22T16:44:12.580Z",
+  "output": {
+    "score": 5,
+    "errors": [],
+    "summary": "Hibátlan válasz: az „en” névmás jó helyen áll, a „voudrais” udvarias, és a „merci” is természetesen hangzik. Legközelebb a „s'il vous plaît” fordulatot is kipróbálhatod, mert rendelésnél ez a szokásosabb."
+  },
+  "meta": {
+    "durationMs": 5531,
+    "costUsd": 0.0198574,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 1928,
+    "outputTokens": 198
+  }
+}

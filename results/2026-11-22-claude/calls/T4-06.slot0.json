@@ -1,0 +1,35 @@
+{
+  "entryId": "T4-06",
+  "slot": 0,
+  "promptSha": "320a4cfd9ebeb33556b00e6e454f4d8e53932d8d6f9bc3815e69a51a2b32fd9d",
+  "recordedAt": "2026-11-22T16:46:01.244Z",
+  "output": {
+    "errors": [
+      {
+        "quote": "Hier, j'ai pris le petit-déjeuner au restaurant de l'hôtel.",
+        "problem": "A feladat a hétköznapi, szokásos reggelit kéri jelen időben. A válasz viszont egyetlen múltbeli reggelit mesél el egy szállodában, múlt időben („passé composé”).",
+        "fix": "En semaine, je prends le petit-déjeuner à la maison : je mange des toasts et je bois un café.",
+        "category": "feladat-teljesítés"
+      },
+      {
+        "quote": "C'était une journée magnifique.",
+        "problem": "Hiányzik a második kötelező rész: nem derül ki, mi változik hétvégén. A strandolásról szóló rész nem kapcsolódik a feladathoz.",
+        "fix": "Le week-end, c'est différent : je me lève plus tard et je mange des œufs et du bacon avec mes amis.",
+        "category": "tartalom"
+      }
+    ],
+    "score": 2,
+    "summary": "Nyelvileg helyes a szöveg, és jól használod a partitív névelőket („des œufs”, „du bacon”, „des toasts”). Csakhogy nem a feladatra válaszolsz: írd le jelen időben a szokásos hétköznapi reggelidet, aztán azt, hogy mi más hétvégén."
+  },
+  "meta": {
+    "durationMs": 9393,
+    "costUsd": 0.035233400000000005,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 2180,
+    "outputTokens": 866
+  }
+}

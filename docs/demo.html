@@ -1,0 +1,34 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Feedback demo</title><style>
+:root{--bg:#f6f4ef;--card:#fff;--ink:#1d1d1f;--muted:#6b6b70;--line:#e3dfd6;--red:#b3261e;--redbg:#fde7e4;--green:#1e7a3c;--greenbg:#e3f4e8;--amber:#8a5a00;--amberbg:#fff1d6;--accent:#2c4a8c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17181b;--card:#222327;--ink:#ececee;--muted:#a1a1a8;--line:#34353a;--red:#ff8a80;--redbg:#3a2321;--green:#7ad69a;--greenbg:#1f3326;--amber:#ffc66b;--amberbg:#3a2f1a;--accent:#9db6ff}}
+:root[data-theme="dark"]{--bg:#17181b;--card:#222327;--ink:#ececee;--muted:#a1a1a8;--line:#34353a;--red:#ff8a80;--redbg:#3a2321;--green:#7ad69a;--greenbg:#1f3326;--amber:#ffc66b;--amberbg:#3a2f1a;--accent:#9db6ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:760px;margin:0 auto;padding:24px 16px 48px}header p{color:var(--muted);margin:.25rem 0}
+.task{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:16px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:14px 0}
+h1{font-size:1.4rem;margin:0}h2{font-size:1rem;margin:0 0 8px;color:var(--muted);font-weight:600}
+.answer{font-size:1.05rem;margin:0 0 12px}mark{background:var(--redbg);color:var(--red);text-decoration:underline wavy;text-underline-offset:3px;border-radius:3px;padding:0 1px}
+sup{font-size:.65em;margin-left:1px}.scores{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.chip{font-size:.8rem;border:1px solid var(--line);border-radius:999px;padding:2px 10px;color:var(--muted)}.chip.strong{color:var(--accent);border-color:var(--accent)}
+.verdict{font-weight:600;border-radius:8px;padding:8px 12px;margin:8px 0}.verdict.pass{background:var(--greenbg);color:var(--green)}
+.verdict.revise{background:var(--redbg);color:var(--red)}.verdict.filtered{background:var(--amberbg);color:var(--amber);font-weight:500}
+.errors{padding-left:0;list-style:none;margin:10px 0}.errors li{padding:8px 0;border-top:1px solid var(--line)}
+s{color:var(--red)}ins{color:var(--green);text-decoration:none;font-weight:600}.cat{font-size:.75rem;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:0 5px;margin-left:4px}
+.why,.summary{color:var(--muted);font-size:.92rem}.note{font-size:.85rem;color:var(--muted)}
+</style></head><body><main>
+<header><h1>Writing feedback: three attempts</h1>
+<p>Replay of recorded checker outputs (two independent Claude calls per checked attempt). Feedback is written in the learner's first language (Hungarian), French forms in quotes.</p></header>
+<div class="task"><b>Task (T3):</b> Écris un court message (40 à 70 mots) à ton ami Hugo : propose-lui de prendre le petit-déjeuner ensemble samedi dans un café. Dis où et à quelle heure, et ce que tu vas commander.</div>
+<section class="card"><h2>Attempt 1</h2><p class="answer">Salut Hugo, petit-déjeuner samedi au café ? À dix heures. Bises, Marc</p>
+<div class="verdict filtered">Stopped by the deterministic filter — Too few words (11 words, needs 40–70). <b>No model call.</b></div></section>
+<section class="card"><h2>Attempt 2</h2><p class="answer">Salut Hugo, est-ce que tu veux prendre le petit-déjeuner avec moi samedi ? <mark>Nous pouvons se retrouver<sup>1</sup></mark> <mark>à le Café<sup>2</sup></mark> du Marché à <mark>dix heure<sup>3</sup></mark>. Je vais prendre un café <mark>avec de lait<sup>4</sup></mark> et <mark>des croissant<sup>5</sup></mark>. Après, nous pouvons faire une promenade dans le parc. <mark>Réponds moi<sup>6</sup></mark> vite ! Bises, Marc</p>
+<div class="scores"><span class="chip">Checker A: 3/5</span><span class="chip">Checker B: 3/5</span><span class="chip strong">Merged (stricter wins): 3/5, threshold 4</span></div>
+<div class="verdict revise">Revise and resubmit</div>
+<ol class="errors"><li><b>1.</b> <s>Nous pouvons se retrouver</s> → <ins>Nous pouvons nous retrouver</ins> <span class="cat">nyelvtan</span><br><span class="why">A visszaható névmásnak egyeznie kell az alannyal: „nous” alanyhoz „nous” névmás jár, nem „se”.</span></li><li><b>2.</b> <s>à le Café</s> → <ins>au Café</ins> <span class="cat">nyelvtan</span><br><span class="why">Az „à” és a „le” kötelezően összeolvad: „au”.</span></li><li><b>3.</b> <s>dix heure</s> → <ins>dix heures</ins> <span class="cat">nyelvtan</span><br><span class="why">Egynél több óránál az „heure” többes számba kerül.</span></li><li><b>4.</b> <s>avec de lait</s> → <ins>avec du lait</ins> <span class="cat">nyelvtan</span><br><span class="why">Itt partitív névelő kell: „du lait” (vagy egyszerűen „un café au lait”).</span></li><li><b>5.</b> <s>des croissant</s> → <ins>des croissants</ins> <span class="cat">nyelvtan</span><br><span class="why">A „des” után a főnév is többes számban áll: „croissants”.</span></li><li><b>6.</b> <s>Réponds moi</s> → <ins>Réponds-moi</ins> <span class="cat">helyesírás</span><br><span class="why">Állító felszólító módban az ige és a névmás közé kötőjel kell.</span></li></ol><p class="summary">Minden kötelező elem megvan: barátságosan, tegezve hívod meg Hugót, megadod a helyet, az időpontot és azt, hogy mit rendelsz. A következő lépés a névelők gyakorlása („au”, „du lait”), valamint a többes szám és a visszaható névmás egyeztetése („nous retrouver”).</p></section>
+<section class="card"><h2>Attempt 3</h2><p class="answer">Salut Hugo, est-ce que tu veux prendre le petit-déjeuner avec moi samedi ? Nous pouvons nous retrouver au Café du Marché à dix heures. Je vais prendre un café au lait et des croissants. Après, nous pouvons faire une promenade dans le parc. Réponds-moi vite ! Bises, Marc</p>
+<div class="scores"><span class="chip">Checker A: 5/5</span><span class="chip">Checker B: 5/5</span><span class="chip strong">Merged (stricter wins): 5/5, threshold 4</span></div>
+<div class="verdict pass">Accepted</div>
+<p class="summary">Hibátlan, kedves üzenet: megvan a hely („au Café du Marché”), az időpont („à dix heures”) és a rendelés is, végig tegezel, és a névelőket is jól használod („un café au lait”, „des croissants”). Következő lépésként a rendelésnél kipróbálhatod az „en” névmást (pl. „des croissants ? J'en prends deux”), és beszélt nyelvben a „nous pouvons” helyett a természetesebb „on peut” is jó.</p></section>
+<p class="note">Generated by <code>node scripts/render-html.mjs</code> from <code>results/2026-11-22-claude</code>. Labels and scores are not teacher-validated.</p>
+</main></body></html>

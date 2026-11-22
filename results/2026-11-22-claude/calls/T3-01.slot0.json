@@ -1,0 +1,22 @@
+{
+  "entryId": "T3-01",
+  "slot": 0,
+  "promptSha": "d88c4d099f16a953b1f3e4b06ccb8ed5302b4393ca6ed0caa107dead960e58f6",
+  "recordedAt": "2026-11-22T16:44:38.554Z",
+  "output": {
+    "score": 5,
+    "errors": [],
+    "summary": "Hibátlan, természetes hangú baráti üzenet. Benne van a helyszín („au Café du Marché, à côté de la gare”), az időpont („à dix heures”) és a rendelés is, a névelőket pedig helyesen használod („du beurre”, „de la confiture”). Következő lépésként kipróbálhatod az udvarias rendelés formáit is, például: „je voudrais…”, „j'en prends deux”."
+  },
+  "meta": {
+    "durationMs": 6481,
+    "costUsd": 0.029845399999999998,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 2289,
+    "outputTokens": 553
+  }
+}

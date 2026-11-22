@@ -1,0 +1,22 @@
+{
+  "entryId": "T2-03r",
+  "slot": 0,
+  "promptSha": "73e95b52494379769fbb3b6ac78260971020d4101dcb63fc241adb72c3125417",
+  "recordedAt": "2026-11-22T16:44:30.582Z",
+  "output": {
+    "score": 5,
+    "errors": [],
+    "summary": "Hibátlan válasz: jó helyen áll az „en” névmás, a „deux” szám is benne van, és az udvarias „s'il vous plaît” is jól illik a kávézós helyzethez. Következő lépésként gyakorold az „en” használatát tagadó mondatban is, például: „Je n'en prends pas.”"
+  },
+  "meta": {
+    "durationMs": 4574,
+    "costUsd": 0.0200694,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 1932,
+    "outputTokens": 207
+  }
+}

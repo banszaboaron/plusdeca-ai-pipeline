@@ -1,0 +1,59 @@
+{
+  "entryId": "T3-05",
+  "slot": 0,
+  "promptSha": "ba8d3cab5b18538d96d26ec11b9432b59b7a28e8d494757bc13bced7bda19972",
+  "recordedAt": "2026-11-22T16:45:05.563Z",
+  "output": {
+    "score": 3,
+    "errors": [
+      {
+        "quote": "Nous pouvons se retrouver",
+        "problem": "A visszaható névmásnak egyeznie kell az alannyal: „nous” alanyhoz „nous” névmás jár, nem „se”.",
+        "fix": "Nous pouvons nous retrouver",
+        "category": "nyelvtan"
+      },
+      {
+        "quote": "à le Café",
+        "problem": "Az „à” és a „le” kötelezően összeolvad: „au”.",
+        "fix": "au Café",
+        "category": "nyelvtan"
+      },
+      {
+        "quote": "dix heure",
+        "problem": "Egynél több óránál az „heure” többes számba kerül.",
+        "fix": "dix heures",
+        "category": "nyelvtan"
+      },
+      {
+        "quote": "avec de lait",
+        "problem": "Itt partitív névelő kell: „du lait” (vagy egyszerűen „un café au lait”).",
+        "fix": "avec du lait",
+        "category": "nyelvtan"
+      },
+      {
+        "quote": "des croissant",
+        "problem": "A „des” után a főnév is többes számban áll: „croissants”.",
+        "fix": "des croissants",
+        "category": "nyelvtan"
+      },
+      {
+        "quote": "Réponds moi",
+        "problem": "Állító felszólító módban az ige és a névmás közé kötőjel kell.",
+        "fix": "Réponds-moi",
+        "category": "helyesírás"
+      }
+    ],
+    "summary": "Minden kötelező elem megvan: barátságosan, tegezve hívod meg Hugót, megadod a helyet, az időpontot és azt, hogy mit rendelsz. A következő lépés a névelők gyakorlása („au”, „du lait”), valamint a többes szám és a visszaható névmás egyeztetése („nous retrouver”)."
+  },
+  "meta": {
+    "durationMs": 9598,
+    "costUsd": 0.020483599999999998,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 4218,
+    "cacheWriteTokens": 404,
+    "outputTokens": 820
+  }
+}

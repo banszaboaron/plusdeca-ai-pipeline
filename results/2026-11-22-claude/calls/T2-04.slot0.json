@@ -1,0 +1,29 @@
+{
+  "entryId": "T2-04",
+  "slot": 0,
+  "promptSha": "938931fc1f26614c6abaae7446f67ef63437495587e5268cc4a199fb9f4c1333",
+  "recordedAt": "2026-11-22T16:44:22.283Z",
+  "output": {
+    "score": 2,
+    "errors": [
+      {
+        "quote": "y",
+        "problem": "A feladat az „en” névmást kéri. Ez a névmás egy mennyiséggel vagy számnévvel bevezetett főnevet helyettesít, itt a „des croissants” szerkezetet. Az „y” helyet vagy „à”-val bevezetett kiegészítőt helyettesít, ezért itt helytelen.",
+        "fix": "en",
+        "category": "nyelvtan"
+      }
+    ],
+    "summary": "A mondat szerkezete jó: a névmás az ige előtt áll, és a „deux” is a helyén van. Csak a névmás rossz: számnévvel álló mennyiségnél „en” kell, tehát a helyes alak „J'en prends deux.” Érdemes még gyakorolni, mikor kell „en”, és mikor „y”."
+  },
+  "meta": {
+    "durationMs": 6646,
+    "costUsd": 0.0255014,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 1926,
+    "outputTokens": 481
+  }
+}

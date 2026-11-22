@@ -1,0 +1,22 @@
+{
+  "entryId": "T1-02",
+  "slot": 1,
+  "promptSha": "93f34c68d6cb9cee23e2c2b4a3737a209b516808423553fe90e72ab1bce30fd6",
+  "recordedAt": "2026-11-22T16:43:36.424Z",
+  "output": {
+    "score": 5,
+    "errors": [],
+    "summary": "Hibátlan, udvarias rendelés: a „Bonjour” köszönés, a „je pourrais avoir…” szerkezet és a „s'il vous plaît” mind jó helyen van, a „thé au lait” pedig meleg ital. Következő lépésként kipróbálhatod a fordított szórendű kérdést is: „Pourrais-je avoir un thé au lait, s'il vous plaît ?”"
+  },
+  "meta": {
+    "durationMs": 5661,
+    "costUsd": 0.0218414,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 1956,
+    "outputTokens": 286
+  }
+}

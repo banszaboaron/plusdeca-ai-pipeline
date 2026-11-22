@@ -1,0 +1,29 @@
+{
+  "entryId": "T3-04",
+  "slot": 1,
+  "promptSha": "92c53e53184cab3a933820d684953de902c27e7928e44a21aa5b4ee986ca1601",
+  "recordedAt": "2026-11-22T16:44:54.561Z",
+  "output": {
+    "score": 3,
+    "errors": [
+      {
+        "quote": "samedi ?",
+        "problem": "Kötelező tartalmi elem hiányzik: a feladat azt is kéri, hogy add meg, hány órakor találkoztok. Az üzenetben csak a nap („samedi”) szerepel, az időpont nem.",
+        "fix": "samedi vers neuf heures ?",
+        "category": "feladat-teljesítés"
+      }
+    ],
+    "summary": "Nyelvileg az üzenet hibátlan: természetes, baráti hangú, végig tegeződik, és a partitív névelőket is jól használod („du beurre”, „de la confiture”). Megadod a helyet és azt is, mit rendelsz, de kimaradt az időpont. Legközelebb nézd végig a feladat összes pontját, és írd bele például, hogy „vers neuf heures”."
+  },
+  "meta": {
+    "durationMs": 8439,
+    "costUsd": 0.0346054,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 2304,
+    "outputTokens": 785
+  }
+}

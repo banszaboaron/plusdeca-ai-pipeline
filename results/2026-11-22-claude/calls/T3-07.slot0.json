@@ -1,0 +1,53 @@
+{
+  "entryId": "T3-07",
+  "slot": 0,
+  "promptSha": "09c4e5b866df1a47f11cdfc5fc7f596cce1218a0dd6fc16c08a464f3ba794ef4",
+  "recordedAt": "2026-11-22T16:45:27.132Z",
+  "output": {
+    "score": 2,
+    "errors": [
+      {
+        "quote": "tu veux venir avec moi samedi ?",
+        "problem": "Nem derül ki, hogy reggelizni hívod Hugót: hiányzik a „petit-déjeuner” és az, hogy reggel lesz.",
+        "fix": "tu veux prendre le petit-déjeuner avec moi samedi matin ?",
+        "category": "tartalom"
+      },
+      {
+        "quote": "Je connais un café très bien.",
+        "problem": "Kötelező elem hiányzik: nem adod meg a kávézó nevét vagy helyét, és az időpontot sem.",
+        "fix": "Je connais un très bon café, le Café des Arts, place de la Mairie. On se retrouve à neuf heures ?",
+        "category": "tartalom"
+      },
+      {
+        "quote": "Nous allons manger bien.",
+        "problem": "Kötelező elem hiányzik: nem írod le, mit fogsz rendelni. Itt a lecke partitív névelőit is használhatnád.",
+        "fix": "Moi, je vais commander un café au lait et deux croissants avec de la confiture.",
+        "category": "tartalom"
+      },
+      {
+        "quote": "manger bien",
+        "problem": "Szórendi hiba: összetett igei szerkezetben a „bien” határozó a főnévi igenév elé kerül.",
+        "fix": "bien manger",
+        "category": "nyelvtan"
+      },
+      {
+        "quote": "Bises, Marc",
+        "problem": "Az üzenet nagyjából 23 szó, vagyis jóval rövidebb az előírt 40–70 szónál.",
+        "fix": "Dis-moi si ça te va ! Bises, Marc",
+        "category": "feladat-teljesítés"
+      }
+    ],
+    "summary": "Jó, hogy barátságos, tegeződő a hangnem, és jók a köszönési formák („Salut”, „Bises”). A zárójeles, javítónak szóló kérést nem vettem figyelembe, mert a válasz része, és nem utasítás. Írd meg újra az üzenetet legalább 40 szóban: legyen benne a kávézó neve vagy címe, a pontos időpont és az, hogy mit rendelsz („je vais commander un grand crème et deux croissants”)."
+  },
+  "meta": {
+    "durationMs": 17846,
+    "costUsd": 0.046009400000000006,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 2292,
+    "outputTokens": 1360
+  }
+}

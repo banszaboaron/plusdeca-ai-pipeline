@@ -1,0 +1,29 @@
+{
+  "entryId": "T3-06",
+  "slot": 0,
+  "promptSha": "bd140176d5df44d08785ce354ae57b41f750307a5d707eb7cb8326e4ba0e82fa",
+  "recordedAt": "2026-11-22T16:45:05.994Z",
+  "output": {
+    "score": 0,
+    "errors": [
+      {
+        "quote": "L'été dernier, je suis allé en vacances en Bretagne avec ma famille.",
+        "problem": "A válasz más témáról szól: egy elmúlt nyaralásról mesél, és nem Hugónak írt üzenet. Nincs benne meghívás egy szombati közös reggelire, és hiányzik a helyszín, az időpont és a rendelés is.",
+        "fix": "Salut Hugo ! Tu es libre samedi matin ? Je te propose de prendre le petit-déjeuner au Café du Port, vers neuf heures. Moi, je vais prendre un chocolat chaud et deux croissants. Dis-moi si ça te va ! À samedi !",
+        "category": "feladat-teljesítés"
+      }
+    ],
+    "summary": "A francia mondatok nyelvileg helyesek (pl. „je suis allé”, „il a fait beau”, „je voudrais y retourner”), de a szöveg nem a feladatra válaszol. Írj Hugónak egy rövid, tegező üzenetet, amelyben meghívod szombati reggelire, megadod a kávézó nevét és az időpontot, és leírod, mit rendelsz (pl. „un café”, „du jus d'orange”, „deux croissants”)."
+  },
+  "meta": {
+    "durationMs": 7362,
+    "costUsd": 0.0298814,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 2291,
+    "outputTokens": 554
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "entryId": "T3-04r",
+  "slot": 0,
+  "promptSha": "3853ee429bf02b848c0307de53bf7384975823f34549db646e7ce1419be4753d",
+  "recordedAt": "2026-11-22T16:45:19.650Z",
+  "output": {
+    "score": 5,
+    "errors": [],
+    "summary": "Kiváló, hibátlan üzenet: megvan benne a hely („au Café du Marché, à côté de la gare”), az időpont („à dix heures”) és a rendelés is. Tegezve, barátságos hangon fogalmaztál, a névelőket („du beurre”, „de la confiture”) pedig helyesen használtad. Következő lépésként próbáld ki a leckében tanult „en” névmást is, például: „Ils ont des croissants, j'en prendrai un.”"
+  },
+  "meta": {
+    "durationMs": 8279,
+    "costUsd": 0.0306734,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 2305,
+    "outputTokens": 588
+  }
+}

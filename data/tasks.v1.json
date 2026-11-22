@@ -1,0 +1,73 @@
+{
+  "schema": "plusdeca-portfolio-tasks/1",
+  "version": "tasks.v1",
+  "note": "Demo tasks written for this portfolio (not taken from the private course). Item objects use the same v2 item shape as the Plusdeça course package, so the vendored core can read them unchanged.",
+  "lesson": {
+    "id": "demo:w01:cafe",
+    "title": "Au café",
+    "text": "Au café. Pour commander poliment, on utilise « je voudrais… » ou « je pourrais avoir… », suivi de « s'il vous plaît ». Avec une quantité, le pronom « en » remplace un nom introduit par un partitif ou par un nombre : « Vous voulez des croissants ? — Oui, j'en veux deux. » Les partitifs : du pain, de la confiture, de l'eau, des œufs ; à la forme négative : pas de pain, pas de fruits."
+  },
+  "tasks": [
+    {
+      "id": "T1",
+      "label": "Polite order (one sentence, reference answer)",
+      "item": {
+        "id": "demo:w01:cafe:p01:i01",
+        "prompt": "Au café, commande poliment une boisson chaude au serveur (une phrase).",
+        "response": { "type": "text" },
+        "solution": { "type": "reference", "text": "Je voudrais un café, s'il vous plaît.", "accepted": ["Un thé, s'il vous plaît.", "Pourrais-je avoir un chocolat chaud, s'il vous plaît ?"] },
+        "evaluation": { "mode": "semantic", "policyId": "semantic-rubric" },
+        "repetition": { "mode": "none" }
+      },
+      "pres": {}
+    },
+    {
+      "id": "T2",
+      "label": "Pronoun « en » with a quantity (reference answer)",
+      "item": {
+        "id": "demo:w01:cafe:p01:i02",
+        "prompt": "Le serveur demande : « Vous prenez combien de croissants ? » Réponds avec le pronom « en » et le nombre deux.",
+        "response": { "type": "text" },
+        "solution": { "type": "reference", "text": "J'en prends deux.", "accepted": ["J'en prends deux, s'il vous plaît.", "J'en voudrais deux."] },
+        "evaluation": { "mode": "semantic", "policyId": "semantic-rubric" },
+        "repetition": { "mode": "none" }
+      },
+      "pres": {}
+    },
+    {
+      "id": "T3",
+      "label": "Short message to a friend (40–70 words, rubric)",
+      "item": {
+        "id": "demo:w01:cafe:p02:i01",
+        "prompt": "Écris un court message (40 à 70 mots) à ton ami Hugo : propose-lui de prendre le petit-déjeuner ensemble samedi dans un café. Dis où et à quelle heure, et ce que tu vas commander.",
+        "response": { "type": "writing", "wordRange": { "min": 40, "max": 70 } },
+        "solution": { "type": "rubric", "criteria": [
+          { "id": "c1", "description": "Le lieu et l'heure du rendez-vous sont indiqués.", "required": true },
+          { "id": "c2", "description": "Le message dit ce que la personne va commander.", "required": true },
+          { "id": "c3", "description": "C'est une proposition amicale, au tutoiement (« tu »).", "required": true },
+          { "id": "c4", "description": "Les articles (partitifs, définis, indéfinis) sont corrects.", "required": false }
+        ] },
+        "evaluation": { "mode": "dual-gate", "policyId": "writing-dual-gate" },
+        "repetition": { "mode": "none" }
+      },
+      "pres": { "rubricSamples": ["Salut Hugo ! Tu es libre samedi matin ? Je te propose de prendre le petit-déjeuner au Café des Arts, place de la Mairie, vers neuf heures et demie. Moi, je vais commander un grand crème et deux croissants. Ils font aussi du jus d'orange pressé. Dis-moi si ça te va ! À samedi, Léa"] }
+    },
+    {
+      "id": "T4",
+      "label": "Describe your breakfast habits (30–60 words, rubric)",
+      "item": {
+        "id": "demo:w01:cafe:p02:i02",
+        "prompt": "Décris en 30 à 60 mots ton petit-déjeuner habituel pendant la semaine, puis explique ce qui change le week-end.",
+        "response": { "type": "writing", "wordRange": { "min": 30, "max": 60 } },
+        "solution": { "type": "rubric", "criteria": [
+          { "id": "c1", "description": "Le petit-déjeuner de la semaine est décrit au présent.", "required": true },
+          { "id": "c2", "description": "Le texte indique ce qui change le week-end.", "required": true },
+          { "id": "c3", "description": "Les articles partitifs (du, de la, des, pas de) sont corrects.", "required": false }
+        ] },
+        "evaluation": { "mode": "dual-gate", "policyId": "writing-dual-gate" },
+        "repetition": { "mode": "none" }
+      },
+      "pres": { "rubricSamples": ["En semaine, je n'ai pas beaucoup de temps : je bois un café noir et je mange une tartine beurrée. Le week-end, c'est différent. Je me lève plus tard, je prépare des œufs et je bois du jus d'orange avec ma famille."] }
+    }
+  ]
+}

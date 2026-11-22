@@ -1,0 +1,22 @@
+{
+  "entryId": "T4-01",
+  "slot": 0,
+  "promptSha": "9b216f0aaea87c1763e1dbadc035424080292bdcfab5988c50c57712943c1f58",
+  "recordedAt": "2026-11-22T16:45:39.006Z",
+  "output": {
+    "score": 5,
+    "errors": [],
+    "summary": "Hibátlan válasz, és teljesíti a feladatot: jelen időben leírod a hétköznapi reggelidet, és világosan megmutatod, mi változik hétvégén. A partitív névelőket is helyesen használod („du miel”, „des crêpes”, „des œufs brouillés”). Következő lépésként próbáld ki a tagadó alakot is (pl. „je ne mange pas de pain”) és az „en” névmást (pl. „j'en mange deux”)."
+  },
+  "meta": {
+    "durationMs": 8106,
+    "costUsd": 0.027857399999999997,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 2183,
+    "outputTokens": 496
+  }
+}

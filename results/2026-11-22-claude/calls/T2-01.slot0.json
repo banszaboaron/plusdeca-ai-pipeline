@@ -1,0 +1,22 @@
+{
+  "entryId": "T2-01",
+  "slot": 0,
+  "promptSha": "8f165eb5c666579a37fa3193eeffa54e0da15c3f7a6dfbebb5a8d4b466973373",
+  "recordedAt": "2026-11-22T16:44:09.463Z",
+  "output": {
+    "score": 5,
+    "errors": [],
+    "summary": "Hibátlan válasz: az „en” névmás jó helyen áll, és a „deux” számnév is ott van, a kérdésben szereplő „prendre” igét pedig helyesen vetted át. Következő lépésként próbáld udvariasabban is: „J'en voudrais deux, s'il vous plaît.”"
+  },
+  "meta": {
+    "durationMs": 4039,
+    "costUsd": 0.0199254,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 1924,
+    "outputTokens": 203
+  }
+}

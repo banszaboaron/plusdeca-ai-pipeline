@@ -1,0 +1,29 @@
+{
+  "entryId": "T1-03",
+  "slot": 1,
+  "promptSha": "f1b957e7103fb7b77446ea6d81fc9d7433c7f127b2241d36c6a27921b347e385",
+  "recordedAt": "2026-11-22T16:43:44.604Z",
+  "output": {
+    "score": 4,
+    "errors": [
+      {
+        "quote": "cafe",
+        "problem": "Hiányzik az ékezet: a „café” szó végén „é” áll.",
+        "fix": "café",
+        "category": "helyesírás"
+      }
+    ],
+    "summary": "A mondat udvarias és helyes, jól használod a „je voudrais… s'il vous plaît” szerkezetet. Egyetlen apró hiba van benne: a „café” szóban ne hagyd le az ékezetet, figyelj jobban az ékezetekre."
+  },
+  "meta": {
+    "durationMs": 4180,
+    "costUsd": 0.0208974,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 1943,
+    "outputTokens": 244
+  }
+}

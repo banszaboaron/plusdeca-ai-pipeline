@@ -1,0 +1,22 @@
+{
+  "entryId": "T3-01",
+  "slot": 1,
+  "promptSha": "d88c4d099f16a953b1f3e4b06ccb8ed5302b4393ca6ed0caa107dead960e58f6",
+  "recordedAt": "2026-11-22T16:44:40.396Z",
+  "output": {
+    "score": 5,
+    "errors": [],
+    "summary": "A válasz hibátlan és teljesíti a feladatot. Barátságos, tegeződő ajánlatot teszel („ça te dit de…”), megadod a helyet és az időpontot („au Café du Marché, à côté de la gare, à dix heures”), és leírod, mit rendelsz. A partitív névelőket is jól használod („du beurre”, „de la confiture”). Következő lépésként kipróbálhatod az „en” névmást is, például: „Ils ont des croissants, j'en prendrai un.”"
+  },
+  "meta": {
+    "durationMs": 8067,
+    "costUsd": 0.030125399999999997,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 2299,
+    "outputTokens": 563
+  }
+}

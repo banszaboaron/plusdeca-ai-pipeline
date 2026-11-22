@@ -1,0 +1,47 @@
+{
+  "entryId": "T4-04",
+  "slot": 0,
+  "promptSha": "e1194df4a6d6b89c121eda6d2acc2278cc9fdb2455c59d33bc41310453c3d90d",
+  "recordedAt": "2026-11-22T16:45:55.544Z",
+  "output": {
+    "score": 3,
+    "errors": [
+      {
+        "quote": "des pain",
+        "problem": "A „pain” itt megszámlálhatatlan anyagnév, egyes számban áll, ezért hímnemű partitívusz kell: „du”. A „des” többes számú alak, nem illik egyes számú főnévhez.",
+        "fix": "du pain",
+        "category": "nyelvtan"
+      },
+      {
+        "quote": "de le beurre",
+        "problem": "A „de + le” kötelezően összevonódik: „du”. A „de le” forma nem létezik.",
+        "fix": "du beurre",
+        "category": "nyelvtan"
+      },
+      {
+        "quote": "de la café",
+        "problem": "A „café” hímnemű, ezért a partitívusz „du”, nem „de la”.",
+        "fix": "du café",
+        "category": "nyelvtan"
+      },
+      {
+        "quote": "pas des fruits",
+        "problem": "Tagadásban a partitívusz („du”, „de la”, „des”) helyett „de” áll: „pas de fruits”.",
+        "fix": "pas de fruits",
+        "category": "nyelvtan"
+      }
+    ],
+    "summary": "Tartalmilag a válasz rendben van: jelen időben leírja a hétköznapi reggelit, kiderül belőle, mi változik hétvégén, és a hossza is megfelelő. Az utolsó mondat partitívuszai („des croissants”, „du jus d'orange”) helyesek. A feladat egyik fő célja, az elöljárós névelők (partitívusz) használata viszont még nem megy: négy helyen hibás. Gyakorold a „du / de la / de l' / des” közötti választást a főnév neme és száma szerint, és tagadásban a „pas de” szerkezetet."
+  },
+  "meta": {
+    "durationMs": 11577,
+    "costUsd": 0.0368174,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 2153,
+    "outputTokens": 956
+  }
+}

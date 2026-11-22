@@ -1,0 +1,22 @@
+{
+  "entryId": "T3-05r",
+  "slot": 0,
+  "promptSha": "e2e4cbda0d23ed15f5a6de9959ea492d9d10e4f009f79e492c2bdac5d98c539e",
+  "recordedAt": "2026-11-22T16:45:30.977Z",
+  "output": {
+    "score": 5,
+    "errors": [],
+    "summary": "Hibátlan, kedves üzenet: megvan a hely („au Café du Marché”), az időpont („à dix heures”) és a rendelés is, végig tegezel, és a névelőket is jól használod („un café au lait”, „des croissants”). Következő lépésként a rendelésnél kipróbálhatod az „en” névmást (pl. „des croissants ? J'en prends deux”), és beszélt nyelvben a „nous pouvons” helyett a természetesebb „on peut” is jó."
+  },
+  "meta": {
+    "durationMs": 8111,
+    "costUsd": 0.029009399999999998,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 2297,
+    "outputTokens": 508
+  }
+}

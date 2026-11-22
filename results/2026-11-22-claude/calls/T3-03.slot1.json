@@ -1,0 +1,29 @@
+{
+  "entryId": "T3-03",
+  "slot": 1,
+  "promptSha": "0f30719274eff192d60973125d47183c590eb43ce8ae9b8b48ae7520324d4083",
+  "recordedAt": "2026-11-22T16:44:52.459Z",
+  "output": {
+    "score": 4,
+    "errors": [
+      {
+        "quote": "du confiture",
+        "problem": "A „confiture” nőnemű szó, ezért a nőnemű partitív névelő kell: „de la”. A „du” csak hímnemű szó előtt áll, például „du beurre”.",
+        "fix": "de la confiture",
+        "category": "nyelvtan"
+      }
+    ],
+    "summary": "Kedves, tegező üzenetet írtál, és minden kért adat benne van: a hely, az időpont és a rendelés. A hossz is megfelelő, kb. 48 szó. Egy hiba van benne, a nőnemű partitív névelő: „de la confiture”. A következő lépés: tanulj meg minden főnevet a nemével együtt, például „la confiture”, „le beurre”."
+  },
+  "meta": {
+    "durationMs": 9110,
+    "costUsd": 0.032409400000000005,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 2292,
+    "outputTokens": 680
+  }
+}

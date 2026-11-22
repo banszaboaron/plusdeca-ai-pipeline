@@ -1,0 +1,29 @@
+{
+  "entryId": "T2-04",
+  "slot": 1,
+  "promptSha": "938931fc1f26614c6abaae7446f67ef63437495587e5268cc4a199fb9f4c1333",
+  "recordedAt": "2026-11-22T16:44:21.274Z",
+  "output": {
+    "score": 2,
+    "errors": [
+      {
+        "quote": "y",
+        "problem": "A feladat az „en” névmást kéri. Az „en” egy mennyiséggel vagy számmal bevezetett főnevet helyettesít (itt: „deux croissants”). Az „y” helyet vagy „à + főnév” szerkezetet helyettesít, ezért ide nem jó.",
+        "fix": "en",
+        "category": "nyelvtan"
+      }
+    ],
+    "summary": "A mondatszerkezet jó: az ige („prends”) és a szám („deux”) is stimmel. Az „y” helyett viszont „en” kell: „J'en prends deux.” Érdemes megjegyezni, hogy ha számot vagy mennyiséget mondasz, a főnevet „en” helyettesíti."
+  },
+  "meta": {
+    "durationMs": 5629,
+    "costUsd": 0.0238574,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 1923,
+    "outputTokens": 400
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "entryId": "T1-02",
+  "slot": 0,
+  "promptSha": "93f34c68d6cb9cee23e2c2b4a3737a209b516808423553fe90e72ab1bce30fd6",
+  "recordedAt": "2026-11-22T16:43:36.031Z",
+  "output": {
+    "score": 5,
+    "errors": [],
+    "summary": "Hibátlan, udvarias rendelés: a „Bonjour” köszönés, a „je pourrais avoir…” szerkezet és a „s'il vous plaît” együtt pontosan megfelel a feladatnak, és a „thé au lait” valóban meleg ital. Következő lépésként gyakorold a kérdő inverziót is („Pourrais-je avoir…?”), és próbálj mennyiséget is rendelni az „en” névmással (pl. „J'en voudrais deux.”)."
+  },
+  "meta": {
+    "durationMs": 5034,
+    "costUsd": 0.022777400000000003,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 1958,
+    "outputTokens": 332
+  }
+}

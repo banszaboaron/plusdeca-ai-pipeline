@@ -1,0 +1,35 @@
+{
+  "entryId": "T1-04",
+  "slot": 1,
+  "promptSha": "b69565e09800fc0ccb6f665a82b49729e4a7133e766c7ea4b59838c9c6f72011",
+  "recordedAt": "2026-11-22T16:43:51.275Z",
+  "output": {
+    "score": 3,
+    "errors": [
+      {
+        "quote": "Je veux",
+        "problem": "A „je veux” túl direkt, a pincérrel szemben udvariatlannak hat. A feladat udvarias rendelést kér, erre a feltételes módú „je voudrais” való.",
+        "fix": "Je voudrais",
+        "category": "feladat-teljesítés"
+      },
+      {
+        "quote": "un café.",
+        "problem": "Hiányzik a „s'il vous plaît”, pedig udvarias rendelésnél ez elvárt.",
+        "fix": "un café, s'il vous plaît.",
+        "category": "feladat-teljesítés"
+      }
+    ],
+    "summary": "A mondat nyelvtanilag helyes, és meleg italt rendel. Az udvariasság viszont hiányzik belőle. Legközelebb használd a „je voudrais” alakot, és tedd hozzá a „s'il vous plaît”-t: „Je voudrais un café, s'il vous plaît.”"
+  },
+  "meta": {
+    "durationMs": 10675,
+    "costUsd": 0.0326414,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 1931,
+    "outputTokens": 836
+  }
+}

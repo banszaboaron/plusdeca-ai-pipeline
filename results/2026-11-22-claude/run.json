@@ -1,0 +1,11 @@
+{
+  "name": "2026-11-22-claude",
+  "recordedAt": "2026-11-22T16:46:05.201Z",
+  "cli": "2.1.289 (Claude Code)",
+  "models": [
+    "claude-opus-5-5"
+  ],
+  "evalSet": "eval-set.v1",
+  "tasks": "tasks.v1",
+  "checkers": "two independent claude -p calls (production: claude + codex)"
+}

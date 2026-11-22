@@ -1,0 +1,59 @@
+{
+  "entryId": "T3-05",
+  "slot": 1,
+  "promptSha": "ba8d3cab5b18538d96d26ec11b9432b59b7a28e8d494757bc13bced7bda19972",
+  "recordedAt": "2026-11-22T16:45:07.254Z",
+  "output": {
+    "score": 3,
+    "errors": [
+      {
+        "quote": "Nous pouvons se retrouver",
+        "problem": "A visszaható névmásnak egyeznie kell az alannyal: „nous” mellett „nous retrouver” a helyes, nem „se retrouver”.",
+        "fix": "Nous pouvons nous retrouver",
+        "category": "nyelvtan"
+      },
+      {
+        "quote": "à le Café",
+        "problem": "Az „à” és a „le” kötelezően összevonódik: „au”.",
+        "fix": "au Café",
+        "category": "nyelvtan"
+      },
+      {
+        "quote": "dix heure",
+        "problem": "Egynél több óránál az „heure” többes számba kerül: „dix heures”.",
+        "fix": "dix heures",
+        "category": "nyelvtan"
+      },
+      {
+        "quote": "avec de lait",
+        "problem": "Állító mondatban a partitív névelő „du” (de + le) kell, nem csak „de”.",
+        "fix": "avec du lait",
+        "category": "nyelvtan"
+      },
+      {
+        "quote": "des croissant",
+        "problem": "A „des” után a főnév többes számban áll: „croissants”.",
+        "fix": "des croissants",
+        "category": "nyelvtan"
+      },
+      {
+        "quote": "Réponds moi",
+        "problem": "Felszólító módban az ige és az utána álló névmás közé kötőjel kell.",
+        "fix": "Réponds-moi",
+        "category": "helyesírás"
+      }
+    ],
+    "summary": "Az üzeneted minden kért tartalmi elemet tartalmaz: baráti, tegező hangnemben megadod a helyet, az időpontot és azt is, mit rendelsz, ráadásul még egy programot is ajánlasz. Ezután a névelőket gyakorold („au”, „du lait”), és figyelj a többes számra („dix heures”, „des croissants”) meg a visszaható névmás egyeztetésére („nous retrouver”)."
+  },
+  "meta": {
+    "durationMs": 11491,
+    "costUsd": 0.022551600000000005,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 4218,
+    "cacheWriteTokens": 410,
+    "outputTokens": 921
+  }
+}

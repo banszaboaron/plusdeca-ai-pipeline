@@ -1,0 +1,29 @@
+{
+  "entryId": "T1-06",
+  "slot": 1,
+  "promptSha": "b1c5f1fde31b057187d23e28de3c559ab37079afba05ce2a513f33fc980c0cc9",
+  "recordedAt": "2026-11-22T16:44:00.611Z",
+  "output": {
+    "score": 2,
+    "errors": [
+      {
+        "quote": "un croissant",
+        "problem": "A feladat meleg italt kér, de a „croissant” sütemény, nem ital, így a válasz nem teljesíti a feladat lényegét.",
+        "fix": "un café",
+        "category": "feladat-teljesítés"
+      }
+    ],
+    "summary": "A mondat nyelvileg hibátlan, és az udvarias kérés („Je voudrais…, s'il vous plaît.”) is pontosan a tanult szerkezet. A feladat azonban meleg italt kér: rendelj inkább például „un café”, „un thé” vagy „un chocolat chaud” italt."
+  },
+  "meta": {
+    "durationMs": 6473,
+    "costUsd": 0.024429399999999997,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 1947,
+    "outputTokens": 419
+  }
+}

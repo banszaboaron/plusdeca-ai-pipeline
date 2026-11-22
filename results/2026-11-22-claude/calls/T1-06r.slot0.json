@@ -1,0 +1,22 @@
+{
+  "entryId": "T1-06r",
+  "slot": 0,
+  "promptSha": "a71f9fabc33576cc9f2354d2ffe937812e5f426eb28334bea88293b179e0bba8",
+  "recordedAt": "2026-11-22T16:44:01.903Z",
+  "output": {
+    "score": 5,
+    "errors": [],
+    "summary": "Hibátlan, udvarias rendelés: a „je voudrais” és a „s'il vous plaît” jól szerepel, és a croissant hozzáadása sem gond. Következő lépésként próbáld ki a „Pourrais-je avoir… ?” szerkezetet, vagy egy mennyiséget az „en” névmással (pl. „J'en voudrais deux”)."
+  },
+  "meta": {
+    "durationMs": 5602,
+    "costUsd": 0.0212334,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 1945,
+    "outputTokens": 260
+  }
+}

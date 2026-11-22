@@ -1,0 +1,29 @@
+{
+  "entryId": "T3-06",
+  "slot": 1,
+  "promptSha": "bd140176d5df44d08785ce354ae57b41f750307a5d707eb7cb8326e4ba0e82fa",
+  "recordedAt": "2026-11-22T16:45:05.898Z",
+  "output": {
+    "score": 0,
+    "errors": [
+      {
+        "quote": "L'été dernier, je suis allé en vacances en Bretagne avec ma famille.",
+        "problem": "A szöveg nem a feladatra válaszol: múlt nyári bretagne-i nyaralásról szól, nem pedig Hugónak szóló meghívásról egy szombati közös reggelire. Hiányzik a megszólítás, a javaslat tegezve, a helyszín, az időpont és az, hogy mit fogsz rendelni.",
+        "fix": "Salut Hugo ! Tu es libre samedi matin ? Je te propose de prendre le petit-déjeuner ensemble au Café de la Gare, rue Victor Hugo, à neuf heures. Moi, je vais commander un café au lait, du pain avec de la confiture et deux croissants. Dis-moi si ça te va ! À samedi !",
+        "category": "feladat-teljesítés"
+      }
+    ],
+    "summary": "Nyelvileg a szöveg jó: a passé composé és az imparfait használata is helyes. A feladatra viszont nem válaszol, mert nyaralásról szól. Írj Hugónak egy tegező üzenetet, amelyben szombatra közös reggelit javasolsz, megadod a kávézót és az időpontot, és leírod, mit rendelsz („du pain”, „de la confiture”, „deux croissants”)."
+  },
+  "meta": {
+    "durationMs": 7366,
+    "costUsd": 0.0313854,
+    "models": [
+      "claude-opus-5-5"
+    ],
+    "inputTokens": 2,
+    "cacheReadTokens": 2327,
+    "cacheWriteTokens": 2294,
+    "outputTokens": 628
+  }
+}
