@@ -1,0 +1,466 @@
+{
+  "schemaVersion": "p5-block-1.0.0",
+  "contractVersion": "2.0.0",
+  "id": "w40-u-5-1",
+  "week": 40,
+  "kind": "lesson",
+  "title": "Chemin au choix",
+  "position": {
+    "row": 4,
+    "column": 1
+  },
+  "prerequisites": [],
+  "estimatedMinutes": {
+    "min": 5,
+    "max": 8
+  },
+  "review": {
+    "status": "REVIEW_PASS",
+    "reviewPass": "w40-u-5-1.review-pass.md",
+    "manuscripts": [
+      {
+        "file": "w40-u-5-1.review-pass.md",
+        "sha256": "39990e4f17ecd66dc9bbe979794db381ceb885315c59b65b9b6536d9fa0f5e65",
+        "role": "review-pass"
+      }
+    ],
+    "contentSha256": "846fde3f35fba6e7800b645e5b080c76e942d4cf8f0a2a231349ea2d6c020825"
+  },
+  "paths": {
+    "choicePage": "w40-u-5-1-p01",
+    "options": [
+      {
+        "id": "video",
+        "label": "Vidéo (recommandé)",
+        "pages": [
+          "w40-u-5-1-p02"
+        ],
+        "recommended": true
+      },
+      {
+        "id": "texte",
+        "label": "Chemin texte",
+        "pages": [
+          "w40-u-5-1-p03"
+        ]
+      }
+    ]
+  },
+  "pages": [
+    {
+      "id": "w40-u-5-1-p01",
+      "template": "PAGE-closed",
+      "variant": "PV-closed-mixed",
+      "title": "Choisis ton chemin",
+      "manuscriptRef": {
+        "file": "w40-u-5-1.review-pass.md",
+        "anchor": "## `w40-u-5-1-p01` — Choisis ton chemin"
+      },
+      "content": [
+        {
+          "type": "text",
+          "role": "note",
+          "language": "fr",
+          "text": "Tu peux suivre la vidéo ou un court résumé écrit. Les deux chemins comptent de la même façon.",
+          "manuscriptRef": {
+            "file": "w40-u-5-1.review-pass.md",
+            "anchor": "## `w40-u-5-1-p01` — Choisis ton chemin"
+          }
+        }
+      ],
+      "items": []
+    },
+    {
+      "id": "w40-u-5-1-p02",
+      "template": "PAGE-closed",
+      "variant": "PV-choice-one",
+      "title": "La scène en vidéo",
+      "manuscriptRef": {
+        "file": "w40-u-5-1.review-pass.md",
+        "anchor": "## `w40-u-5-1-p02` — La scène en vidéo"
+      },
+      "content": [
+        {
+          "type": "text",
+          "role": "situation",
+          "language": "fr",
+          "text": "Dans la vidéo, Inès boit son café à la fenêtre, en fin de matinée.",
+          "manuscriptRef": {
+            "file": "w40-u-5-1.review-pass.md",
+            "anchor": "## `w40-u-5-1-p02` — La scène en vidéo"
+          }
+        }
+      ],
+      "items": [
+        {
+          "id": "w40-u-5-1-i01",
+          "capability": "CAP-choice-single",
+          "variant": "PV-choice-one",
+          "prompt": "Où est Inès ?",
+          "response": {
+            "type": "single",
+            "options": [
+              {
+                "id": "a",
+                "label": "chez elle"
+              },
+              {
+                "id": "b",
+                "label": "au café"
+              }
+            ]
+          },
+          "solution": {
+            "type": "choice",
+            "keyOptionIds": [
+              "a"
+            ]
+          },
+          "feedback": {
+            "incorrect": "Regarde où elle boit son café."
+          },
+          "evaluation": {
+            "mode": "exact"
+          },
+          "manuscriptRef": {
+            "file": "w40-u-5-1.review-pass.md",
+            "anchor": "### `w40-u-5-1-i01`"
+          },
+          "retry": {
+            "afterItems": 1,
+            "page": "w40-u-5-1-p06",
+            "maxVariants": 2,
+            "closure": "supported",
+            "items": [
+              {
+                "id": "w40-u-5-1-i01-r1",
+                "capability": "CAP-choice-single",
+                "variant": "PV-choice-one",
+                "prompt": "À quel moment de la journée sommes-nous ?",
+                "response": {
+                  "type": "single",
+                  "options": [
+                    {
+                      "id": "a",
+                      "label": "en fin de matinée"
+                    },
+                    {
+                      "id": "b",
+                      "label": "tôt le matin"
+                    }
+                  ]
+                },
+                "solution": {
+                  "type": "choice",
+                  "keyOptionIds": [
+                    "a"
+                  ]
+                },
+                "evaluation": {
+                  "mode": "exact"
+                },
+                "manuscriptRef": {
+                  "file": "w40-u-5-1.review-pass.md",
+                  "anchor": "### `w40-u-5-1-i01-r1`"
+                }
+              },
+              {
+                "id": "w40-u-5-1-i01-r2",
+                "capability": "CAP-choice-single",
+                "variant": "PV-choice-one",
+                "prompt": "Que fait Inès à la fenêtre ?",
+                "response": {
+                  "type": "single",
+                  "options": [
+                    {
+                      "id": "a",
+                      "label": "elle boit son café"
+                    },
+                    {
+                      "id": "b",
+                      "label": "elle téléphone"
+                    }
+                  ]
+                },
+                "solution": {
+                  "type": "choice",
+                  "keyOptionIds": [
+                    "a"
+                  ]
+                },
+                "feedback": {
+                  "closure": "Nézzük meg együtt. Inès otthon van, és a kávéját issza az ablaknál. Ez már nem számít pontnak, de így a feladat lezárul."
+                },
+                "evaluation": {
+                  "mode": "exact"
+                },
+                "manuscriptRef": {
+                  "file": "w40-u-5-1.review-pass.md",
+                  "anchor": "### `w40-u-5-1-i01-r2`"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "w40-u-5-1-p03",
+      "template": "PAGE-closed",
+      "variant": "PV-choice-one",
+      "title": "La scène en texte",
+      "manuscriptRef": {
+        "file": "w40-u-5-1.review-pass.md",
+        "anchor": "## `w40-u-5-1-p03` — La scène en texte"
+      },
+      "content": [
+        {
+          "type": "text",
+          "role": "situation",
+          "language": "fr",
+          "text": "Résumé : en fin de matinée, Inès boit son café chez elle et regarde la rue par la fenêtre.",
+          "manuscriptRef": {
+            "file": "w40-u-5-1.review-pass.md",
+            "anchor": "## `w40-u-5-1-p03` — La scène en texte"
+          }
+        }
+      ],
+      "items": [
+        {
+          "id": "w40-u-5-1-alt-i01",
+          "capability": "CAP-choice-single",
+          "variant": "PV-choice-one",
+          "prompt": "Où se passe la scène ?",
+          "response": {
+            "type": "single",
+            "options": [
+              {
+                "id": "a",
+                "label": "chez Inès"
+              },
+              {
+                "id": "b",
+                "label": "dans la rue"
+              }
+            ]
+          },
+          "solution": {
+            "type": "choice",
+            "keyOptionIds": [
+              "a"
+            ]
+          },
+          "evaluation": {
+            "mode": "exact"
+          },
+          "manuscriptRef": {
+            "file": "w40-u-5-1.review-pass.md",
+            "anchor": "### `w40-u-5-1-alt-i01`"
+          },
+          "retry": {
+            "afterItems": 1,
+            "page": "w40-u-5-1-p06",
+            "maxVariants": 1,
+            "closure": "supported",
+            "items": [
+              {
+                "id": "w40-u-5-1-alt-i01-r1",
+                "capability": "CAP-choice-single",
+                "variant": "PV-choice-one",
+                "prompt": "Que regarde Inès ?",
+                "response": {
+                  "type": "single",
+                  "options": [
+                    {
+                      "id": "a",
+                      "label": "la rue"
+                    },
+                    {
+                      "id": "b",
+                      "label": "la télévision"
+                    }
+                  ]
+                },
+                "solution": {
+                  "type": "choice",
+                  "keyOptionIds": [
+                    "a"
+                  ]
+                },
+                "feedback": {
+                  "closure": "Nézzük meg együtt. Inès az ablakon át az utcát nézi. Ez már nem számít pontnak, de így a feladat lezárul."
+                },
+                "evaluation": {
+                  "mode": "exact"
+                },
+                "manuscriptRef": {
+                  "file": "w40-u-5-1.review-pass.md",
+                  "anchor": "### `w40-u-5-1-alt-i01-r1`"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "w40-u-5-1-p04",
+      "template": "PAGE-writing",
+      "variant": "PV-writing-short",
+      "title": "Ton avis",
+      "manuscriptRef": {
+        "file": "w40-u-5-1.review-pass.md",
+        "anchor": "## `w40-u-5-1-p04` — Ton avis"
+      },
+      "content": [],
+      "items": [
+        {
+          "id": "w40-u-5-1-i02",
+          "capability": "CAP-writing",
+          "variant": "PV-writing-short",
+          "prompt": "En une phrase : pourquoi Inès reste-t-elle à la fenêtre ?",
+          "response": {
+            "type": "text",
+            "lines": "multi",
+            "sentences": {
+              "min": 1,
+              "max": 2
+            }
+          },
+          "solution": {
+            "type": "rubric",
+            "criteria": [
+              {
+                "label": "Une raison",
+                "points": 1,
+                "requirements": [
+                  "Tu donnes une raison avec parce que."
+                ]
+              }
+            ],
+            "keyDescription": "Bármely indok elfogadható, ha a parce que után áll.",
+            "rejected": [
+              {
+                "text": "Parce que.",
+                "reason": "Hiányzik az indok."
+              }
+            ]
+          },
+          "feedback": {
+            "closure": "Nézzük meg együtt. Egy lehetséges válasz: Elle reste à la fenêtre parce qu’elle regarde la vie du quartier. Ez már nem számít pontnak, de így a feladat lezárul."
+          },
+          "evaluation": {
+            "mode": "semantic",
+            "aiAdvisoryOnly": true,
+            "scoring": "scored"
+          },
+          "manuscriptRef": {
+            "file": "w40-u-5-1.review-pass.md",
+            "anchor": "### `w40-u-5-1-i02`"
+          },
+          "retry": {
+            "closure": "supported",
+            "items": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "w40-u-5-1-p05",
+      "template": "PAGE-speaking",
+      "variant": "PV-speech-reference",
+      "title": "Ton message",
+      "manuscriptRef": {
+        "file": "w40-u-5-1.review-pass.md",
+        "anchor": "## `w40-u-5-1-p05` — Ton message"
+      },
+      "content": [],
+      "items": [
+        {
+          "id": "w40-u-5-1-t01",
+          "capability": "CAP-speech-reference",
+          "variant": "PV-speech-reference",
+          "prompt": "Envoie un message à un ami : que vois-tu de ta fenêtre le matin ? Message vocal ou message écrit, au choix.",
+          "response": {
+            "type": "speech",
+            "durationRange": {
+              "min": 20,
+              "max": 40
+            },
+            "writtenAlternative": true
+          },
+          "solution": {
+            "type": "samples",
+            "samples": [
+              "De ma fenêtre, je vois la boulangerie et le bus du matin."
+            ],
+            "keyDescription": "szabad üzenet."
+          },
+          "evaluation": {
+            "mode": "formative",
+            "scoring": "formative-required"
+          },
+          "manuscriptRef": {
+            "file": "w40-u-5-1.review-pass.md",
+            "anchor": "### `w40-u-5-1-t01`"
+          }
+        }
+      ]
+    },
+    {
+      "id": "w40-u-5-1-p06",
+      "template": "PAGE-feedback",
+      "variant": "PV-feedback-retry",
+      "title": "Encore une fois, autrement",
+      "manuscriptRef": {
+        "file": "w40-u-5-1.review-pass.md",
+        "anchor": "## `w40-u-5-1-p06` — Encore une fois, autrement"
+      },
+      "content": [
+        {
+          "type": "text",
+          "role": "note",
+          "language": "fr",
+          "text": "Ici reviennent, sous une autre forme, les exercices qui n’ont pas marché du premier coup.",
+          "manuscriptRef": {
+            "file": "w40-u-5-1.review-pass.md",
+            "anchor": "## `w40-u-5-1-p06` — Encore une fois, autrement"
+          }
+        }
+      ],
+      "items": []
+    },
+    {
+      "id": "w40-u-5-1-p07",
+      "template": "PAGE-closed",
+      "variant": "PV-closed-mixed",
+      "title": "Réponses modèles",
+      "visibleAfter": "w40-u-5-1-p06",
+      "manuscriptRef": {
+        "file": "w40-u-5-1.review-pass.md",
+        "anchor": "## `w40-u-5-1-p07` — Réponses modèles"
+      },
+      "content": [
+        {
+          "type": "text",
+          "role": "example",
+          "language": "fr",
+          "text": "Elle reste à la fenêtre parce qu’elle aime regarder le quartier se réveiller.",
+          "manuscriptRef": {
+            "file": "w40-u-5-1.review-pass.md",
+            "anchor": "## `w40-u-5-1-p07` — Réponses modèles"
+          }
+        }
+      ],
+      "items": []
+    }
+  ],
+  "completion": {
+    "mode": "resolved",
+    "requiredRefs": [
+      "w40-u-5-1-i01",
+      "w40-u-5-1-alt-i01",
+      "w40-u-5-1-i02"
+    ]
+  }
+}

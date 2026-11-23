@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.1.0",
+  "week": 1,
+  "units": [
+    {
+      "id": "w01-u-4-1",
+      "coordinate": "(4,1)",
+      "functionType": "grammar_pronoun_practice",
+      "title": "En et quantité",
+      "pages": [
+        {
+          "id": "w01-u-4-1-p07",
+          "title": "En et quantité",
+          "instruction": "Réponds avec en et garde la quantité donnée.",
+          "blocks": [],
+          "items": [
+            {
+              "id": "w01-u-4-1-i05",
+              "type": "typed",
+              "instruction": "Réponds avec en et garde la quantité donnée.",
+              "prompt": "Tu veux combien de croissants ? Réponds : deux.",
+              "answer": {
+                "primary": "J’en veux deux.",
+                "accepted": [
+                  "J’en veux deux.",
+                  "J’en prends deux.",
+                  "J’en voudrais deux."
+                ],
+                "normalization": {
+                  "unicode": "NFC",
+                  "trim": true,
+                  "collapseSpaces": true
+                }
+              },
+              "feedback": {
+                "correct": "Exact : en remplace « de croissants ».",
+                "genericIncorrect": "Utilise en et garde la quantité donnée."
+              },
+              "retry": {
+                "onIncorrect": true,
+                "delayMin": 3,
+                "delayMax": 7
+              }
+            }
+          ]
+        }
+      ],
+      "reviewBinding": {
+        "reviewPass": "w01-u-4-1.review-pass.md",
+        "manuscripts": [
+          {
+            "file": "w01-u-4-1.review-pass.md",
+            "sha256": "94f578e096ce9e7c4fc5717cbafb59c35dc5ef64022753165612e8c859580c18"
+          }
+        ],
+        "contentSha256": "3f3871160da87b9a5b191c7fc6b8234d74d7c16850ddc375faffa9bd7a617767"
+      }
+    }
+  ],
+  "tests": [],
+  "vocabulary": [
+    {
+      "id": "w01-v2-073",
+      "fr": "une gamme",
+      "hu": [
+        "termékválaszték",
+        "skála"
+      ],
+      "acceptedTranslations": {
+        "FR_TO_HU": [
+          "termékválaszték",
+          "skála"
+        ],
+        "HU_TO_FR": [
+          "une gamme",
+          "la gamme"
+        ]
+      }
+    }
+  ]
+}

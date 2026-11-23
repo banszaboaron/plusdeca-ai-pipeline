@@ -1,0 +1,182 @@
+{
+  "_megjegyzes": "Alapbeállítás. Saját értékekhez másold config.local.json néven (nincs verziókezelve), és csak az eltérő mezőket írd bele.",
+  "_agentMode": "Agent-módú futásnál (--roles agent) a szerepleírás átadása: inline (a prompt elején; mindig működik) | agents-md (a munkamappa AGENTS.md-je, csak Codex) | codex-spawn (kísérleti) | claude-agent (claude -p --agent). Hogy melyik működik nálad, a `node ceo.mjs doctor --probe-agents` méri meg.",
+  "workRoot": null,
+  "providers": {
+    "codex": {
+      "command": "codex",
+      "args": [
+        "exec",
+        "--skip-git-repo-check",
+        "--ephemeral",
+        "--sandbox",
+        "read-only",
+        "--disable",
+        "shell_tool",
+        "--disable",
+        "unified_exec",
+        "--cd",
+        "{workdir}",
+        "--output-last-message",
+        "{outFile}",
+        "{modelArgs}",
+        "{agentArgs}",
+        "-"
+      ],
+      "modelFlag": "--model",
+      "effortTemplate": [
+        "-c",
+        "model_reasoning_effort={effort}"
+      ],
+      "outputFrom": "file",
+      "helpArgs": [
+        "exec",
+        "--help"
+      ],
+      "requiredFlags": [
+        "--skip-git-repo-check",
+        "--ephemeral",
+        "--sandbox",
+        "--cd",
+        "--output-last-message",
+        "--model",
+        "--disable"
+      ],
+      "loginCheckArgs": [
+        "login",
+        "status"
+      ],
+      "jsonFlag": "--json",
+      "agentMode": "inline"
+    },
+    "claude": {
+      "command": "claude",
+      "args": [
+        "-p",
+        "--output-format",
+        "stream-json",
+        "--verbose",
+        "--disallowedTools",
+        "Bash,Edit,Write,NotebookEdit,WebFetch,WebSearch",
+        "{modelArgs}",
+        "{agentArgs}"
+      ],
+      "modelFlag": "--model",
+      "outputFrom": "stream-json",
+      "helpArgs": [
+        "--help"
+      ],
+      "requiredFlags": [
+        "--print",
+        "--output-format",
+        "--disallowedTools",
+        "--model",
+        "--verbose"
+      ],
+      "agentMode": "inline"
+    },
+    "claude-web": {
+      "command": "claude",
+      "args": [
+        "-p",
+        "--output-format",
+        "stream-json",
+        "--verbose",
+        "--disallowedTools",
+        "Bash,Edit,Write,NotebookEdit",
+        "--allowedTools",
+        "WebSearch,WebFetch",
+        "{modelArgs}",
+        "{agentArgs}"
+      ],
+      "modelFlag": "--model",
+      "outputFrom": "stream-json",
+      "helpArgs": [
+        "--help"
+      ],
+      "requiredFlags": [
+        "--print",
+        "--output-format",
+        "--disallowedTools",
+        "--allowedTools",
+        "--model",
+        "--verbose"
+      ],
+      "agentMode": "claude-agent"
+    }
+  },
+  "assign": {
+    "GI1-3": "claude-web",
+    "PE": "claude-web",
+    "GI1-4": "claude-web",
+    "SOLVER": "claude"
+  },
+  "assignWeek": {
+    "author": "claude-web",
+    "reviewer": "claude-web",
+    "FR": "claude-web",
+    "GR": "claude-web",
+    "RR": "claude-web",
+    "VR": "claude-web",
+    "XR": "claude-web",
+    "iro": "claude-web",
+    "MEGOLDASIRO": "claude-web",
+    "PE": "claude-web",
+    "NavE": "claude-web",
+    "NyE": "claude-web",
+    "HE": "claude-web",
+    "UE": "claude-web"
+  },
+  "roles": {
+    "GI1-3": {
+      "effort": "high"
+    },
+    "PE": {
+      "effort": "high"
+    },
+    "GI1-4": {
+      "effort": "high"
+    },
+    "SOLVER": {}
+  },
+  "limits": {
+    "maxCalls": 40,
+    "maxRounds": 2,
+    "minorRounds": 1,
+    "solverRounds": 1,
+    "stepTimeoutMs": 1200000,
+    "peMaxRounds": 4,
+    "peRuns": 2,
+    "peRewriteAfter": 2,
+    "weekMaxCalls": 450,
+    "javitasMaxCalls": 80,
+    "javitasDecisionCalls": 30,
+    "p5MaxRounds": 3,
+    "autoExtraRounds": 1,
+    "autoExtraMaxMajor": 2,
+    "peRecheckRuns": 1
+  },
+  "_peRecheckRuns": "2026-11-15 (1. hét mérése): a kettős PE-futás (peRuns) csak a teljes vizsgálatnál; a recheck az egyesített korábbi jelentésből dolgozik, ott peRecheckRuns futás (1).",
+  "_autoExtraRounds": "2026-11-15: ha egy lépés körkerete elfogy, de minden nyitott ellenőr javul (kevesebb BLOCKER+MAJOR, mint az előző jelentésében), nincs BLOCKER és legfeljebb autoExtraMaxMajor MAJOR maradt, a CEO lépésenként autoExtraRounds plusz kört ad, mielőtt a PRESIDENT-hez fordulna. Nem javuló vagy nagy maradéknál a döntés továbbra is a PRESIDENT-é.",
+  "_p5MaxRounds": "A javitas lánc P5-javítási köreinek száma (2026-11-02): 3, mert a kapu a szerződést (CONTRACT) csak a CL-01 hibák után ellenőrzi, így a szerződéshiba gyakran csak a 2. kör után jön elő (U21 i05). A többi fázis maxRounds-a nem változik.",
+  "_limits": "maxCalls: hívási felső korlát futásonként (a full --solver legrosszabb esetben 12 hívás). maxRounds: PE-javítási körök. minorRounds: PASS mellett a minor findingok javítására szánt körök (a maxRounds-on belül). solverRounds: a független megoldó problémáinak visszacsatolási körei; ha utána is marad probléma, BLOCKED_SOLVER_FINDINGS. peMaxRounds/peRuns/peRewriteAfter (2026-10-28, DONTESEK): a PE-nek legfeljebb 4 javítási köre van (a többi ellenőrnek maxRounds = 2 marad), minden PE-lépés 2 független futás (a findingok uniója számít), és ha a 2. kör után is nyitott valóság- vagy mondatpróbás MAJOR, a következő szerzői megbízás újraírás (assignments/het/UJRAIRAS.md). maxCalls 14 → 40 (egy egység javítása): alapkör 12 (terv + NavE + UE 3, kézirat 1, megoldás + megoldó 2, PE×2 + NavE + NyE + HE + UE 6), PE-körönként 3 (szerző + PE×2) + a még nyitott többi ellenőr; 2 kör jellemzően ~20, 4 PE-kör újraírással (újraírás után minden ellenőr újra) ~32, + tartalék a P5-javításra és a döntési/segítség-lépésekre. A heti lánc saját korlátja weekMaxCalls (450). javitasMaxCalls (a javitas lánc, egy egység): alap 15 (terv + NavE + UE 3; kézirat + PE×2 + NavE 4; megoldás + PE×2 + NavE + NyE + HE + UE + megoldó 8), jellemzően ~22, legrosszabb esetben ~58 (kézirat- és megoldásfázis 4-4 PE-körrel, P5-javítással) → 80.",
+  "_ellenorizve": "A kapcsolók ellenőrizve: codex-cli 0.160.0 (codex exec --help), Claude Code 2.1.289 (claude --help), 2026-10-04.",
+  "_workRoot": "A szerepek munkamappája. null: a rendszer ideiglenes mappája (a repón kívül, hogy a CLI ne töltse be a repó AGENTS.md-jét). \"runDir\": a futásmappán belül (régi viselkedés).",
+  "_eszkozok": "A Codex-szerepek csak olvasási sandboxban és parancsfuttatás nélkül futnak (--disable shell_tool, --disable unified_exec). Ha a te Codex-verziód ezeket a kapcsolókat nem ismeri, a doctor --probe jelzi.",
+  "decisions": {
+    "pollSeconds": 60
+  },
+  "_decisions": "Döntésre várva a CEO ennyi percig figyeli a választ (helyi fájl vagy projektkövető), utána megáll. waitMinutes alapértéke: relay mellett 720 (12 óra), anélkül 0 (azonnal megáll). Heti láncban (2026-10-31, Áron) egy blokk kérdése nem állítja meg a futást: a CEO értesít, a tőle független blokkokkal megy tovább (az oszlop későbbi blokkjai a korábbiak elfogadott tervére várnak), és csak akkor vár a válaszra, ha már nincs más teendő.",
+  "_assign": "Szerepenként a szolgáltató. 2026-10-28 (Áron döntése, docs/DONTESEK.md): minden szerep Claude-on fut a Max előfizetésből — szerzők, rendezők, megoldásíró és ellenőrök claude-web (webbel), a független megoldó claude (web és eszköz nélkül). Felülírja a 10-05-i „szerzők Codexen” döntést; szerepenként visszaállítható (assign / assignWeek). A heti láncban a megoldót a --solver kapcsoló kapcsolja be. Összehasonlító próbához: --pe codex|claude|claude-web.",
+  "_access": "Segítségkérés: ha egy szerep saját webes kereséssel (2–3 lekérdezés) sem talál használható forrást, SEGITSEGKERES blokkal kérhet. A CEO nem vár (PRESIDENT, 2026-10-28; a 10-06-i 2 órás várakozás helyett): a szerep a tartaléktervével folytatja, forrásonként egyszer megy értesítés, a válasz (decisions/segitseg-<n>.md) minden további hívás promptjába bekerül.",
+  "usage": {
+    "enabled": true,
+    "file": null,
+    "threshold": 95,
+    "staleMinutes": 30,
+    "noResetWaitMinutes": 30,
+    "marginSeconds": 60,
+    "maxWaits": 100
+  },
+  "_usage": "Keretfigyelés (Áron kérése, 2026-10-28). file: a keretfájl (null: %USERPROFILE%.claudeplusdeca-usage.json); a CEO minden claude -p hívás stream-json kimenetéből (rate_limit_event) frissíti, és a Claude Code statusline-szkriptje is írhatja (tools/statusline/plusdeca-usage.mjs). Hívás előtt: ha a fájl staleMinutes-nál frissebb, és az 5 órás vagy a heti ablak ≥ threshold %, a CEO e-mailt küld („vár: keret X%, folytatás ekkor: …”), és a resets_at + marginSeconds időpontig vár. Keretkimerülési hibánál ugyanígy vár (ha a CLI nem ad időpontot: noResetWaitMinutes), majd ugyanazt a lépést újra hívja; a keret miatt elutasított hívás nem számít a maxCalls-ba. maxWaits: ennyi várakozás után egy lépés hibával megáll."
+}

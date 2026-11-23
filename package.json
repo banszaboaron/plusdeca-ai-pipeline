@@ -1,16 +1,16 @@
 {
-  "name": "plusdeca-feedback-portfolio",
-  "version": "1.0.0",
+  "name": "plusdeca-ai-pipeline",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
-  "description": "Evaluated LLM feedback on short French writing tasks: deterministic filter, two independent checkers, schema validation, strict merge, revision loop. Extracted from the private Plusdeça course app.",
+  "description": "LLM course-production pipeline with deterministic gates, a real example unit, and an evaluated feedback pipeline for learner writing. Extracted from the private Plusdeça French course.",
   "license": "MIT",
-  "engines": { "node": ">=20" },
+  "engines": { "node": ">=22" },
   "scripts": {
-    "test": "node --test test/*.test.mjs",
-    "demo": "node scripts/demo.mjs",
-    "eval": "node scripts/eval.mjs",
-    "eval:live": "node scripts/eval.mjs --live --out results/live-local",
-    "html": "node scripts/render-html.mjs"
+    "test": "npm run test:pipeline && npm run test:feedback",
+    "test:pipeline": "node pipeline/run-tests.mjs",
+    "test:feedback": "npm test --prefix feedback-eval",
+    "demo": "npm run demo --prefix feedback-eval",
+    "stats": "node pipeline/scripts/run-stats.mjs"
   }
 }

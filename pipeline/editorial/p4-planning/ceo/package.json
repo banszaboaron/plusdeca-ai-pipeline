@@ -1,0 +1,21 @@
+{
+  "name": "plusdeca-ceo-pilot",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "CEO-vezérlő pilot: a P4 szerepek automatikus futtatása Codex/Claude CLI-vel (szerepcsomagként vagy generált agentként), kézi chat-továbbítás nélkül.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "doctor": "node ceo.mjs doctor",
+    "probe": "node ceo.mjs doctor --probe",
+    "probe-agents": "node ceo.mjs doctor --probe-agents",
+    "agents": "node build-agents.mjs",
+    "agents:check": "node build-agents.mjs --check"
+  },
+  "devDependencies": {
+    "smol-toml": "^1.9.0"
+  }
+}

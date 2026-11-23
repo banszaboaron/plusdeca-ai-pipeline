@@ -1,0 +1,190 @@
+{
+  "schemaVersion": "p5-block-1.0.0",
+  "contractVersion": "2.0.0",
+  "id": "w40-test-maitrise",
+  "week": 40,
+  "kind": "assessment",
+  "assessmentKind": "grammar",
+  "title": "Test de maîtrise",
+  "prerequisites": [],
+  "estimatedMinutes": {
+    "min": 3,
+    "max": 5
+  },
+  "pages": [
+    {
+      "id": "w40-test-maitrise-p01",
+      "template": "PAGE-closed",
+      "variant": "PV-closed-mixed",
+      "title": "Test de maîtrise",
+      "instruction": "Réponds à chaque question. Si une réponse est fausse, une autre question sur le même point viendra plus tard.",
+      "manuscriptRef": {
+        "file": "w40-test-maitrise.review-pass.md",
+        "anchor": "## `w40-test-maitrise-p01` — Test de maîtrise"
+      },
+      "content": [],
+      "items": [
+        {
+          "id": "w40-test-maitrise-i01",
+          "capability": "CAP-choice-single",
+          "variant": "PV-choice-one",
+          "prompt": "Pour le goûter, Nora achète ___ brioche.",
+          "response": {
+            "type": "single",
+            "options": [
+              {
+                "id": "a",
+                "label": "une"
+              },
+              {
+                "id": "b",
+                "label": "de la"
+              }
+            ]
+          },
+          "solution": {
+            "type": "choice",
+            "keyOptionIds": [
+              "a"
+            ]
+          },
+          "evaluation": {
+            "mode": "exact"
+          },
+          "manuscriptRef": {
+            "file": "w40-test-maitrise.review-pass.md",
+            "anchor": "### `w40-test-maitrise-i01`"
+          },
+          "retry": {
+            "afterItems": 1,
+            "items": [
+              {
+                "id": "w40-test-maitrise-i01-r1",
+                "capability": "CAP-choice-single",
+                "variant": "PV-choice-one",
+                "prompt": "Le voisin apporte ___ tarte.",
+                "response": {
+                  "type": "single",
+                  "options": [
+                    {
+                      "id": "a",
+                      "label": "une"
+                    },
+                    {
+                      "id": "b",
+                      "label": "de la"
+                    }
+                  ]
+                },
+                "solution": {
+                  "type": "choice",
+                  "keyOptionIds": [
+                    "a"
+                  ]
+                },
+                "evaluation": {
+                  "mode": "exact"
+                },
+                "manuscriptRef": {
+                  "file": "w40-test-maitrise.review-pass.md",
+                  "anchor": "### `w40-test-maitrise-i01-r1`"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "w40-test-maitrise-i02",
+          "capability": "CAP-typed-short",
+          "variant": "PV-typed-short",
+          "prompt": "Complète : Il n’y a plus ___ lait.",
+          "response": {
+            "type": "text",
+            "lines": "single"
+          },
+          "solution": {
+            "type": "exact",
+            "key": "de",
+            "alternatives": []
+          },
+          "evaluation": {
+            "mode": "exact"
+          },
+          "manuscriptRef": {
+            "file": "w40-test-maitrise.review-pass.md",
+            "anchor": "### `w40-test-maitrise-i02`"
+          },
+          "retry": {
+            "afterItems": 3,
+            "items": [
+              {
+                "id": "w40-test-maitrise-i02-r1",
+                "capability": "CAP-typed-short",
+                "variant": "PV-typed-short",
+                "prompt": "Complète : Je ne veux pas ___ sucre.",
+                "response": {
+                  "type": "text",
+                  "lines": "single"
+                },
+                "solution": {
+                  "type": "exact",
+                  "key": "de",
+                  "alternatives": []
+                },
+                "evaluation": {
+                  "mode": "exact"
+                },
+                "manuscriptRef": {
+                  "file": "w40-test-maitrise.review-pass.md",
+                  "anchor": "### `w40-test-maitrise-i02-r1`"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "w40-test-maitrise-i03",
+          "capability": "CAP-transformation",
+          "variant": "PV-transform-sentence",
+          "prompt": "Remplace par en : Je veux trois pommes.",
+          "response": {
+            "type": "text",
+            "lines": "single"
+          },
+          "solution": {
+            "type": "exact",
+            "key": "J’en veux trois.",
+            "alternatives": []
+          },
+          "evaluation": {
+            "mode": "exact"
+          },
+          "manuscriptRef": {
+            "file": "w40-test-maitrise.review-pass.md",
+            "anchor": "### `w40-test-maitrise-i03`"
+          }
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "mode": "mastery",
+    "requiredRefs": [
+      "w40-test-maitrise-i01",
+      "w40-test-maitrise-i02",
+      "w40-test-maitrise-i03"
+    ]
+  },
+  "review": {
+    "status": "REVIEW_PASS",
+    "reviewPass": "w40-test-maitrise.review-pass.md",
+    "manuscripts": [
+      {
+        "file": "w40-test-maitrise.review-pass.md",
+        "sha256": "4f0f5cfe2d8c1caf94055ccf2c85ac2cbe58de8f3479824c58a652be8aaca6cd",
+        "role": "review-pass"
+      }
+    ],
+    "contentSha256": "6efff6c85f23c9962fde8b82be1fa83260b609ee16639202760e9c26802dad2c"
+  }
+}

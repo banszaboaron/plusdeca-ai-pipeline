@@ -1,0 +1,153 @@
+{
+  "schemaVersion": "p5-block-1.0.0",
+  "contractVersion": "2.0.0",
+  "id": "w40-u-4-1",
+  "week": 40,
+  "kind": "lesson",
+  "title": "Regarder la vidéo",
+  "position": {
+    "row": 4,
+    "column": 4
+  },
+  "prerequisites": [],
+  "estimatedMinutes": {
+    "min": 1,
+    "max": 2
+  },
+  "media": [
+    {
+      "id": "mire",
+      "kind": "video",
+      "access": "local",
+      "file": "test-pattern.mp4",
+      "alternative": "Mire de test en couleurs, sans son.",
+      "duration": 2
+    },
+    {
+      "id": "clip",
+      "kind": "video",
+      "access": "link",
+      "uri": "https://example.com/plusdeca-video-test",
+      "alternative": "Vidéo externe de test. Elle s’ouvre seulement avec une connexion."
+    }
+  ],
+  "pages": [
+    {
+      "id": "w40-u-4-1-p01",
+      "template": "PAGE-media",
+      "variant": "PV-media-video",
+      "title": "Regarder la vidéo",
+      "instruction": "Regarde la courte vidéo.",
+      "manuscriptRef": {
+        "file": "w40-u-4-1.review-pass.md",
+        "anchor": "## `w40-u-4-1-p01` — Regarder la vidéo"
+      },
+      "content": [],
+      "items": [
+        {
+          "id": "w40-u-4-1-i01",
+          "capability": "CAP-media-observation",
+          "variant": "PV-media-video",
+          "prompt": "Que montre la vidéo ?",
+          "mediaRefs": [
+            "mire"
+          ],
+          "response": {
+            "type": "single",
+            "options": [
+              {
+                "id": "a",
+                "label": "une mire de test"
+              },
+              {
+                "id": "b",
+                "label": "un café"
+              }
+            ]
+          },
+          "solution": {
+            "type": "choice",
+            "keyOptionIds": [
+              "a"
+            ]
+          },
+          "evaluation": {
+            "mode": "exact"
+          },
+          "manuscriptRef": {
+            "file": "w40-u-4-1.review-pass.md",
+            "anchor": "### `w40-u-4-1-i01`"
+          }
+        }
+      ]
+    },
+    {
+      "id": "w40-u-4-1-p02",
+      "template": "PAGE-media",
+      "variant": "PV-media-video",
+      "title": "Vidéo en ligne",
+      "instruction": "Cette vidéo s’ouvre dans un nouvel onglet.",
+      "manuscriptRef": {
+        "file": "w40-u-4-1.review-pass.md",
+        "anchor": "## `w40-u-4-1-p02` — Vidéo en ligne"
+      },
+      "content": [],
+      "items": [
+        {
+          "id": "w40-u-4-1-i02",
+          "capability": "CAP-media-observation",
+          "variant": "PV-media-video",
+          "prompt": "Que faut-il pour regarder cette vidéo ?",
+          "mediaRefs": [
+            "clip"
+          ],
+          "response": {
+            "type": "single",
+            "options": [
+              {
+                "id": "a",
+                "label": "une connexion internet"
+              },
+              {
+                "id": "b",
+                "label": "rien"
+              }
+            ]
+          },
+          "solution": {
+            "type": "choice",
+            "keyOptionIds": [
+              "a"
+            ]
+          },
+          "evaluation": {
+            "mode": "exact"
+          },
+          "manuscriptRef": {
+            "file": "w40-u-4-1.review-pass.md",
+            "anchor": "### `w40-u-4-1-i02`"
+          }
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "mode": "all-items",
+    "requiredRefs": [
+      "w40-u-4-1-i01",
+      "w40-u-4-1-i02"
+    ]
+  },
+  "review": {
+    "status": "REVIEW_PASS",
+    "reviewPass": "w40-u-4-1.review-pass.md",
+    "manuscripts": [
+      {
+        "file": "w40-u-4-1.review-pass.md",
+        "sha256": "00bb853c9e952ab5decfcce10bf86927b68617e98693ecbb370d06ef3b739f24",
+        "role": "review-pass"
+      }
+    ],
+    "contentSha256": "039cc2d64ab27cc0ca0d3ef8241f410cdf1cd86cd1912063b599231724c72b2d"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "unit": "U21",
+  "p5Id": "w01-u-2-1",
+  "runDir": "<private-repo>\\editorial\\p4-planning\\ceo\\runs\\t27-U21-2026-11-15",
+  "calls": 67,
+  "estimate": {
+    "alap": 15,
+    "jellemzo": 22,
+    "legrosszabb": 58
+  },
+  "rounds": {
+    "terv": 1,
+    "kezirat": 0,
+    "megoldas": 2
+  },
+  "rewrites": {
+    "kezirat": 0,
+    "megoldas": 0
+  },
+  "escalations": [
+    {
+      "n": 1,
+      "items": [
+        "E-09",
+        "E-10",
+        "E-11",
+        "E-12",
+        "E-13",
+        "E-14"
+      ],
+      "decision": "<private-repo>\\editorial\\p4-planning\\ceo\\runs\\t27-U21-2026-11-15\\decisions\\u21-eszkalacio1.md",
+      "kezirat": {
+        "id": "u21-kezirat-e1",
+        "rounds": 0,
+        "reviewers": [
+          "PE",
+          "NyE",
+          "NavE"
+        ]
+      },
+      "megoldas": {
+        "id": "u21-megoldas-e1-rev1",
+        "rounds": 1,
+        "reviewers": [
+          "PE",
+          "NyE",
+          "UE",
+          "SOLVER"
+        ]
+      }
+    }
+  ],
+  "p5": {
+    "outcome": "P5_PASS",
+    "rounds": 0,
+    "errors": 0
+  }
+}

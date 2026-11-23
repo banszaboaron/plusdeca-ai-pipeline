@@ -1,0 +1,58 @@
+{
+  "unit": "U21",
+  "p5Id": "w01-u-2-1",
+  "runDir": "<private-repo>\\editorial\\p4-planning\\ceo\\runs\\javitas-U21-2026-11-01",
+  "calls": 55,
+  "estimate": {
+    "alap": 15,
+    "jellemzo": 22,
+    "legrosszabb": 58
+  },
+  "rounds": {
+    "terv": 2,
+    "kezirat": 1,
+    "megoldas": 2
+  },
+  "rewrites": {
+    "kezirat": 0,
+    "megoldas": 0
+  },
+  "escalations": [
+    {
+      "n": 1,
+      "items": [
+        "E-01",
+        "E-02",
+        "E-03",
+        "E-05"
+      ],
+      "decision": null,
+      "kezirat": {
+        "id": "u21-kezirat-e1",
+        "rounds": 0,
+        "reviewers": [
+          "PE",
+          "NyE",
+          "NavE",
+          "UE"
+        ]
+      },
+      "megoldas": {
+        "id": "u21-megoldas-e1-rev1",
+        "rounds": 1,
+        "reviewers": [
+          "PE",
+          "NavE",
+          "NyE",
+          "UE",
+          "SOLVER"
+        ]
+      }
+    }
+  ],
+  "p5": {
+    "outcome": "P5_PASS",
+    "rounds": 3,
+    "errors": 0
+  }
+}

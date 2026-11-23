@@ -1,0 +1,350 @@
+{
+  "$comment": "Minta, nem teljes blokk: egy sorrendezős oldal (PV-order-tokens) a kapun átment U11 blokkból (p5/blocks/w01/block.w01-u-1-1.json, 2026-11-01, GATE_PASS). A kulcs formája: solution.type = choice, keyOptionIds = a tokenek teljes sorrendje, alternativeOrders = további helyes sorrendek (elhagyható).",
+  "page": {
+    "id": "w01-u-1-1-p23",
+    "template": "PAGE-structured",
+    "variant": "PV-order-tokens",
+    "title": "Rakd össze a mondatot",
+    "instruction": "Rakd sorba az elemeket, hogy helyes mondat legyen belőlük. A már lerakott elemeket is átrakhatod.",
+    "manuscriptRef": {
+      "file": "w01-u-1-1.kezirat.md",
+      "anchor": "## p23: Rakd össze a mondatot"
+    },
+    "content": [],
+    "items": [
+      {
+        "id": "w01-u-1-1-i23-s001",
+        "capability": "CAP-ordering",
+        "variant": "PV-order-tokens",
+        "prompt": "*Boulangerie, 8 h 16. Une cliente montre les pains au chocolat qui restent.* `deux` · `voudrais` · `j'` · `en`",
+        "response": {
+          "type": "order",
+          "tokens": [
+            {
+              "id": "t1",
+              "label": "deux"
+            },
+            {
+              "id": "t2",
+              "label": "voudrais"
+            },
+            {
+              "id": "t3",
+              "label": "j'"
+            },
+            {
+              "id": "t4",
+              "label": "en"
+            }
+          ]
+        },
+        "solution": {
+          "type": "choice",
+          "keyOptionIds": [
+            "t3",
+            "t4",
+            "t2",
+            "t1"
+          ]
+        },
+        "feedback": {
+          "incorrect": "Az *en* a ragozott ige elé kerül, a szám a mondat végére: *J'en voudrais deux.*"
+        },
+        "evaluation": {
+          "mode": "exact",
+          "scoring": "scored"
+        },
+        "targetRefs": [
+          "w01-g-en-position-finite-infinitive"
+        ],
+        "manuscriptRef": {
+          "file": "w01-u-1-1.kezirat.md",
+          "anchor": "### w01-u-1-1-i23"
+        }
+      },
+      {
+        "id": "w01-u-1-1-i23-s002",
+        "capability": "CAP-ordering",
+        "variant": "PV-order-tokens",
+        "prompt": "*Boulangerie, 8 h 09. La boulangère parle des croissants au beurre.* `plus` · `nous` · `avons` · `n'` · `en`",
+        "response": {
+          "type": "order",
+          "tokens": [
+            {
+              "id": "t1",
+              "label": "plus"
+            },
+            {
+              "id": "t2",
+              "label": "nous"
+            },
+            {
+              "id": "t3",
+              "label": "avons"
+            },
+            {
+              "id": "t4",
+              "label": "n'"
+            },
+            {
+              "id": "t5",
+              "label": "en"
+            }
+          ]
+        },
+        "solution": {
+          "type": "choice",
+          "keyOptionIds": [
+            "t2",
+            "t4",
+            "t5",
+            "t3",
+            "t1"
+          ],
+          "alternativeOrders": [
+            [
+              "t4",
+              "t5",
+              "t3",
+              "t2",
+              "t1"
+            ]
+          ]
+        },
+        "feedback": {
+          "incorrect": "Tagadásban az *en* a *ne* és az ige között áll: *Nous n'en avons plus.*",
+          "targeted": [
+            {
+              "id": "U11-I23-S002-INV",
+              "trigger": "t4 t5 t3 t2 t1",
+              "text": "Kérdésként helyes: *N'en avons-nous plus ?* Állításként: *Nous n'en avons plus.*"
+            }
+          ]
+        },
+        "evaluation": {
+          "mode": "exact",
+          "scoring": "scored"
+        },
+        "targetRefs": [
+          "w01-g-en-position-finite-infinitive"
+        ],
+        "manuscriptRef": {
+          "file": "w01-u-1-1.kezirat.md",
+          "anchor": "### w01-u-1-1-i23"
+        }
+      },
+      {
+        "id": "w01-u-1-1-i23-s003",
+        "capability": "CAP-ordering",
+        "variant": "PV-order-tokens",
+        "prompt": "*Salle de pause, 9 h. Thomas parle de Sophie : chez elle, elle n'a plus de café moulu.* `demain` · `acheter` · `elle` · `en` · `va`",
+        "response": {
+          "type": "order",
+          "tokens": [
+            {
+              "id": "t1",
+              "label": "demain"
+            },
+            {
+              "id": "t2",
+              "label": "acheter"
+            },
+            {
+              "id": "t3",
+              "label": "elle"
+            },
+            {
+              "id": "t4",
+              "label": "en"
+            },
+            {
+              "id": "t5",
+              "label": "va"
+            }
+          ]
+        },
+        "solution": {
+          "type": "choice",
+          "keyOptionIds": [
+            "t3",
+            "t5",
+            "t4",
+            "t2",
+            "t1"
+          ],
+          "alternativeOrders": [
+            [
+              "t1",
+              "t3",
+              "t5",
+              "t4",
+              "t2"
+            ]
+          ]
+        },
+        "feedback": {
+          "incorrect": "Ha az *en* a főnévi igenév tárgya, a főnévi igenév elé kerül: *Elle va en acheter demain.*"
+        },
+        "evaluation": {
+          "mode": "exact",
+          "scoring": "scored"
+        },
+        "targetRefs": [
+          "w01-g-en-position-finite-infinitive"
+        ],
+        "manuscriptRef": {
+          "file": "w01-u-1-1.kezirat.md",
+          "anchor": "### w01-u-1-1-i23"
+        }
+      },
+      {
+        "id": "w01-u-1-1-i23-s004",
+        "capability": "CAP-ordering",
+        "variant": "PV-order-tokens",
+        "prompt": "*Boulangerie, 8 h 13. La boulangère, à Réka, à propos des chouquettes.* `souvent` · `prenez` · `en` · `vous`",
+        "response": {
+          "type": "order",
+          "tokens": [
+            {
+              "id": "t1",
+              "label": "souvent"
+            },
+            {
+              "id": "t2",
+              "label": "prenez"
+            },
+            {
+              "id": "t3",
+              "label": "en"
+            },
+            {
+              "id": "t4",
+              "label": "vous"
+            }
+          ]
+        },
+        "solution": {
+          "type": "choice",
+          "keyOptionIds": [
+            "t4",
+            "t3",
+            "t2",
+            "t1"
+          ],
+          "alternativeOrders": [
+            [
+              "t3",
+              "t2",
+              "t4",
+              "t1"
+            ],
+            [
+              "t1",
+              "t4",
+              "t3",
+              "t2"
+            ]
+          ]
+        },
+        "feedback": {
+          "incorrect": "Az *en* a ragozott ige előtt áll: *Vous en prenez souvent.*",
+          "targeted": [
+            {
+              "id": "U11-I23-S004-INV",
+              "trigger": "t3 t2 t4 t1",
+              "text": "Kérdésként helyes: *En prenez-vous souvent ?* Állításként: *Vous en prenez souvent.*"
+            }
+          ]
+        },
+        "evaluation": {
+          "mode": "exact",
+          "scoring": "scored"
+        },
+        "targetRefs": [
+          "w01-g-en-position-finite-infinitive"
+        ],
+        "manuscriptRef": {
+          "file": "w01-u-1-1.kezirat.md",
+          "anchor": "### w01-u-1-1-i23"
+        }
+      },
+      {
+        "id": "w01-u-1-1-i23-s005",
+        "capability": "CAP-ordering",
+        "variant": "PV-order-tokens",
+        "prompt": "*Salle de pause, 9 h 10. Réka parle de Thomas, de Marc et des tartes pour l'anniversaire de Sophie.* `commander` · `ils` · `en` · `pas` · `veulent` · `ne`",
+        "response": {
+          "type": "order",
+          "tokens": [
+            {
+              "id": "t1",
+              "label": "commander"
+            },
+            {
+              "id": "t2",
+              "label": "ils"
+            },
+            {
+              "id": "t3",
+              "label": "en"
+            },
+            {
+              "id": "t4",
+              "label": "pas"
+            },
+            {
+              "id": "t5",
+              "label": "veulent"
+            },
+            {
+              "id": "t6",
+              "label": "ne"
+            }
+          ]
+        },
+        "solution": {
+          "type": "choice",
+          "keyOptionIds": [
+            "t2",
+            "t6",
+            "t5",
+            "t4",
+            "t3",
+            "t1"
+          ],
+          "alternativeOrders": [
+            [
+              "t6",
+              "t5",
+              "t2",
+              "t4",
+              "t3",
+              "t1"
+            ]
+          ]
+        },
+        "feedback": {
+          "incorrect": "A tagadás a ragozott igét (*veulent*) fogja közre, az *en* a főnévi igenév előtt marad: *Ils ne veulent pas en commander.*",
+          "targeted": [
+            {
+              "id": "U11-I23-S005-INV",
+              "trigger": "t6 t5 t2 t4 t3 t1",
+              "text": "Kérdésként helyes: *Ne veulent-ils pas en commander ?* Állításként: *Ils ne veulent pas en commander.*"
+            }
+          ]
+        },
+        "evaluation": {
+          "mode": "exact",
+          "scoring": "scored"
+        },
+        "targetRefs": [
+          "w01-g-en-position-finite-infinitive"
+        ],
+        "manuscriptRef": {
+          "file": "w01-u-1-1.kezirat.md",
+          "anchor": "### w01-u-1-1-i23"
+        }
+      }
+    ]
+  }
+}

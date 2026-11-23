@@ -1,0 +1,15 @@
+{
+  "name": "plusdeca-p5",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "P5: blokkforrás-formátum (block.<ID>.json) és a gépi kapuk (séma, hűség, review-kötés, játszhatóság, válasz-épség, brief, meta-tokenek). Függőség nélkül fut.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test \"test/*.test.mjs\"",
+    "gates": "node gates.mjs",
+    "bind": "node bind.mjs"
+  }
+}

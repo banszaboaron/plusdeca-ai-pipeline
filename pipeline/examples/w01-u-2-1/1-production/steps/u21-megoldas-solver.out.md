@@ -1,0 +1,26 @@
+# U21 — független megoldás, kulcs nélkül
+
+| item-ID | a te válaszod | minden elfogadható válasz | probléma (ha van) |
+|---|---|---|---|
+| w01-u-2-1-i01 | 1 = partitív névelő (a kenyér meghatározatlan mennyisége); 2 = az *à côté de* elöljárószó *de*-je és a *le* névelő összevonása (de + le → du) | 1: partitív névelő / meghatározatlan mennyiség, nem megszámlálható főnévvel. 2: elöljárószó + határozott névelő összevonása (*à côté de* + *le parc*). Elég egy rövid megfogalmazás is. | Nincs. |
+| w01-u-2-1-i02 | A. du | Csak **A** (revenir de + le café → du). | Nincs. A mondatból és a helyzetből egyértelműen helyként kell érteni a *café* szót. |
+| w01-u-2-1-i03 | 1: **d'**; 2: **des** | 1: **d'** (írott kalauzban, melléknév + többes szám esetén ez az elvárt alak). A beszélt nyelvi *des excellents* ebben a regiszterben nem jó. Kérdés, hogy a *de* alakot (elízió nélkül) elfogadja-e a rendszer. 2: **des** (a *petits pains* összetett főnévként rögzült). A *de petits pains* csak gondozott írott nyelvben, határesetként fordul elő. | A mező alakja nem egyértelmű: a tanuló nem tudja, hogy *d'*-t vagy *de*-t várnak tőle, és a kulcs könnyen csak az egyiket fogadja el. A „deux boulangeries” keretben csak egy pékség szerepel. Az oldalcím (*De belles tartes, des petits pains*) szinte kiadja a választ. |
+| w01-u-2-1-i04 | 1: **beaucoup de**; 2: **Beaucoup des** | 1: csak *beaucoup de*. 2: csak *beaucoup des* (meghatározott csoport része: *les tartes de la vitrine*). | Nincs. |
+| w01-u-2-1-i05 | 1. J'en prends. 2. Je vais en prendre deux. 3. Je n'en veux pas. 4. Nous en avons acheté trois. | 1. *J'en prends.* / *Oui, j'en prends.* 2. *Je vais en prendre deux.* 3. *Je n'en veux pas.* 4. *Nous en avons acheté trois.* Hasonlóan elfogadható: *Nous en avions acheté trois* és *Nous en avons acheté trois parts* (ebben az *en* = du flan). | A 4. pontban az *en*-nek nincs előzménye: a boulangère nem említette a flant, és a tanuló sem. Egy visszatérő vevő nem nyitna *Nous en avons acheté trois*-zal, ezért a cseremondat itt természetellenes. Természetes így lenne: *…trois parts de flan, mais il n'y en a que deux.* |
+| w01-u-2-1-i06 | Je vais en prendre deux. / Nous ne voulons pas en acheter. | 1. *Je vais en prendre deux.* (Ha nem a minimális javítás a mérce, akkor *J'en prends deux* is.) 2. *Nous ne voulons pas en acheter.* Esetleg *Nous n'en voulons pas.* | Nincs, a két hibás mondat egyértelműen megtalálható. (Kisebb furcsaság a 2. megjegyzésben.) |
+| w01-u-2-1-i07 | 1. du 2. du 3. d' 4. des 5. de 6. Je vais en prendre trois. | 1. *du* (miel). 2. *du* (métro). 3. *d'* (*de*), írott honlapszöveg; *des immenses* csak beszélt nyelvben. 4. *des* (petits pains = összetett főnév, ráadásul a boulangère beszél). 5. *de*. 6. *Je vais en prendre trois.* Hasonlóan elfogadható: *J'en prends trois* és *Je vais en prendre trois parts* (ebben az *en* = du flan). | A 3. pontban ugyanaz a *d'*/*de* mezőalak-probléma áll fenn, mint az i03-ban. A 6. pontban két szerkezet is helyes, ezért a kulcsnak a *…trois parts* változatot is el kell fogadnia. Kisebb hiba: az instrukció szerint „Réponds aux six questions”, de a mondatok nem kérdések. |
+| w01-u-2-1-i08 | *Coucou Léo ! Avec Camille, on a déjà acheté du pain de seigle, des pains au chocolat et du flan au Pain Perché. Par contre, il nous manque du fromage et du jus d'orange. Tu peux prendre un beau morceau de comté au stand du fromager, à l'entrée du marché ? Prends aussi deux bouteilles de jus : Camille en boit beaucoup ! Il y a sûrement beaucoup de monde, mais beaucoup des fromages du stand sont déjà coupés, donc ça va vite. Et je te le conseille parce que son comté est le meilleur du quartier. À tout à l'heure !* (7 mondat) | Nyílt feladat. | Nem egyértelmű a teljesítés feltétele. Mit jelent „egy nyitott mennyiség vagy tömeg (a piac, a sor, a kínálat)”: a *beaucoup de monde* elég? A „hat ellenőrzőkérdés” maguk a kérdések nélkül jelenik meg, a tanuló csak a mikropéldákat látja. Nem derül ki, hogy kötelező-e az *en* használata, pedig az ellenőrzőlista utolsó két példája ezt sugallja. A 6–8 mondatba legalább hat kötelező elemet kell belesűríteni. Ez teljesíthető, de túlzsúfolt. |
+
+**Megjegyzések**
+
+1. A keret összességében egységes. Vasárnap 7:55–8:15 a kávézó, 8:25 a metró, 8:45 a sor és a pékség, 9:05 és 9:15 otthon, majd vissza a pékségbe, 10:15 Léo SMS-e, 10:40 a tartine. A két foglalt pain au chocolat, a három fő és a három szelet flan minden itemben stimmel.
+2. Az i06 keretében a tanuló „Bonjour !”-val ír, a pékség „Bonsoir !”-val válaszol. A tanuló ezt javítandó hibának vélheti, de a vázlatban már helyesen *Bonsoir* áll.
+3. Az i03 és az i07/3 ugyanazt a szabályt kéri (melléknév + többes szám → *de*, elízióval *d'*). A kulcsnak mindkettőnél egységesen kell kezelnie a *d'*/*de* alakot.
+4. Az i05/4, az i07/6 és az i06 is a *trois parts* → *en … trois* mintára épül. Az *en … trois parts* változat nyelvtanilag helyes, ezért érdemes elfogadni vagy kifejezetten kizárni.
+5. Az i01 rövid szöveges mezőjénél nem derül ki, mennyi szakszó kell (pl. „partitif”, „contraction”). Ezt nem számoltam problémának, de a javítási kulcsban érdemes rögzíteni.
+
+```
+MEGOLDO_OSSZEGZES
+problemak: 4
+MEGOLDO_OSSZEGZES_VEGE
+```

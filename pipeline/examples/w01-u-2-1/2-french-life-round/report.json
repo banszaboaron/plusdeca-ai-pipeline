@@ -1,0 +1,791 @@
+{
+  "pipeline": "javitas",
+  "createdAt": "2026-11-15T18:56:21.364Z",
+  "finishedAt": "2026-11-16T10:15:53.222Z",
+  "outcome": "COMPLETED",
+  "calls": 67,
+  "totalModelSeconds": 6348,
+  "tokens": null,
+  "steps": [
+    {
+      "id": "u21-terv",
+      "role": "GR",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 207,
+      "agent": "plusdeca-gr",
+      "agentMode": "claude-agent",
+      "promptBytes": 123473,
+      "contextBytes": 140376,
+      "outputBytes": 20366,
+      "tokens": 117243,
+      "summary": {
+        "status": "DRAFT_FOR_REVIEW"
+      }
+    },
+    {
+      "id": "u21-terv-nave",
+      "role": "NavE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 151,
+      "agent": "plusdeca-nave",
+      "agentMode": "claude-agent",
+      "promptBytes": 141876,
+      "contextBytes": 158162,
+      "outputBytes": 10965,
+      "tokens": 121254,
+      "summary": {
+        "verdict": "REVISION_REQUIRED",
+        "blocker": 0,
+        "major": 1,
+        "minor": 4
+      }
+    },
+    {
+      "id": "u21-terv-ue",
+      "role": "UE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 138,
+      "agent": "plusdeca-ue",
+      "agentMode": "claude-agent",
+      "promptBytes": 141791,
+      "contextBytes": 157315,
+      "outputBytes": 12354,
+      "tokens": 118823,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 6
+      }
+    },
+    {
+      "id": "u21-terv-rev1",
+      "role": "GR",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 147,
+      "agent": "plusdeca-gr",
+      "agentMode": "claude-agent",
+      "promptBytes": 155434,
+      "contextBytes": 172337,
+      "outputBytes": 30195,
+      "tokens": 129807,
+      "summary": {
+        "status": "DRAFT_FOR_REVIEW"
+      }
+    },
+    {
+      "id": "u21-terv-nave-recheck1",
+      "role": "NavE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 91,
+      "agent": "plusdeca-nave",
+      "agentMode": "claude-agent",
+      "promptBytes": 162749,
+      "contextBytes": 179035,
+      "outputBytes": 8512,
+      "tokens": 125048,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 1
+      }
+    },
+    {
+      "id": "u21-kezirat",
+      "role": "U21",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 278,
+      "agent": "plusdeca-g-iro",
+      "agentMode": "claude-agent",
+      "promptBytes": 153526,
+      "contextBytes": 172404,
+      "outputBytes": 43800,
+      "tokens": 145771,
+      "summary": {
+        "status": "DRAFT_FOR_REVIEW"
+      }
+    },
+    {
+      "id": "u21-kezirat-pe",
+      "role": "PE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": "high",
+      "status": "DONE",
+      "seconds": 183,
+      "agent": "plusdeca-pe",
+      "agentMode": "claude-agent",
+      "promptBytes": 196366,
+      "contextBytes": 221365,
+      "outputBytes": 17438,
+      "tokens": 448249,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 4
+      }
+    },
+    {
+      "id": "u21-kezirat-pe-2",
+      "role": "PE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": "high",
+      "status": "DONE",
+      "seconds": 185,
+      "agent": "plusdeca-pe",
+      "agentMode": "claude-agent",
+      "promptBytes": 196366,
+      "contextBytes": 221365,
+      "outputBytes": 16933,
+      "tokens": 451701,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 8
+      }
+    },
+    {
+      "id": "u21-kezirat-nave",
+      "role": "NavE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 117,
+      "agent": "plusdeca-nave",
+      "agentMode": "claude-agent",
+      "promptBytes": 195557,
+      "contextBytes": 211843,
+      "outputBytes": 7918,
+      "tokens": 143576,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 1
+      }
+    },
+    {
+      "id": "u21-megoldas",
+      "role": "MEGOLDASIRO",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 532,
+      "agent": "plusdeca-megoldasiro",
+      "agentMode": "claude-agent",
+      "promptBytes": 187368,
+      "contextBytes": 204775,
+      "outputBytes": 117202,
+      "tokens": 201115,
+      "summary": {
+        "status": "DRAFT_FOR_REVIEW"
+      }
+    },
+    {
+      "id": "u21-megoldas-solver",
+      "role": "SOLVER",
+      "provider": "claude",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 79,
+      "agent": "plusdeca-solver",
+      "agentMode": "claude-agent",
+      "promptBytes": 7589,
+      "contextBytes": 9617,
+      "outputBytes": 4637,
+      "tokens": 42469,
+      "summary": null
+    },
+    {
+      "id": "u21-megoldas-ue",
+      "role": "UE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 115,
+      "agent": "plusdeca-ue",
+      "agentMode": "claude-agent",
+      "promptBytes": 316586,
+      "contextBytes": 330560,
+      "outputBytes": 8534,
+      "tokens": 201558,
+      "summary": {
+        "verdict": "REVISION_REQUIRED",
+        "blocker": 0,
+        "major": 1,
+        "minor": 2
+      }
+    },
+    {
+      "id": "u21-megoldas-nye",
+      "role": "NyE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 145,
+      "agent": "plusdeca-nye",
+      "agentMode": "claude-agent",
+      "promptBytes": 316385,
+      "contextBytes": 330359,
+      "outputBytes": 10096,
+      "tokens": 205656,
+      "summary": {
+        "verdict": "REVISION_REQUIRED",
+        "blocker": 0,
+        "major": 1,
+        "minor": 3
+      }
+    },
+    {
+      "id": "u21-megoldas-pe-2",
+      "role": "PE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": "high",
+      "status": "DONE",
+      "seconds": 111,
+      "agent": "plusdeca-pe",
+      "agentMode": "claude-agent",
+      "promptBytes": 326970,
+      "contextBytes": 340944,
+      "outputBytes": 11914,
+      "tokens": 206627,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 2
+      }
+    },
+    {
+      "id": "u21-megoldas-nave",
+      "role": "NavE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 106,
+      "agent": "plusdeca-nave",
+      "agentMode": "claude-agent",
+      "promptBytes": 317355,
+      "contextBytes": 331329,
+      "outputBytes": 8861,
+      "tokens": 200924,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 2
+      }
+    },
+    {
+      "id": "u21-megoldas-pe",
+      "role": "PE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": "high",
+      "status": "DONE",
+      "seconds": 148,
+      "agent": "plusdeca-pe",
+      "agentMode": "claude-agent",
+      "promptBytes": 326970,
+      "contextBytes": 340944,
+      "outputBytes": 12968,
+      "tokens": 620178,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 3
+      }
+    },
+    {
+      "id": "u21-megoldas-he",
+      "role": "HE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 111,
+      "agent": "plusdeca-he",
+      "agentMode": "claude-agent",
+      "promptBytes": 315990,
+      "contextBytes": 329964,
+      "outputBytes": 7220,
+      "tokens": 200374,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 5
+      }
+    },
+    {
+      "id": "u21-megoldas-rev1",
+      "role": "MEGOLDASIRO",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 560,
+      "agent": "plusdeca-megoldasiro",
+      "agentMode": "claude-agent",
+      "promptBytes": 328525,
+      "contextBytes": 345932,
+      "outputBytes": 128208,
+      "tokens": 270940,
+      "summary": {
+        "status": "DRAFT_FOR_REVIEW"
+      }
+    },
+    {
+      "id": "u21-megoldas-solver-recheck1",
+      "role": "SOLVER",
+      "provider": "claude",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 40,
+      "agent": "plusdeca-solver",
+      "agentMode": "claude-agent",
+      "promptBytes": 13931,
+      "contextBytes": 15959,
+      "outputBytes": 3940,
+      "tokens": 42301,
+      "summary": null
+    },
+    {
+      "id": "u21-megoldas-ue-recheck1",
+      "role": "UE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 79,
+      "agent": "plusdeca-ue",
+      "agentMode": "claude-agent",
+      "promptBytes": 341445,
+      "contextBytes": 355419,
+      "outputBytes": 9493,
+      "tokens": 211606,
+      "summary": {
+        "verdict": "REVISION_REQUIRED",
+        "blocker": 0,
+        "major": 1,
+        "minor": 2
+      }
+    },
+    {
+      "id": "u21-megoldas-nye-recheck1",
+      "role": "NyE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 92,
+      "agent": "plusdeca-nye",
+      "agentMode": "claude-agent",
+      "promptBytes": 342806,
+      "contextBytes": 356780,
+      "outputBytes": 9398,
+      "tokens": 214147,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 3
+      }
+    },
+    {
+      "id": "u21-megoldas-rev2",
+      "role": "MEGOLDASIRO",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 473,
+      "agent": "plusdeca-megoldasiro",
+      "agentMode": "claude-agent",
+      "promptBytes": 329676,
+      "contextBytes": 347083,
+      "outputBytes": 131774,
+      "tokens": 263577,
+      "summary": {
+        "status": "DRAFT_FOR_REVIEW"
+      }
+    },
+    {
+      "id": "u21-megoldas-solver-recheck2",
+      "role": "SOLVER",
+      "provider": "claude",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 26,
+      "agent": "plusdeca-solver",
+      "agentMode": "claude-agent",
+      "promptBytes": 13162,
+      "contextBytes": 15190,
+      "outputBytes": 3702,
+      "tokens": 40587,
+      "summary": null
+    },
+    {
+      "id": "u21-megoldas-ue-recheck2",
+      "role": "UE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 88,
+      "agent": "plusdeca-ue",
+      "agentMode": "claude-agent",
+      "promptBytes": 348109,
+      "contextBytes": 363633,
+      "outputBytes": 9810,
+      "tokens": 216902,
+      "summary": {
+        "verdict": "REVISION_REQUIRED",
+        "blocker": 0,
+        "major": 1,
+        "minor": 1
+      }
+    },
+    {
+      "id": "u21-kezirat-e1",
+      "role": "U21",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 307,
+      "agent": "plusdeca-g-iro",
+      "agentMode": "claude-agent",
+      "promptBytes": 56697,
+      "contextBytes": 80048,
+      "outputBytes": 54934,
+      "tokens": 107167,
+      "summary": {
+        "status": "DRAFT_FOR_REVIEW"
+      }
+    },
+    {
+      "id": "u21-kezirat-e1-nave",
+      "role": "NavE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 117,
+      "agent": "plusdeca-nave",
+      "agentMode": "claude-agent",
+      "promptBytes": 116561,
+      "contextBytes": 132048,
+      "outputBytes": 9179,
+      "tokens": 104937,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 2
+      }
+    },
+    {
+      "id": "u21-kezirat-e1-pe",
+      "role": "PE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": "high",
+      "status": "DONE",
+      "seconds": 150,
+      "agent": "plusdeca-pe",
+      "agentMode": "claude-agent",
+      "promptBytes": 155745,
+      "contextBytes": 171232,
+      "outputBytes": 13444,
+      "tokens": 126711,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 6
+      }
+    },
+    {
+      "id": "u21-kezirat-e1-nye",
+      "role": "NyE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 135,
+      "agent": "plusdeca-nye",
+      "agentMode": "claude-agent",
+      "promptBytes": 107672,
+      "contextBytes": 123159,
+      "outputBytes": 9785,
+      "tokens": 103121,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 2
+      }
+    },
+    {
+      "id": "u21-megoldas-e1",
+      "role": "MEGOLDASIRO",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 581,
+      "agent": "plusdeca-megoldasiro",
+      "agentMode": "claude-agent",
+      "promptBytes": 349738,
+      "contextBytes": 370176,
+      "outputBytes": 136839,
+      "tokens": 287205,
+      "summary": {
+        "status": "DRAFT_FOR_REVIEW"
+      }
+    },
+    {
+      "id": "u21-megoldas-e1-ue",
+      "role": "UE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 85,
+      "agent": "plusdeca-ue",
+      "agentMode": "claude-agent",
+      "promptBytes": 369075,
+      "contextBytes": 384562,
+      "outputBytes": 8071,
+      "tokens": 225708,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 2
+      }
+    },
+    {
+      "id": "u21-megoldas-e1-nye",
+      "role": "NyE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 89,
+      "agent": "plusdeca-nye",
+      "agentMode": "claude-agent",
+      "promptBytes": 368462,
+      "contextBytes": 383949,
+      "outputBytes": 11387,
+      "tokens": 226728,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 2
+      }
+    },
+    {
+      "id": "u21-megoldas-e1-pe",
+      "role": "PE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": "high",
+      "status": "DONE",
+      "seconds": 126,
+      "agent": "plusdeca-pe",
+      "agentMode": "claude-agent",
+      "promptBytes": 396729,
+      "contextBytes": 412216,
+      "outputBytes": 12610,
+      "tokens": 243634,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 1
+      }
+    },
+    {
+      "id": "u21-megoldas-e1-rev1",
+      "role": "MEGOLDASIRO",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 445,
+      "agent": "plusdeca-megoldasiro",
+      "agentMode": "claude-agent",
+      "promptBytes": 491022,
+      "contextBytes": 511460,
+      "outputBytes": 135463,
+      "tokens": 338274,
+      "summary": {
+        "status": "DRAFT_FOR_REVIEW"
+      }
+    },
+    {
+      "id": "u21-megoldas-e1-rev1-dontes",
+      "role": "MEGOLDASIRO",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "status": "RUNNING",
+      "seconds": null,
+      "agent": "plusdeca-megoldasiro",
+      "agentMode": "claude-agent",
+      "promptBytes": 479155,
+      "contextBytes": 496562,
+      "outputBytes": null,
+      "tokens": null,
+      "summary": null
+    },
+    {
+      "id": "u21-megoldas-e1-solver",
+      "role": "SOLVER",
+      "provider": "claude",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 33,
+      "agent": "plusdeca-solver",
+      "agentMode": "claude-agent",
+      "promptBytes": 14104,
+      "contextBytes": 16132,
+      "outputBytes": 3798,
+      "tokens": 41384,
+      "summary": null
+    },
+    {
+      "id": "u21-megoldas-e1-solver-recheck1",
+      "role": "SOLVER",
+      "provider": "claude",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 20,
+      "agent": "plusdeca-solver",
+      "agentMode": "claude-agent",
+      "promptBytes": 15870,
+      "contextBytes": 17898,
+      "outputBytes": 3083,
+      "tokens": 41367,
+      "summary": null
+    },
+    {
+      "id": "u21-megoldas-e1-nye-recheck1",
+      "role": "NyE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "status": "DONE",
+      "seconds": 57,
+      "agent": "plusdeca-nye",
+      "agentMode": "claude-agent",
+      "promptBytes": 367213,
+      "contextBytes": 384017,
+      "outputBytes": 9102,
+      "tokens": 223166,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 3
+      }
+    }
+  ],
+  "checks": {
+    "unit": "U21",
+    "estimate": {
+      "alap": 15,
+      "jellemzo": 22,
+      "legrosszabb": 58
+    },
+    "p5Id": "w01-u-2-1",
+    "runDir": "<private-repo>\\editorial\\p4-planning\\ceo\\runs\\t27-U21-2026-11-15",
+    "calls": 67,
+    "rounds": {
+      "terv": 1,
+      "kezirat": 0,
+      "megoldas": 2
+    },
+    "rewrites": {
+      "kezirat": 0,
+      "megoldas": 0
+    },
+    "escalations": [
+      {
+        "n": 1,
+        "items": [
+          "E-09",
+          "E-10",
+          "E-11",
+          "E-12",
+          "E-13",
+          "E-14"
+        ],
+        "decision": "<private-repo>\\editorial\\p4-planning\\ceo\\runs\\t27-U21-2026-11-15\\decisions\\u21-eszkalacio1.md",
+        "kezirat": {
+          "id": "u21-kezirat-e1",
+          "rounds": 0,
+          "reviewers": [
+            "PE",
+            "NyE",
+            "NavE"
+          ]
+        },
+        "megoldas": {
+          "id": "u21-megoldas-e1-rev1",
+          "rounds": 1,
+          "reviewers": [
+            "PE",
+            "NyE",
+            "UE",
+            "SOLVER"
+          ]
+        }
+      }
+    ],
+    "p5": {
+      "outcome": "P5_PASS",
+      "rounds": 0,
+      "errors": 0
+    },
+    "kimenet": "<private-repo>\\editorial\\week-01\\javitas-2026-10\\U21\\t27"
+  },
+  "compare": []
+}

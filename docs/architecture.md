@@ -1,7 +1,7 @@
 # Architecture
 
-This page places the extracted component (writing feedback) inside the larger private system it comes from.
-Only the feedback component is runnable from this repository. Everything else is described here and not shipped.
+How the parts in this repository fit together, and which parts of the system stay private (the app, the release
+tooling, the course content). Role details: [agents.md](agents.md). Code: [pipeline/](../pipeline/) and [feedback-eval/](../feedback-eval/).
 
 ## 1. The whole system (private, single learner)
 
@@ -37,12 +37,19 @@ flowchart LR
 
 | Part | What it does | Evidence it works | Not shown by that evidence |
 |---|---|---|---|
-| Authoring chain | Headless role sessions (`codex exec`, `claude -p`). Each role gets a fresh session. Bounded fix rounds. A block is complete only when the independent solver reports no problems. | The first week (23 blocks) went through it and runs in the app. | Content quality beyond what the reviewers and the solver check. Weeks 2–40 are planned, not produced. |
-| Release gates | Deterministic checks on every block: content hashes bind the release to the reviewed manuscript, then playability, answer-key and brief checks. Then compilation and a crawl of the real app. | Unit tests, plus a crawl report for each release. | Pedagogical value. |
+| Authoring chain ([pipeline/](../pipeline/)) | Headless role sessions (`codex exec`, `claude -p`). Each role gets a fresh session. Bounded fix rounds. A block is complete only when every assigned reviewer passes it and the independent solver's problems are resolved. | The first week (23 blocks) went through it and runs in the app; [run statistics](week1-run-stats.md); [one unit end to end](../pipeline/examples/w01-u-2-1/); 119 orchestrator tests. | Content quality beyond what the reviewers and the solver check. Weeks 2–40 are planned, not produced. |
+| Release gates ([pipeline/p5/](../pipeline/p5/)) | Deterministic checks on every block: content hashes bind the release to the reviewed manuscript, then playability, answer-key, brief and target-language checks. Then compilation and a crawl of the real app (crawl not included). | 69 gate tests here; the gates re-run on the real example. | Pedagogical value. |
 | Phone app | Offline PWA. Closed answers are checked locally against keys, open answers are queued for feedback. | In use by the learner on a phone. A domain expert reviews selected parts. | Learning outcomes (no study). |
-| Feedback pipeline | See below. | `results/` in this repository. | See [Limitations](../README.md#limitations). |
+| Feedback pipeline ([feedback-eval/](../feedback-eval/)) | See below. | [Recorded run and eval set](../feedback-eval/results/2026-11-22-claude/report.md). | See [its limitations](../feedback-eval/README.md#limitations--what-is-not-claimed). |
 
-## 2. The feedback pipeline (this repository)
+## 2. The authoring chain
+
+See the diagram in the [README](../README.md#the-idea-in-one-diagram), the [roles](agents.md) and the
+[U21 walkthrough](../pipeline/examples/w01-u-2-1/). The orchestrator is plain Node.js: it starts each role as a CLI
+process, saves every prompt and answer to the run folder, parses the verdict line, and decides the next step in code.
+A stopped run can be resumed: steps are keyed by a hash of their inputs, and a finished step with unchanged inputs is not called again.
+
+## 3. The feedback pipeline
 
 ```mermaid
 sequenceDiagram
@@ -84,6 +91,6 @@ Design decisions, with the reason for each:
 - **Privacy.** Only task data and the answer go to the checker. No name, e-mail or account id is sent.
 - **Feedback in L1.** Explanations are in Hungarian (the learner's first language). French forms are quoted.
 
-What this repository changes for the portfolio: both checker slots are filled by two independent Claude calls
+What the feedback-eval copy changes: both checker slots are filled by two independent Claude calls
 (the Codex slot was out of scope). The queue, the Cloudflare Worker and the app UI are not included.
 The pipeline logic itself (`vendor/`) is the production code, byte-for-byte.

@@ -1,0 +1,2283 @@
+{
+  "schemaVersion": "2.0.0",
+  "catalogVersion": "1.0.0",
+  "contentVersion": "1.0.0",
+  "namespace": "demo",
+  "label": "DEMO contract shapes",
+  "courseId": "contract-demo",
+  "weeks": [
+    {
+      "id": "demo:contract-demo:w1",
+      "number": 1,
+      "title": "DEMO week 1",
+      "blocks": [
+        {
+          "id": "demo:contract-demo:w1:b1",
+          "kind": "lesson",
+          "title": "DEMO CAP-choice-single",
+          "prerequisites": [],
+          "pages": [
+            {
+              "id": "demo:contract-demo:w1:b1:p1",
+              "template": "PAGE-closed",
+              "variant": "PV-choice-one",
+              "title": "Egyválaszos választás",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Example stimulus",
+                  "language": "fr"
+                }
+              ],
+              "items": [
+                {
+                  "id": "demo:contract-demo:w1:b1:p1:i1",
+                  "capability": "CAP-choice-single",
+                  "prompt": "Synthetic example for CAP-choice-single",
+                  "response": {
+                    "type": "single",
+                    "options": [
+                      {
+                        "id": "a",
+                        "label": "Alpha"
+                      },
+                      {
+                        "id": "b",
+                        "label": "Beta"
+                      }
+                    ]
+                  },
+                  "solution": {
+                    "type": "exact",
+                    "answers": [
+                      "a"
+                    ]
+                  },
+                  "evaluation": {
+                    "mode": "exact",
+                    "policyId": "closed-exact",
+                    "uncertainty": "pending",
+                    "selfCheckCanPass": false
+                  },
+                  "repair": {
+                    "mode": "delayed-retry",
+                    "hideFeedback": true
+                  },
+                  "repetition": {
+                    "mode": "delayed",
+                    "minIntervening": 2,
+                    "independentSuccess": true
+                  },
+                  "sourceRefs": [
+                    "demo:contract-demo:source"
+                  ],
+                  "targetRefs": [
+                    "demo:contract-demo:target"
+                  ],
+                  "mediaRefs": []
+                }
+              ]
+            }
+          ],
+          "completion": {
+            "mode": "all-items",
+            "requiredRefs": [
+              "demo:contract-demo:w1:b1:p1:i1"
+            ]
+          }
+        },
+        {
+          "id": "demo:contract-demo:w1:b3",
+          "kind": "lesson",
+          "title": "DEMO CAP-matching",
+          "prerequisites": [],
+          "pages": [
+            {
+              "id": "demo:contract-demo:w1:b3:p1",
+              "template": "PAGE-structured",
+              "variant": "PV-matching-text",
+              "title": "Párosítás",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Example stimulus",
+                  "language": "fr"
+                }
+              ],
+              "items": [
+                {
+                  "id": "demo:contract-demo:w1:b3:p1:i1",
+                  "capability": "CAP-matching",
+                  "prompt": "Synthetic example for CAP-matching",
+                  "response": {
+                    "type": "pairs",
+                    "left": [
+                      {
+                        "id": "a",
+                        "label": "Alpha"
+                      },
+                      {
+                        "id": "b",
+                        "label": "Beta"
+                      }
+                    ],
+                    "right": [
+                      {
+                        "id": "x",
+                        "label": "First"
+                      },
+                      {
+                        "id": "y",
+                        "label": "Second"
+                      }
+                    ]
+                  },
+                  "solution": {
+                    "type": "exact",
+                    "answers": [
+                      {
+                        "a": "x",
+                        "b": "y"
+                      }
+                    ]
+                  },
+                  "evaluation": {
+                    "mode": "exact",
+                    "policyId": "closed-exact",
+                    "uncertainty": "pending",
+                    "selfCheckCanPass": false
+                  },
+                  "repair": {
+                    "mode": "delayed-retry",
+                    "hideFeedback": true
+                  },
+                  "repetition": {
+                    "mode": "delayed",
+                    "minIntervening": 2,
+                    "independentSuccess": true
+                  },
+                  "sourceRefs": [
+                    "demo:contract-demo:source"
+                  ],
+                  "targetRefs": [
+                    "demo:contract-demo:target"
+                  ],
+                  "mediaRefs": []
+                }
+              ]
+            }
+          ],
+          "completion": {
+            "mode": "all-items",
+            "requiredRefs": [
+              "demo:contract-demo:w1:b3:p1:i1"
+            ]
+          }
+        },
+        {
+          "id": "demo:contract-demo:w1:b5",
+          "kind": "lesson",
+          "title": "DEMO CAP-gap-bank",
+          "prerequisites": [],
+          "pages": [
+            {
+              "id": "demo:contract-demo:w1:b5:p1",
+              "template": "PAGE-structured",
+              "variant": "PV-gap-bank",
+              "title": "Szóbankos többhelyes kitöltés",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Example stimulus",
+                  "language": "fr"
+                }
+              ],
+              "items": [
+                {
+                  "id": "demo:contract-demo:w1:b5:p1:i1",
+                  "capability": "CAP-gap-bank",
+                  "prompt": "Synthetic example for CAP-gap-bank",
+                  "response": {
+                    "type": "fields",
+                    "fields": [
+                      {
+                        "id": "f1",
+                        "label": "Masculin",
+                        "required": true,
+                        "normalization": {
+                          "unicode": "NFC",
+                          "caseSensitive": false,
+                          "accentsSensitive": true,
+                          "apostropheEquivalent": true,
+                          "trim": true,
+                          "collapseWhitespace": true,
+                          "hyphensSensitive": true
+                        },
+                        "accepted": [
+                          "a"
+                        ]
+                      },
+                      {
+                        "id": "f2",
+                        "label": "Feminin",
+                        "required": true,
+                        "normalization": {
+                          "unicode": "NFC",
+                          "caseSensitive": false,
+                          "accentsSensitive": true,
+                          "apostropheEquivalent": true,
+                          "trim": true,
+                          "collapseWhitespace": true,
+                          "hyphensSensitive": true
+                        },
+                        "accepted": [
+                          "b"
+                        ]
+                      }
+                    ],
+                    "bank": [
+                      {
+                        "id": "a",
+                        "label": "Alpha"
+                      },
+                      {
+                        "id": "b",
+                        "label": "Beta"
+                      }
+                    ]
+                  },
+                  "solution": {
+                    "type": "exact",
+                    "answers": [
+                      {
+                        "f1": "a",
+                        "f2": "b"
+                      }
+                    ]
+                  },
+                  "evaluation": {
+                    "mode": "exact",
+                    "policyId": "closed-exact",
+                    "uncertainty": "pending",
+                    "selfCheckCanPass": false
+                  },
+                  "repair": {
+                    "mode": "delayed-retry",
+                    "hideFeedback": true
+                  },
+                  "repetition": {
+                    "mode": "delayed",
+                    "minIntervening": 2,
+                    "independentSuccess": true
+                  },
+                  "sourceRefs": [
+                    "demo:contract-demo:source"
+                  ],
+                  "targetRefs": [
+                    "demo:contract-demo:target"
+                  ],
+                  "mediaRefs": []
+                }
+              ]
+            }
+          ],
+          "completion": {
+            "mode": "all-items",
+            "requiredRefs": [
+              "demo:contract-demo:w1:b5:p1:i1"
+            ]
+          }
+        },
+        {
+          "id": "demo:contract-demo:w1:b7",
+          "kind": "lesson",
+          "title": "DEMO CAP-correction",
+          "prerequisites": [],
+          "pages": [
+            {
+              "id": "demo:contract-demo:w1:b7:p1",
+              "template": "PAGE-structured",
+              "variant": "PV-correction-select-rewrite",
+              "title": "Hibakijelölés és javítás",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Example stimulus",
+                  "language": "fr"
+                }
+              ],
+              "items": [
+                {
+                  "id": "demo:contract-demo:w1:b7:p1:i1",
+                  "capability": "CAP-correction",
+                  "prompt": "Synthetic example for CAP-correction",
+                  "response": {
+                    "type": "correction",
+                    "text": "bonjur",
+                    "spans": [
+                      {
+                        "id": "s1",
+                        "start": 0,
+                        "end": 6
+                      }
+                    ]
+                  },
+                  "solution": {
+                    "type": "exact",
+                    "answers": [
+                      {
+                        "s1": "bonjour"
+                      }
+                    ]
+                  },
+                  "evaluation": {
+                    "mode": "exact",
+                    "policyId": "closed-exact",
+                    "uncertainty": "pending",
+                    "selfCheckCanPass": false
+                  },
+                  "repair": {
+                    "mode": "delayed-retry",
+                    "hideFeedback": true
+                  },
+                  "repetition": {
+                    "mode": "delayed",
+                    "minIntervening": 2,
+                    "independentSuccess": true
+                  },
+                  "sourceRefs": [
+                    "demo:contract-demo:source"
+                  ],
+                  "targetRefs": [
+                    "demo:contract-demo:target"
+                  ],
+                  "mediaRefs": []
+                }
+              ]
+            }
+          ],
+          "completion": {
+            "mode": "all-items",
+            "requiredRefs": [
+              "demo:contract-demo:w1:b7:p1:i1"
+            ]
+          }
+        },
+        {
+          "id": "demo:contract-demo:w1:b9",
+          "kind": "lesson",
+          "title": "DEMO CAP-writing",
+          "prerequisites": [],
+          "pages": [
+            {
+              "id": "demo:contract-demo:w1:b9:p1",
+              "template": "PAGE-writing",
+              "variant": "PV-writing-short",
+              "title": "Írás, rubrika, javítás",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Example stimulus",
+                  "language": "fr"
+                }
+              ],
+              "items": [
+                {
+                  "id": "demo:contract-demo:w1:b9:p1:i1",
+                  "capability": "CAP-writing",
+                  "prompt": "Synthetic example for CAP-writing",
+                  "response": {
+                    "type": "writing",
+                    "wordRange": {
+                      "min": 10,
+                      "max": 30
+                    }
+                  },
+                  "solution": {
+                    "type": "rubric",
+                    "criteria": [
+                      {
+                        "id": "meaning",
+                        "description": "Complete the synthetic task",
+                        "required": true
+                      }
+                    ]
+                  },
+                  "evaluation": {
+                    "mode": "dual-gate",
+                    "policyId": "writing-dual-gate",
+                    "uncertainty": "pending",
+                    "selfCheckCanPass": false,
+                    "revisionBinding": "current-full-response",
+                    "authorityRefs": [
+                      "demo:contract-demo:source"
+                    ],
+                    "scopeBlockRef": "demo:contract-demo:w1:b9",
+                    "minimumScore": 3
+                  },
+                  "repair": {
+                    "mode": "full-revision",
+                    "hideFeedback": true
+                  },
+                  "repetition": {
+                    "mode": "delayed",
+                    "minIntervening": 2,
+                    "independentSuccess": true
+                  },
+                  "sourceRefs": [
+                    "demo:contract-demo:source"
+                  ],
+                  "targetRefs": [
+                    "demo:contract-demo:target"
+                  ],
+                  "mediaRefs": []
+                }
+              ]
+            }
+          ],
+          "completion": {
+            "mode": "all-items",
+            "requiredRefs": [
+              "demo:contract-demo:w1:b9:p1:i1"
+            ]
+          }
+        },
+        {
+          "id": "demo:contract-demo:w1:b11",
+          "kind": "lesson",
+          "title": "DEMO CAP-speech-open",
+          "prerequisites": [],
+          "pages": [
+            {
+              "id": "demo:contract-demo:w1:b11:p1",
+              "template": "PAGE-speaking",
+              "variant": "PV-speech-guided",
+              "title": "Saját szavas rögzített beszéd",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Example stimulus",
+                  "language": "fr"
+                }
+              ],
+              "items": [
+                {
+                  "id": "demo:contract-demo:w1:b11:p1:i1",
+                  "capability": "CAP-speech-open",
+                  "prompt": "Synthetic example for CAP-speech-open",
+                  "response": {
+                    "type": "speech",
+                    "durationRange": {
+                      "min": 1,
+                      "max": 30
+                    }
+                  },
+                  "solution": {
+                    "type": "rubric",
+                    "criteria": [
+                      {
+                        "id": "meaning",
+                        "description": "Complete the synthetic task",
+                        "required": true
+                      }
+                    ]
+                  },
+                  "evaluation": {
+                    "mode": "semantic",
+                    "policyId": "semantic-rubric",
+                    "uncertainty": "pending",
+                    "selfCheckCanPass": false,
+                    "revisionBinding": "current-full-response",
+                    "authorityRefs": [
+                      "demo:contract-demo:source"
+                    ],
+                    "scopeBlockRef": "demo:contract-demo:w1:b11"
+                  },
+                  "repair": {
+                    "mode": "full-revision",
+                    "hideFeedback": true
+                  },
+                  "repetition": {
+                    "mode": "delayed",
+                    "minIntervening": 2,
+                    "independentSuccess": true
+                  },
+                  "sourceRefs": [
+                    "demo:contract-demo:source"
+                  ],
+                  "targetRefs": [
+                    "demo:contract-demo:target"
+                  ],
+                  "mediaRefs": []
+                }
+              ]
+            }
+          ],
+          "completion": {
+            "mode": "all-items",
+            "requiredRefs": [
+              "demo:contract-demo:w1:b11:p1:i1"
+            ]
+          }
+        },
+        {
+          "id": "demo:contract-demo:w1:b13",
+          "kind": "lesson",
+          "title": "DEMO CAP-dictation",
+          "prerequisites": [],
+          "pages": [
+            {
+              "id": "demo:contract-demo:w1:b13:p1",
+              "template": "PAGE-listening",
+              "variant": "PV-dictation-word",
+              "title": "Diktálás",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Example stimulus",
+                  "language": "fr"
+                }
+              ],
+              "items": [
+                {
+                  "id": "demo:contract-demo:w1:b13:p1:i1",
+                  "capability": "CAP-dictation",
+                  "prompt": "Synthetic example for CAP-dictation",
+                  "response": {
+                    "type": "text",
+                    "normalization": {
+                      "unicode": "NFC",
+                      "caseSensitive": false,
+                      "accentsSensitive": true,
+                      "apostropheEquivalent": true,
+                      "trim": true,
+                      "collapseWhitespace": true,
+                      "hyphensSensitive": true
+                    }
+                  },
+                  "solution": {
+                    "type": "exact",
+                    "answers": [
+                      "bonjour"
+                    ]
+                  },
+                  "evaluation": {
+                    "mode": "exact",
+                    "policyId": "closed-exact",
+                    "uncertainty": "pending",
+                    "selfCheckCanPass": false
+                  },
+                  "repair": {
+                    "mode": "delayed-retry",
+                    "hideFeedback": true
+                  },
+                  "repetition": {
+                    "mode": "delayed",
+                    "minIntervening": 2,
+                    "independentSuccess": true
+                  },
+                  "sourceRefs": [
+                    "demo:contract-demo:source"
+                  ],
+                  "targetRefs": [
+                    "demo:contract-demo:target"
+                  ],
+                  "mediaRefs": [
+                    "demo:contract-demo:audio-a"
+                  ],
+                  "anchorRefs": [
+                    {
+                      "mediaRef": "demo:contract-demo:audio-a",
+                      "segmentId": "whole"
+                    }
+                  ],
+                  "playback": {
+                    "maxPlays": 3,
+                    "transcriptPolicy": "after-attempt"
+                  }
+                }
+              ]
+            }
+          ],
+          "completion": {
+            "mode": "all-items",
+            "requiredRefs": [
+              "demo:contract-demo:w1:b13:p1:i1"
+            ]
+          }
+        },
+        {
+          "id": "demo:contract-demo:w1:b15",
+          "kind": "lesson",
+          "title": "DEMO CAP-recall-spoken",
+          "prerequisites": [],
+          "pages": [
+            {
+              "id": "demo:contract-demo:w1:b15:p1",
+              "template": "PAGE-memoriter",
+              "variant": "PV-memoriter-understand",
+              "title": "Emlékezetből felmondás",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Example stimulus",
+                  "language": "fr"
+                }
+              ],
+              "items": [
+                {
+                  "id": "demo:contract-demo:w1:b15:p1:i1",
+                  "capability": "CAP-recall-spoken",
+                  "prompt": "Synthetic example for CAP-recall-spoken",
+                  "response": {
+                    "type": "speech",
+                    "durationRange": {
+                      "min": 1,
+                      "max": 30
+                    }
+                  },
+                  "solution": {
+                    "type": "reference",
+                    "text": "bonjour",
+                    "accepted": []
+                  },
+                  "evaluation": {
+                    "mode": "reference",
+                    "policyId": "reference-transcript",
+                    "uncertainty": "pending",
+                    "selfCheckCanPass": false
+                  },
+                  "repair": {
+                    "mode": "delayed-retry",
+                    "hideFeedback": true
+                  },
+                  "repetition": {
+                    "mode": "delayed",
+                    "minIntervening": 2,
+                    "independentSuccess": true
+                  },
+                  "sourceRefs": [
+                    "demo:contract-demo:source"
+                  ],
+                  "targetRefs": [
+                    "demo:contract-demo:target"
+                  ],
+                  "mediaRefs": [],
+                  "evidence": {
+                    "modality": "spoken",
+                    "assistance": "uncued",
+                    "canonicalText": "bonjour"
+                  }
+                }
+              ]
+            }
+          ],
+          "completion": {
+            "mode": "all-items",
+            "requiredRefs": [
+              "demo:contract-demo:w1:b15:p1:i1"
+            ]
+          }
+        },
+        {
+          "id": "demo:contract-demo:w1:b17",
+          "kind": "lesson",
+          "title": "DEMO CAP-structured-form",
+          "prerequisites": [],
+          "pages": [
+            {
+              "id": "demo:contract-demo:w1:b17:p1",
+              "template": "PAGE-structured",
+              "variant": "PV-form-fields",
+              "title": "Strukturált adatlap / táblázat",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Example stimulus",
+                  "language": "fr"
+                }
+              ],
+              "items": [
+                {
+                  "id": "demo:contract-demo:w1:b17:p1:i1",
+                  "capability": "CAP-structured-form",
+                  "prompt": "Synthetic example for CAP-structured-form",
+                  "response": {
+                    "type": "fields",
+                    "fields": [
+                      {
+                        "id": "f1",
+                        "label": "Masculin",
+                        "required": true,
+                        "normalization": {
+                          "unicode": "NFC",
+                          "caseSensitive": false,
+                          "accentsSensitive": true,
+                          "apostropheEquivalent": true,
+                          "trim": true,
+                          "collapseWhitespace": true,
+                          "hyphensSensitive": true
+                        },
+                        "accepted": [
+                          "un habitue"
+                        ],
+                        "gender": "masculine"
+                      },
+                      {
+                        "id": "f2",
+                        "label": "Feminin",
+                        "required": true,
+                        "normalization": {
+                          "unicode": "NFC",
+                          "caseSensitive": false,
+                          "accentsSensitive": true,
+                          "apostropheEquivalent": true,
+                          "trim": true,
+                          "collapseWhitespace": true,
+                          "hyphensSensitive": true
+                        },
+                        "accepted": [
+                          "une habituee"
+                        ],
+                        "gender": "feminine"
+                      }
+                    ],
+                    "formPolicy": "typed-mf-pair"
+                  },
+                  "solution": {
+                    "type": "exact",
+                    "answers": [
+                      {
+                        "f1": "un habitue",
+                        "f2": "une habituee"
+                      }
+                    ]
+                  },
+                  "evaluation": {
+                    "mode": "exact",
+                    "policyId": "closed-exact",
+                    "uncertainty": "pending",
+                    "selfCheckCanPass": false
+                  },
+                  "repair": {
+                    "mode": "delayed-retry",
+                    "hideFeedback": true
+                  },
+                  "repetition": {
+                    "mode": "delayed",
+                    "minIntervening": 2,
+                    "independentSuccess": true
+                  },
+                  "sourceRefs": [
+                    "demo:contract-demo:source"
+                  ],
+                  "targetRefs": [
+                    "demo:contract-demo:target"
+                  ],
+                  "mediaRefs": []
+                }
+              ]
+            }
+          ],
+          "completion": {
+            "mode": "all-items",
+            "requiredRefs": [
+              "demo:contract-demo:w1:b17:p1:i1"
+            ]
+          }
+        },
+        {
+          "id": "demo:contract-demo:w1:b19",
+          "kind": "lesson",
+          "title": "DEMO CAP-matching-stream",
+          "prerequisites": [],
+          "pages": [
+            {
+              "id": "demo:contract-demo:w1:b19:p1",
+              "template": "PAGE-games",
+              "variant": "PV-game-matching-stream",
+              "title": "Újratöltődő párosítás",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Example stimulus",
+                  "language": "fr"
+                }
+              ],
+              "items": [
+                {
+                  "id": "demo:contract-demo:w1:b19:p1:i1",
+                  "capability": "CAP-matching-stream",
+                  "prompt": "Synthetic example for CAP-matching-stream",
+                  "response": {
+                    "type": "pairs",
+                    "left": [
+                      {
+                        "id": "a",
+                        "label": "Alpha"
+                      },
+                      {
+                        "id": "b",
+                        "label": "Beta"
+                      }
+                    ],
+                    "right": [
+                      {
+                        "id": "x",
+                        "label": "First"
+                      },
+                      {
+                        "id": "y",
+                        "label": "Second"
+                      }
+                    ],
+                    "refill": true
+                  },
+                  "solution": {
+                    "type": "exact",
+                    "answers": [
+                      {
+                        "a": "x",
+                        "b": "y"
+                      }
+                    ]
+                  },
+                  "evaluation": {
+                    "mode": "exact",
+                    "policyId": "closed-exact",
+                    "uncertainty": "pending",
+                    "selfCheckCanPass": false
+                  },
+                  "repair": {
+                    "mode": "delayed-retry",
+                    "hideFeedback": true
+                  },
+                  "repetition": {
+                    "mode": "delayed",
+                    "minIntervening": 2,
+                    "independentSuccess": true
+                  },
+                  "sourceRefs": [
+                    "demo:contract-demo:source"
+                  ],
+                  "targetRefs": [
+                    "demo:contract-demo:target"
+                  ],
+                  "mediaRefs": []
+                }
+              ]
+            }
+          ],
+          "completion": {
+            "mode": "all-items",
+            "requiredRefs": [
+              "demo:contract-demo:w1:b19:p1:i1"
+            ]
+          }
+        },
+        {
+          "id": "demo:contract-demo:w1:b21",
+          "kind": "lesson",
+          "title": "DEMO CAP-letter-build",
+          "prerequisites": [],
+          "pages": [
+            {
+              "id": "demo:contract-demo:w1:b21:p1",
+              "template": "PAGE-games",
+              "variant": "PV-game-letters",
+              "title": "Betűkből szóépítés",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Example stimulus",
+                  "language": "fr"
+                }
+              ],
+              "items": [
+                {
+                  "id": "demo:contract-demo:w1:b21:p1:i1",
+                  "capability": "CAP-letter-build",
+                  "prompt": "Synthetic example for CAP-letter-build",
+                  "response": {
+                    "type": "order",
+                    "tokens": [
+                      {
+                        "id": "a",
+                        "label": "Alpha"
+                      },
+                      {
+                        "id": "b",
+                        "label": "Beta"
+                      }
+                    ]
+                  },
+                  "solution": {
+                    "type": "exact",
+                    "answers": [
+                      [
+                        "a",
+                        "b"
+                      ]
+                    ]
+                  },
+                  "evaluation": {
+                    "mode": "exact",
+                    "policyId": "closed-exact",
+                    "uncertainty": "pending",
+                    "selfCheckCanPass": false
+                  },
+                  "repair": {
+                    "mode": "delayed-retry",
+                    "hideFeedback": true
+                  },
+                  "repetition": {
+                    "mode": "delayed",
+                    "minIntervening": 2,
+                    "independentSuccess": true
+                  },
+                  "sourceRefs": [
+                    "demo:contract-demo:source"
+                  ],
+                  "targetRefs": [
+                    "demo:contract-demo:target"
+                  ],
+                  "mediaRefs": []
+                }
+              ]
+            }
+          ],
+          "completion": {
+            "mode": "all-items",
+            "requiredRefs": [
+              "demo:contract-demo:w1:b21:p1:i1"
+            ]
+          }
+        },
+        {
+          "id": "demo:contract-demo:w1:b23",
+          "kind": "lesson",
+          "title": "DEMO CAP-map-placement",
+          "prerequisites": [],
+          "pages": [
+            {
+              "id": "demo:contract-demo:w1:b23:p1",
+              "template": "PAGE-games",
+              "variant": "PV-map-placement",
+              "title": "Térképes elhelyezés",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Example stimulus",
+                  "language": "fr"
+                }
+              ],
+              "items": [
+                {
+                  "id": "demo:contract-demo:w1:b23:p1:i1",
+                  "capability": "CAP-map-placement",
+                  "prompt": "Synthetic example for CAP-map-placement",
+                  "response": {
+                    "type": "map",
+                    "locations": [
+                      {
+                        "id": "a",
+                        "label": "Alpha"
+                      },
+                      {
+                        "id": "b",
+                        "label": "Beta"
+                      }
+                    ],
+                    "places": [
+                      {
+                        "id": "x",
+                        "label": "Place X"
+                      },
+                      {
+                        "id": "y",
+                        "label": "Place Y"
+                      }
+                    ],
+                    "keyboardAlternative": true
+                  },
+                  "solution": {
+                    "type": "exact",
+                    "answers": [
+                      {
+                        "x": "a",
+                        "y": "b"
+                      }
+                    ]
+                  },
+                  "evaluation": {
+                    "mode": "exact",
+                    "policyId": "closed-exact",
+                    "uncertainty": "pending",
+                    "selfCheckCanPass": false
+                  },
+                  "repair": {
+                    "mode": "delayed-retry",
+                    "hideFeedback": true
+                  },
+                  "repetition": {
+                    "mode": "delayed",
+                    "minIntervening": 2,
+                    "independentSuccess": true
+                  },
+                  "sourceRefs": [
+                    "demo:contract-demo:source"
+                  ],
+                  "targetRefs": [
+                    "demo:contract-demo:target"
+                  ],
+                  "mediaRefs": []
+                }
+              ]
+            }
+          ],
+          "completion": {
+            "mode": "all-items",
+            "requiredRefs": [
+              "demo:contract-demo:w1:b23:p1:i1"
+            ]
+          }
+        },
+        {
+          "id": "demo:contract-demo:w1:b25",
+          "kind": "lesson",
+          "title": "DEMO CAP-drawn-production",
+          "prerequisites": [],
+          "pages": [
+            {
+              "id": "demo:contract-demo:w1:b25:p1",
+              "template": "PAGE-games",
+              "variant": "PV-drawn-card-writing",
+              "title": "Húzott helyzetkártyákból produkció",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Example stimulus",
+                  "language": "fr"
+                }
+              ],
+              "items": [
+                {
+                  "id": "demo:contract-demo:w1:b25:p1:i1",
+                  "capability": "CAP-drawn-production",
+                  "prompt": "Synthetic example for CAP-drawn-production",
+                  "response": {
+                    "type": "writing",
+                    "wordRange": {
+                      "min": 10,
+                      "max": 30
+                    }
+                  },
+                  "solution": {
+                    "type": "rubric",
+                    "criteria": [
+                      {
+                        "id": "meaning",
+                        "description": "Complete the synthetic task",
+                        "required": true
+                      }
+                    ]
+                  },
+                  "evaluation": {
+                    "mode": "dual-gate",
+                    "policyId": "writing-dual-gate",
+                    "uncertainty": "pending",
+                    "selfCheckCanPass": false,
+                    "revisionBinding": "current-full-response",
+                    "authorityRefs": [
+                      "demo:contract-demo:source"
+                    ],
+                    "scopeBlockRef": "demo:contract-demo:w1:b25",
+                    "minimumScore": 3
+                  },
+                  "repair": {
+                    "mode": "full-revision",
+                    "hideFeedback": true
+                  },
+                  "repetition": {
+                    "mode": "delayed",
+                    "minIntervening": 2,
+                    "independentSuccess": true
+                  },
+                  "sourceRefs": [
+                    "demo:contract-demo:source"
+                  ],
+                  "targetRefs": [
+                    "demo:contract-demo:target"
+                  ],
+                  "mediaRefs": [],
+                  "draw": {
+                    "cards": [
+                      {
+                        "id": "a",
+                        "label": "Alpha"
+                      },
+                      {
+                        "id": "b",
+                        "label": "Beta"
+                      }
+                    ],
+                    "count": 1
+                  }
+                }
+              ]
+            }
+          ],
+          "completion": {
+            "mode": "all-items",
+            "requiredRefs": [
+              "demo:contract-demo:w1:b25:p1:i1"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo:contract-demo:w2",
+      "number": 2,
+      "title": "DEMO week 2",
+      "blocks": [
+        {
+          "id": "demo:contract-demo:w2:b2",
+          "kind": "lesson",
+          "title": "DEMO CAP-choice-multiple",
+          "prerequisites": [],
+          "pages": [
+            {
+              "id": "demo:contract-demo:w2:b2:p1",
+              "template": "PAGE-closed",
+              "variant": "PV-choice-many",
+              "title": "Többválaszos választás",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Example stimulus",
+                  "language": "fr"
+                }
+              ],
+              "items": [
+                {
+                  "id": "demo:contract-demo:w2:b2:p1:i1",
+                  "capability": "CAP-choice-multiple",
+                  "prompt": "Synthetic example for CAP-choice-multiple",
+                  "response": {
+                    "type": "multiple",
+                    "options": [
+                      {
+                        "id": "a",
+                        "label": "Alpha"
+                      },
+                      {
+                        "id": "b",
+                        "label": "Beta"
+                      }
+                    ],
+                    "selection": {
+                      "min": 1,
+                      "max": 2
+                    }
+                  },
+                  "solution": {
+                    "type": "exact",
+                    "answers": [
+                      [
+                        "a"
+                      ]
+                    ]
+                  },
+                  "evaluation": {
+                    "mode": "exact",
+                    "policyId": "closed-exact",
+                    "uncertainty": "pending",
+                    "selfCheckCanPass": false
+                  },
+                  "repair": {
+                    "mode": "delayed-retry",
+                    "hideFeedback": true
+                  },
+                  "repetition": {
+                    "mode": "delayed",
+                    "minIntervening": 2,
+                    "independentSuccess": true
+                  },
+                  "sourceRefs": [
+                    "demo:contract-demo:source"
+                  ],
+                  "targetRefs": [
+                    "demo:contract-demo:target"
+                  ],
+                  "mediaRefs": []
+                }
+              ]
+            }
+          ],
+          "completion": {
+            "mode": "all-items",
+            "requiredRefs": [
+              "demo:contract-demo:w2:b2:p1:i1"
+            ]
+          }
+        },
+        {
+          "id": "demo:contract-demo:w2:b4",
+          "kind": "lesson",
+          "title": "DEMO CAP-typed-short",
+          "prerequisites": [],
+          "pages": [
+            {
+              "id": "demo:contract-demo:w2:b4:p1",
+              "template": "PAGE-closed",
+              "variant": "PV-typed-short",
+              "title": "Rövid begépelés / hiánykitöltés",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Example stimulus",
+                  "language": "fr"
+                }
+              ],
+              "items": [
+                {
+                  "id": "demo:contract-demo:w2:b4:p1:i1",
+                  "capability": "CAP-typed-short",
+                  "prompt": "Synthetic example for CAP-typed-short",
+                  "response": {
+                    "type": "text",
+                    "normalization": {
+                      "unicode": "NFC",
+                      "caseSensitive": false,
+                      "accentsSensitive": true,
+                      "apostropheEquivalent": true,
+                      "trim": true,
+                      "collapseWhitespace": true,
+                      "hyphensSensitive": true
+                    }
+                  },
+                  "solution": {
+                    "type": "exact",
+                    "answers": [
+                      "bonjour"
+                    ]
+                  },
+                  "evaluation": {
+                    "mode": "exact",
+                    "policyId": "closed-exact",
+                    "uncertainty": "pending",
+                    "selfCheckCanPass": false
+                  },
+                  "repair": {
+                    "mode": "delayed-retry",
+                    "hideFeedback": true
+                  },
+                  "repetition": {
+                    "mode": "delayed",
+                    "minIntervening": 2,
+                    "independentSuccess": true
+                  },
+                  "sourceRefs": [
+                    "demo:contract-demo:source"
+                  ],
+                  "targetRefs": [
+                    "demo:contract-demo:target"
+                  ],
+                  "mediaRefs": []
+                }
+              ]
+            }
+          ],
+          "completion": {
+            "mode": "all-items",
+            "requiredRefs": [
+              "demo:contract-demo:w2:b4:p1:i1"
+            ]
+          }
+        },
+        {
+          "id": "demo:contract-demo:w2:b6",
+          "kind": "lesson",
+          "title": "DEMO CAP-ordering",
+          "prerequisites": [],
+          "pages": [
+            {
+              "id": "demo:contract-demo:w2:b6:p1",
+              "template": "PAGE-structured",
+              "variant": "PV-order-tokens",
+              "title": "Sorrendezés / mondatkirakó",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Example stimulus",
+                  "language": "fr"
+                }
+              ],
+              "items": [
+                {
+                  "id": "demo:contract-demo:w2:b6:p1:i1",
+                  "capability": "CAP-ordering",
+                  "prompt": "Synthetic example for CAP-ordering",
+                  "response": {
+                    "type": "order",
+                    "tokens": [
+                      {
+                        "id": "a",
+                        "label": "Alpha"
+                      },
+                      {
+                        "id": "b",
+                        "label": "Beta"
+                      }
+                    ]
+                  },
+                  "solution": {
+                    "type": "exact",
+                    "answers": [
+                      [
+                        "a",
+                        "b"
+                      ]
+                    ]
+                  },
+                  "evaluation": {
+                    "mode": "exact",
+                    "policyId": "closed-exact",
+                    "uncertainty": "pending",
+                    "selfCheckCanPass": false
+                  },
+                  "repair": {
+                    "mode": "delayed-retry",
+                    "hideFeedback": true
+                  },
+                  "repetition": {
+                    "mode": "delayed",
+                    "minIntervening": 2,
+                    "independentSuccess": true
+                  },
+                  "sourceRefs": [
+                    "demo:contract-demo:source"
+                  ],
+                  "targetRefs": [
+                    "demo:contract-demo:target"
+                  ],
+                  "mediaRefs": []
+                }
+              ]
+            }
+          ],
+          "completion": {
+            "mode": "all-items",
+            "requiredRefs": [
+              "demo:contract-demo:w2:b6:p1:i1"
+            ]
+          }
+        },
+        {
+          "id": "demo:contract-demo:w2:b8",
+          "kind": "lesson",
+          "title": "DEMO CAP-transformation",
+          "prerequisites": [],
+          "pages": [
+            {
+              "id": "demo:contract-demo:w2:b8:p1",
+              "template": "PAGE-structured",
+              "variant": "PV-transform-sentence",
+              "title": "Mondatátalakítás / kötött fordítás",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Example stimulus",
+                  "language": "fr"
+                }
+              ],
+              "items": [
+                {
+                  "id": "demo:contract-demo:w2:b8:p1:i1",
+                  "capability": "CAP-transformation",
+                  "prompt": "Synthetic example for CAP-transformation",
+                  "response": {
+                    "type": "text",
+                    "normalization": {
+                      "unicode": "NFC",
+                      "caseSensitive": false,
+                      "accentsSensitive": true,
+                      "apostropheEquivalent": true,
+                      "trim": true,
+                      "collapseWhitespace": true,
+                      "hyphensSensitive": true
+                    }
+                  },
+                  "solution": {
+                    "type": "exact",
+                    "answers": [
+                      "bonjour"
+                    ]
+                  },
+                  "evaluation": {
+                    "mode": "exact",
+                    "policyId": "closed-exact",
+                    "uncertainty": "pending",
+                    "selfCheckCanPass": false
+                  },
+                  "repair": {
+                    "mode": "delayed-retry",
+                    "hideFeedback": true
+                  },
+                  "repetition": {
+                    "mode": "delayed",
+                    "minIntervening": 2,
+                    "independentSuccess": true
+                  },
+                  "sourceRefs": [
+                    "demo:contract-demo:source"
+                  ],
+                  "targetRefs": [
+                    "demo:contract-demo:target"
+                  ],
+                  "mediaRefs": []
+                }
+              ]
+            }
+          ],
+          "completion": {
+            "mode": "all-items",
+            "requiredRefs": [
+              "demo:contract-demo:w2:b8:p1:i1"
+            ]
+          }
+        },
+        {
+          "id": "demo:contract-demo:w2:b10",
+          "kind": "lesson",
+          "title": "DEMO CAP-speech-reference",
+          "prerequisites": [],
+          "pages": [
+            {
+              "id": "demo:contract-demo:w2:b10:p1",
+              "template": "PAGE-speaking",
+              "variant": "PV-speech-reference",
+              "title": "Referenciához kötött beszéd",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Example stimulus",
+                  "language": "fr"
+                }
+              ],
+              "items": [
+                {
+                  "id": "demo:contract-demo:w2:b10:p1:i1",
+                  "capability": "CAP-speech-reference",
+                  "prompt": "Synthetic example for CAP-speech-reference",
+                  "response": {
+                    "type": "speech",
+                    "durationRange": {
+                      "min": 1,
+                      "max": 30
+                    }
+                  },
+                  "solution": {
+                    "type": "reference",
+                    "text": "bonjour",
+                    "accepted": []
+                  },
+                  "evaluation": {
+                    "mode": "reference",
+                    "policyId": "reference-transcript",
+                    "uncertainty": "pending",
+                    "selfCheckCanPass": false
+                  },
+                  "repair": {
+                    "mode": "delayed-retry",
+                    "hideFeedback": true
+                  },
+                  "repetition": {
+                    "mode": "delayed",
+                    "minIntervening": 2,
+                    "independentSuccess": true
+                  },
+                  "sourceRefs": [
+                    "demo:contract-demo:source"
+                  ],
+                  "targetRefs": [
+                    "demo:contract-demo:target"
+                  ],
+                  "mediaRefs": []
+                }
+              ]
+            }
+          ],
+          "completion": {
+            "mode": "all-items",
+            "requiredRefs": [
+              "demo:contract-demo:w2:b10:p1:i1"
+            ]
+          }
+        },
+        {
+          "id": "demo:contract-demo:w2:b12",
+          "kind": "lesson",
+          "title": "DEMO CAP-audio-recognition",
+          "prerequisites": [],
+          "pages": [
+            {
+              "id": "demo:contract-demo:w2:b12:p1",
+              "template": "PAGE-closed",
+              "variant": "PV-audio-choice",
+              "title": "Hallott szó / jelentés felismerése",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Example stimulus",
+                  "language": "fr"
+                }
+              ],
+              "items": [
+                {
+                  "id": "demo:contract-demo:w2:b12:p1:i1",
+                  "capability": "CAP-audio-recognition",
+                  "prompt": "Synthetic example for CAP-audio-recognition",
+                  "response": {
+                    "type": "single",
+                    "options": [
+                      {
+                        "id": "a",
+                        "label": "Alpha"
+                      },
+                      {
+                        "id": "b",
+                        "label": "Beta"
+                      }
+                    ]
+                  },
+                  "solution": {
+                    "type": "exact",
+                    "answers": [
+                      "a"
+                    ]
+                  },
+                  "evaluation": {
+                    "mode": "exact",
+                    "policyId": "closed-exact",
+                    "uncertainty": "pending",
+                    "selfCheckCanPass": false
+                  },
+                  "repair": {
+                    "mode": "delayed-retry",
+                    "hideFeedback": true
+                  },
+                  "repetition": {
+                    "mode": "delayed",
+                    "minIntervening": 2,
+                    "independentSuccess": true
+                  },
+                  "sourceRefs": [
+                    "demo:contract-demo:source"
+                  ],
+                  "targetRefs": [
+                    "demo:contract-demo:target"
+                  ],
+                  "mediaRefs": [
+                    "demo:contract-demo:audio-a"
+                  ],
+                  "anchorRefs": [
+                    {
+                      "mediaRef": "demo:contract-demo:audio-a",
+                      "segmentId": "whole"
+                    }
+                  ],
+                  "playback": {
+                    "maxPlays": 3,
+                    "transcriptPolicy": "after-attempt"
+                  }
+                }
+              ]
+            }
+          ],
+          "completion": {
+            "mode": "all-items",
+            "requiredRefs": [
+              "demo:contract-demo:w2:b12:p1:i1"
+            ]
+          }
+        },
+        {
+          "id": "demo:contract-demo:w2:b14",
+          "kind": "lesson",
+          "title": "DEMO CAP-abx",
+          "prerequisites": [],
+          "pages": [
+            {
+              "id": "demo:contract-demo:w2:b14:p1",
+              "template": "PAGE-listening",
+              "variant": "PV-phonetics-abx",
+              "title": "ABX hangmegkülönböztetés",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Example stimulus",
+                  "language": "fr"
+                }
+              ],
+              "items": [
+                {
+                  "id": "demo:contract-demo:w2:b14:p1:i1",
+                  "capability": "CAP-abx",
+                  "prompt": "Synthetic example for CAP-abx",
+                  "response": {
+                    "type": "abx",
+                    "tokens": [
+                      {
+                        "role": "A",
+                        "mediaRef": "demo:contract-demo:audio-a",
+                        "speaker": "speaker1",
+                        "category": "oral"
+                      },
+                      {
+                        "role": "B",
+                        "mediaRef": "demo:contract-demo:audio-b",
+                        "speaker": "speaker1",
+                        "category": "nasal"
+                      },
+                      {
+                        "role": "X",
+                        "mediaRef": "demo:contract-demo:audio-x",
+                        "speaker": "speaker1",
+                        "category": "oral"
+                      }
+                    ],
+                    "window": {
+                      "size": 4,
+                      "required": 3
+                    }
+                  },
+                  "solution": {
+                    "type": "exact",
+                    "answers": [
+                      "A"
+                    ]
+                  },
+                  "evaluation": {
+                    "mode": "exact",
+                    "policyId": "closed-exact",
+                    "uncertainty": "pending",
+                    "selfCheckCanPass": false
+                  },
+                  "repair": {
+                    "mode": "delayed-retry",
+                    "hideFeedback": true
+                  },
+                  "repetition": {
+                    "mode": "delayed",
+                    "minIntervening": 0,
+                    "independentSuccess": true,
+                    "immutableFirstAttempt": true,
+                    "recovery": "new-full-window"
+                  },
+                  "sourceRefs": [
+                    "demo:contract-demo:source"
+                  ],
+                  "targetRefs": [
+                    "demo:contract-demo:target"
+                  ],
+                  "mediaRefs": [],
+                  "evidence": {
+                    "modality": "listening",
+                    "assistance": "uncued"
+                  }
+                }
+              ]
+            }
+          ],
+          "completion": {
+            "mode": "all-items",
+            "requiredRefs": [
+              "demo:contract-demo:w2:b14:p1:i1"
+            ]
+          }
+        },
+        {
+          "id": "demo:contract-demo:w2:b16",
+          "kind": "lesson",
+          "title": "DEMO CAP-recall-written",
+          "prerequisites": [],
+          "pages": [
+            {
+              "id": "demo:contract-demo:w2:b16:p1",
+              "template": "PAGE-memoriter",
+              "variant": "PV-memoriter-written",
+              "title": "Emlékezetből leírás",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Example stimulus",
+                  "language": "fr"
+                }
+              ],
+              "items": [
+                {
+                  "id": "demo:contract-demo:w2:b16:p1:i1",
+                  "capability": "CAP-recall-written",
+                  "prompt": "Synthetic example for CAP-recall-written",
+                  "response": {
+                    "type": "writing",
+                    "wordRange": {
+                      "min": 10,
+                      "max": 30
+                    }
+                  },
+                  "solution": {
+                    "type": "rubric",
+                    "criteria": [
+                      {
+                        "id": "meaning",
+                        "description": "Complete the synthetic task",
+                        "required": true
+                      }
+                    ]
+                  },
+                  "evaluation": {
+                    "mode": "dual-gate",
+                    "policyId": "writing-dual-gate",
+                    "uncertainty": "pending",
+                    "selfCheckCanPass": false,
+                    "revisionBinding": "current-full-response",
+                    "authorityRefs": [
+                      "demo:contract-demo:source"
+                    ],
+                    "scopeBlockRef": "demo:contract-demo:w2:b16",
+                    "minimumScore": 3
+                  },
+                  "repair": {
+                    "mode": "full-revision",
+                    "hideFeedback": true
+                  },
+                  "repetition": {
+                    "mode": "delayed",
+                    "minIntervening": 2,
+                    "independentSuccess": true
+                  },
+                  "sourceRefs": [
+                    "demo:contract-demo:source"
+                  ],
+                  "targetRefs": [
+                    "demo:contract-demo:target"
+                  ],
+                  "mediaRefs": [],
+                  "evidence": {
+                    "modality": "written",
+                    "assistance": "uncued",
+                    "canonicalText": "bonjour"
+                  }
+                }
+              ]
+            }
+          ],
+          "completion": {
+            "mode": "all-items",
+            "requiredRefs": [
+              "demo:contract-demo:w2:b16:p1:i1"
+            ]
+          }
+        },
+        {
+          "id": "demo:contract-demo:w2:b18",
+          "kind": "lesson",
+          "title": "DEMO CAP-media-observation",
+          "prerequisites": [],
+          "pages": [
+            {
+              "id": "demo:contract-demo:w2:b18:p1",
+              "template": "PAGE-media",
+              "variant": "PV-media-image",
+              "title": "Képi / videós / dalhoz kötött feladat",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Example stimulus",
+                  "language": "fr"
+                }
+              ],
+              "items": [
+                {
+                  "id": "demo:contract-demo:w2:b18:p1:i1",
+                  "capability": "CAP-media-observation",
+                  "prompt": "Synthetic example for CAP-media-observation",
+                  "response": {
+                    "type": "single",
+                    "options": [
+                      {
+                        "id": "a",
+                        "label": "Alpha"
+                      },
+                      {
+                        "id": "b",
+                        "label": "Beta"
+                      }
+                    ]
+                  },
+                  "solution": {
+                    "type": "exact",
+                    "answers": [
+                      "a"
+                    ]
+                  },
+                  "evaluation": {
+                    "mode": "exact",
+                    "policyId": "closed-exact",
+                    "uncertainty": "pending",
+                    "selfCheckCanPass": false
+                  },
+                  "repair": {
+                    "mode": "delayed-retry",
+                    "hideFeedback": true
+                  },
+                  "repetition": {
+                    "mode": "delayed",
+                    "minIntervening": 2,
+                    "independentSuccess": true
+                  },
+                  "sourceRefs": [
+                    "demo:contract-demo:source"
+                  ],
+                  "targetRefs": [
+                    "demo:contract-demo:target"
+                  ],
+                  "mediaRefs": [
+                    "demo:contract-demo:audio-a"
+                  ],
+                  "anchorRefs": [
+                    {
+                      "mediaRef": "demo:contract-demo:audio-a",
+                      "segmentId": "whole"
+                    }
+                  ],
+                  "playback": {
+                    "maxPlays": 3,
+                    "transcriptPolicy": "after-attempt"
+                  }
+                }
+              ]
+            }
+          ],
+          "completion": {
+            "mode": "all-items",
+            "requiredRefs": [
+              "demo:contract-demo:w2:b18:p1:i1"
+            ]
+          }
+        },
+        {
+          "id": "demo:contract-demo:w2:b20",
+          "kind": "lesson",
+          "title": "DEMO CAP-memory-pairs",
+          "prerequisites": [],
+          "pages": [
+            {
+              "id": "demo:contract-demo:w2:b20:p1",
+              "template": "PAGE-games",
+              "variant": "PV-game-memory",
+              "title": "Memóriapárok",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Example stimulus",
+                  "language": "fr"
+                }
+              ],
+              "items": [
+                {
+                  "id": "demo:contract-demo:w2:b20:p1:i1",
+                  "capability": "CAP-memory-pairs",
+                  "prompt": "Synthetic example for CAP-memory-pairs",
+                  "response": {
+                    "type": "pairs",
+                    "left": [
+                      {
+                        "id": "a",
+                        "label": "Alpha"
+                      },
+                      {
+                        "id": "b",
+                        "label": "Beta"
+                      }
+                    ],
+                    "right": [
+                      {
+                        "id": "x",
+                        "label": "First"
+                      },
+                      {
+                        "id": "y",
+                        "label": "Second"
+                      }
+                    ],
+                    "memory": true
+                  },
+                  "solution": {
+                    "type": "exact",
+                    "answers": [
+                      {
+                        "a": "x",
+                        "b": "y"
+                      }
+                    ]
+                  },
+                  "evaluation": {
+                    "mode": "exact",
+                    "policyId": "closed-exact",
+                    "uncertainty": "pending",
+                    "selfCheckCanPass": false
+                  },
+                  "repair": {
+                    "mode": "delayed-retry",
+                    "hideFeedback": true
+                  },
+                  "repetition": {
+                    "mode": "delayed",
+                    "minIntervening": 2,
+                    "independentSuccess": true
+                  },
+                  "sourceRefs": [
+                    "demo:contract-demo:source"
+                  ],
+                  "targetRefs": [
+                    "demo:contract-demo:target"
+                  ],
+                  "mediaRefs": []
+                }
+              ]
+            }
+          ],
+          "completion": {
+            "mode": "all-items",
+            "requiredRefs": [
+              "demo:contract-demo:w2:b20:p1:i1"
+            ]
+          }
+        },
+        {
+          "id": "demo:contract-demo:w2:b22",
+          "kind": "lesson",
+          "title": "DEMO CAP-flash-round",
+          "prerequisites": [],
+          "pages": [
+            {
+              "id": "demo:contract-demo:w2:b22:p1",
+              "template": "PAGE-games",
+              "variant": "PV-game-flash",
+              "title": "Gyors döntés / vegyes villámkör",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Example stimulus",
+                  "language": "fr"
+                }
+              ],
+              "items": [
+                {
+                  "id": "demo:contract-demo:w2:b22:p1:i1",
+                  "capability": "CAP-flash-round",
+                  "prompt": "Synthetic example for CAP-flash-round",
+                  "response": {
+                    "type": "sequence",
+                    "itemRefs": [
+                      "demo:contract-demo:w1:b1:p1:i1"
+                    ]
+                  },
+                  "solution": {
+                    "type": "exact",
+                    "answers": [
+                      [
+                        "demo:contract-demo:w1:b1:p1:i1"
+                      ]
+                    ]
+                  },
+                  "evaluation": {
+                    "mode": "exact",
+                    "policyId": "closed-exact",
+                    "uncertainty": "pending",
+                    "selfCheckCanPass": false
+                  },
+                  "repair": {
+                    "mode": "delayed-retry",
+                    "hideFeedback": true
+                  },
+                  "repetition": {
+                    "mode": "delayed",
+                    "minIntervening": 2,
+                    "independentSuccess": true
+                  },
+                  "sourceRefs": [
+                    "demo:contract-demo:source"
+                  ],
+                  "targetRefs": [
+                    "demo:contract-demo:target"
+                  ],
+                  "mediaRefs": []
+                }
+              ]
+            }
+          ],
+          "completion": {
+            "mode": "all-items",
+            "requiredRefs": [
+              "demo:contract-demo:w2:b22:p1:i1"
+            ]
+          }
+        },
+        {
+          "id": "demo:contract-demo:w2:b24",
+          "kind": "lesson",
+          "title": "DEMO CAP-diagram-links",
+          "prerequisites": [],
+          "pages": [
+            {
+              "id": "demo:contract-demo:w2:b24:p1",
+              "template": "PAGE-games",
+              "variant": "PV-diagram-relations",
+              "title": "Kapcsolatdiagram / folyamatábra",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Example stimulus",
+                  "language": "fr"
+                }
+              ],
+              "items": [
+                {
+                  "id": "demo:contract-demo:w2:b24:p1:i1",
+                  "capability": "CAP-diagram-links",
+                  "prompt": "Synthetic example for CAP-diagram-links",
+                  "response": {
+                    "type": "graph",
+                    "nodes": [
+                      {
+                        "id": "a",
+                        "label": "Alpha"
+                      },
+                      {
+                        "id": "b",
+                        "label": "Beta"
+                      }
+                    ],
+                    "relations": [
+                      {
+                        "id": "causes",
+                        "label": "Causes"
+                      }
+                    ],
+                    "directed": true
+                  },
+                  "solution": {
+                    "type": "exact",
+                    "answers": [
+                      [
+                        {
+                          "from": "a",
+                          "to": "b",
+                          "relation": "causes"
+                        }
+                      ]
+                    ]
+                  },
+                  "evaluation": {
+                    "mode": "exact",
+                    "policyId": "closed-exact",
+                    "uncertainty": "pending",
+                    "selfCheckCanPass": false
+                  },
+                  "repair": {
+                    "mode": "delayed-retry",
+                    "hideFeedback": true
+                  },
+                  "repetition": {
+                    "mode": "delayed",
+                    "minIntervening": 2,
+                    "independentSuccess": true
+                  },
+                  "sourceRefs": [
+                    "demo:contract-demo:source"
+                  ],
+                  "targetRefs": [
+                    "demo:contract-demo:target"
+                  ],
+                  "mediaRefs": []
+                }
+              ]
+            }
+          ],
+          "completion": {
+            "mode": "all-items",
+            "requiredRefs": [
+              "demo:contract-demo:w2:b24:p1:i1"
+            ]
+          }
+        },
+        {
+          "id": "demo:contract-demo:w2:b26",
+          "kind": "lesson",
+          "title": "DEMO CAP-review-mission",
+          "prerequisites": [],
+          "pages": [
+            {
+              "id": "demo:contract-demo:w2:b26:p1",
+              "template": "PAGE-games",
+              "variant": "PV-mission-stations",
+              "title": "Többhetes ismétlő küldetés",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Example stimulus",
+                  "language": "fr"
+                }
+              ],
+              "items": [
+                {
+                  "id": "demo:contract-demo:w2:b26:p1:i1",
+                  "capability": "CAP-review-mission",
+                  "prompt": "Synthetic example for CAP-review-mission",
+                  "response": {
+                    "type": "sequence",
+                    "itemRefs": [
+                      "demo:contract-demo:w1:b1:p1:i1",
+                      "demo:contract-demo:w2:b2:p1:i1"
+                    ],
+                    "sourceWeeks": [
+                      1,
+                      2
+                    ]
+                  },
+                  "solution": {
+                    "type": "exact",
+                    "answers": [
+                      [
+                        "demo:contract-demo:w1:b1:p1:i1",
+                        "demo:contract-demo:w2:b2:p1:i1"
+                      ]
+                    ]
+                  },
+                  "evaluation": {
+                    "mode": "exact",
+                    "policyId": "closed-exact",
+                    "uncertainty": "pending",
+                    "selfCheckCanPass": false
+                  },
+                  "repair": {
+                    "mode": "delayed-retry",
+                    "hideFeedback": true
+                  },
+                  "repetition": {
+                    "mode": "delayed",
+                    "minIntervening": 2,
+                    "independentSuccess": true
+                  },
+                  "sourceRefs": [
+                    "demo:contract-demo:source"
+                  ],
+                  "targetRefs": [
+                    "demo:contract-demo:target"
+                  ],
+                  "mediaRefs": []
+                }
+              ]
+            }
+          ],
+          "completion": {
+            "mode": "all-items",
+            "requiredRefs": [
+              "demo:contract-demo:w2:b26:p1:i1"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "demo:contract-demo:source",
+      "title": "Synthetic contract fixture",
+      "locator": "editorial/p1-03/fixtures/demo-course.json",
+      "rights": "original"
+    }
+  ],
+  "media": [
+    {
+      "id": "demo:contract-demo:audio-a",
+      "kind": "audio",
+      "uri": "media/demo-a.wav",
+      "sourceRef": "demo:contract-demo:source",
+      "access": "local",
+      "offline": true,
+      "alternative": "Synthetic audio fixture a",
+      "duration": 1,
+      "transcript": "bonjour",
+      "transcriptPolicy": "after-attempt",
+      "auditStatus": "pending",
+      "checkedAt": "2026-09-22",
+      "segments": [
+        {
+          "id": "whole",
+          "start": 0,
+          "end": 1
+        }
+      ]
+    },
+    {
+      "id": "demo:contract-demo:audio-b",
+      "kind": "audio",
+      "uri": "media/demo-b.wav",
+      "sourceRef": "demo:contract-demo:source",
+      "access": "local",
+      "offline": true,
+      "alternative": "Synthetic audio fixture b",
+      "duration": 1,
+      "transcript": "bonjour",
+      "transcriptPolicy": "after-attempt",
+      "auditStatus": "pending",
+      "checkedAt": "2026-09-22",
+      "segments": [
+        {
+          "id": "whole",
+          "start": 0,
+          "end": 1
+        }
+      ]
+    },
+    {
+      "id": "demo:contract-demo:audio-x",
+      "kind": "audio",
+      "uri": "media/demo-x.wav",
+      "sourceRef": "demo:contract-demo:source",
+      "access": "local",
+      "offline": true,
+      "alternative": "Synthetic audio fixture x",
+      "duration": 1,
+      "transcript": "bonjour",
+      "transcriptPolicy": "after-attempt",
+      "auditStatus": "pending",
+      "checkedAt": "2026-09-22",
+      "segments": [
+        {
+          "id": "whole",
+          "start": 0,
+          "end": 1
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "demo:contract-demo:target",
+      "description": "Synthetic demonstrated target",
+      "taughtIn": [
+        "demo:contract-demo:w1:b1:p1"
+      ],
+      "sourceRefs": [
+        "demo:contract-demo:source"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "schemaVersion": "p5-block-1.0.0",
+  "contractVersion": "2.0.0",
+  "id": "w40-u-3-2",
+  "week": 40,
+  "kind": "lesson",
+  "title": "Écouter A, B et X",
+  "position": {
+    "row": 3,
+    "column": 2
+  },
+  "prerequisites": [],
+  "estimatedMinutes": {
+    "min": 1,
+    "max": 2
+  },
+  "media": [
+    {
+      "id": "abx-a",
+      "kind": "audio",
+      "access": "local",
+      "file": "tone-440.wav",
+      "alternative": "Son de test A."
+    },
+    {
+      "id": "abx-b",
+      "kind": "audio",
+      "access": "local",
+      "file": "tone-660.wav",
+      "alternative": "Son de test B."
+    },
+    {
+      "id": "abx-x",
+      "kind": "audio",
+      "access": "local",
+      "file": "tone-440-long.wav",
+      "alternative": "Son de test X."
+    }
+  ],
+  "pages": [
+    {
+      "id": "w40-u-3-2-p01",
+      "template": "PAGE-listening",
+      "variant": "PV-phonetics-abx",
+      "title": "Écouter A, B et X",
+      "instruction": "Écoute A, puis B, puis X.",
+      "manuscriptRef": {
+        "file": "w40-u-3-2.review-pass.md",
+        "anchor": "## `w40-u-3-2-p01` — Écouter A, B et X"
+      },
+      "content": [],
+      "items": [
+        {
+          "id": "w40-u-3-2-i01",
+          "capability": "CAP-abx",
+          "variant": "PV-phonetics-abx",
+          "prompt": "X ressemble-t-il à A ou à B ?",
+          "response": {
+            "type": "abx",
+            "tokens": [
+              {
+                "role": "A",
+                "mediaRef": "abx-a",
+                "speaker": "synthese",
+                "category": "grave"
+              },
+              {
+                "role": "B",
+                "mediaRef": "abx-b",
+                "speaker": "synthese",
+                "category": "aigu"
+              },
+              {
+                "role": "X",
+                "mediaRef": "abx-x",
+                "speaker": "synthese",
+                "category": "grave"
+              }
+            ]
+          },
+          "solution": {
+            "type": "abx",
+            "key": "A"
+          },
+          "evaluation": {
+            "mode": "exact"
+          },
+          "manuscriptRef": {
+            "file": "w40-u-3-2.review-pass.md",
+            "anchor": "### `w40-u-3-2-i01`"
+          }
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "mode": "all-items",
+    "requiredRefs": [
+      "w40-u-3-2-i01"
+    ]
+  },
+  "review": {
+    "status": "REVIEW_PASS",
+    "reviewPass": "w40-u-3-2.review-pass.md",
+    "manuscripts": [
+      {
+        "file": "w40-u-3-2.review-pass.md",
+        "sha256": "3e14bf87cfc43df622983d92eab47668b90e62040818f87f6c4c26c7dca3c5e3",
+        "role": "review-pass"
+      }
+    ],
+    "contentSha256": "8dfc098f7c2d4d75bc15c0b7389ac4f9c590ab27a91d0ddd997d00059550a73c"
+  }
+}

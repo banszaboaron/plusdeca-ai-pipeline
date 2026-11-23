@@ -1,0 +1,132 @@
+{
+  "schemaVersion": "p5-block-1.0.0",
+  "contractVersion": "2.0.0",
+  "id": "w40-u-2-2",
+  "week": 40,
+  "kind": "lesson",
+  "title": "Deux mots du comptoir",
+  "position": {
+    "row": 2,
+    "column": 3
+  },
+  "prerequisites": [],
+  "estimatedMinutes": {
+    "min": 2,
+    "max": 3
+  },
+  "media": [
+    {
+      "id": "son-tasse",
+      "kind": "audio",
+      "access": "local",
+      "file": "tone-440.wav",
+      "alternative": "Prononciation de test : une tasse."
+    }
+  ],
+  "pages": [
+    {
+      "id": "w40-u-2-2-p01",
+      "template": "PAGE-vocabulary",
+      "variant": "PV-vocabulary-single",
+      "title": "Deux mots du comptoir",
+      "instruction": "Découvre les mots et leurs exemples.",
+      "manuscriptRef": {
+        "file": "w40-u-2-2.review-pass.md",
+        "anchor": "## `w40-u-2-2-p01` — Deux mots du comptoir"
+      },
+      "content": [
+        {
+          "type": "gloss",
+          "surface": "une tasse",
+          "lemma": "tasse",
+          "meaning": "csésze",
+          "language": "fr",
+          "example": "Je voudrais une tasse de thé.",
+          "exampleTranslation": "Egy csésze teát kérek.",
+          "mediaRef": "son-tasse",
+          "manuscriptRef": {
+            "file": "w40-u-2-2.review-pass.md",
+            "anchor": "## `w40-u-2-2-p01` — Deux mots du comptoir"
+          }
+        },
+        {
+          "type": "gloss",
+          "surface": "des viennoiseries",
+          "lemma": "viennoiserie",
+          "meaning": "péksütemények",
+          "language": "fr",
+          "example": "Les viennoiseries sont sur le comptoir.",
+          "manuscriptRef": {
+            "file": "w40-u-2-2.review-pass.md",
+            "anchor": "## `w40-u-2-2-p01` — Deux mots du comptoir"
+          }
+        }
+      ],
+      "items": []
+    },
+    {
+      "id": "w40-u-2-2-p02",
+      "template": "PAGE-closed",
+      "variant": "PV-choice-one",
+      "title": "Vérifier",
+      "instruction": "Choisis la bonne traduction.",
+      "manuscriptRef": {
+        "file": "w40-u-2-2.review-pass.md",
+        "anchor": "## `w40-u-2-2-p02` — Vérifier"
+      },
+      "content": [],
+      "items": [
+        {
+          "id": "w40-u-2-2-i01",
+          "capability": "CAP-choice-single",
+          "variant": "PV-choice-one",
+          "prompt": "Que signifie « une tasse » ?",
+          "response": {
+            "type": "single",
+            "options": [
+              {
+                "id": "a",
+                "label": "csésze"
+              },
+              {
+                "id": "b",
+                "label": "tálca"
+              }
+            ]
+          },
+          "solution": {
+            "type": "choice",
+            "keyOptionIds": [
+              "a"
+            ]
+          },
+          "evaluation": {
+            "mode": "exact"
+          },
+          "manuscriptRef": {
+            "file": "w40-u-2-2.review-pass.md",
+            "anchor": "### `w40-u-2-2-i01`"
+          }
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "mode": "all-items",
+    "requiredRefs": [
+      "w40-u-2-2-i01"
+    ]
+  },
+  "review": {
+    "status": "REVIEW_PASS",
+    "reviewPass": "w40-u-2-2.review-pass.md",
+    "manuscripts": [
+      {
+        "file": "w40-u-2-2.review-pass.md",
+        "sha256": "c3e1d89fdd8e3e2b4994ae38abadaa15b9feb0e365df6ddce0240ea32178ee51",
+        "role": "review-pass"
+      }
+    ],
+    "contentSha256": "009ee2b73cb98645fb04536c4245a6f0b56108a3c441adbe8e857d3566284caa"
+  }
+}

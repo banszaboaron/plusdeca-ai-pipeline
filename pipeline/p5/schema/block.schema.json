@@ -1,0 +1,334 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://plusdeca.invalid/schema/p5-block/1.0.0",
+  "title": "Plusdeça P5 blokkforrás 1.0.0 (block.<ID>.json)",
+  "description": "A blokk utolsó P4-agentjének kimenete és a P5 bemenete. A v2 szerződés (app/src/data/course-contract/schema.js, 2.0.0) block/page/item/stimulus/response részéhez igazodik; ezen felül tartalmazza a kulcsot, az alternatívákat, a feedbacket, a kézirat-hivatkozást és a REVIEW_PASS tartalom-hash-kötését. Minden szöveg a review-zott kéziratból szó szerint átvett (hűségkapu).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "contractVersion", "id", "week", "kind", "title", "prerequisites", "review", "pages", "completion"],
+  "properties": {
+    "schemaVersion": { "const": "p5-block-1.0.0" },
+    "contractVersion": { "const": "2.0.0" },
+    "id": { "type": "string", "pattern": "^w[0-9]{2}-(u-[1-5]-[1-4]|test-[a-z-]+)$" },
+    "week": { "type": "integer", "minimum": 1, "maximum": 40 },
+    "kind": { "enum": ["lesson", "assessment"] },
+    "assessmentKind": { "enum": ["grammar", "reading", "vocabulary"] },
+    "title": { "$ref": "#/$defs/text" },
+    "position": { "$ref": "#/$defs/position" },
+    "prerequisites": { "type": "array", "items": { "$ref": "#/$defs/id" }, "uniqueItems": true },
+    "estimatedMinutes": { "$ref": "#/$defs/range" },
+    "taughtTargetRefs": { "type": "array", "items": { "$ref": "#/$defs/id" }, "uniqueItems": true },
+    "brief": { "$ref": "#/$defs/brief" },
+    "review": { "$ref": "#/$defs/review" },
+    "pages": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/page" } },
+    "completion": { "$ref": "#/$defs/completion" },
+    "paths": { "$ref": "#/$defs/paths" },
+    "media": { "type": "array", "items": { "$ref": "#/$defs/mediaDecl" } }
+  },
+  "$defs": {
+    "mediaDecl": {
+      "description": "A blokk médiája. local: fájl a terv media/ mappájában (offline is); link/embed: külső HTTPS-cím (csak hálózattal). Az alternative és a transcript tanulói szöveg (hűségkapu).",
+      "type": "object", "additionalProperties": false, "required": ["id", "kind", "access", "alternative"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" }, "kind": { "enum": ["audio", "video", "image"] },
+        "access": { "enum": ["local", "link", "embed"] },
+        "file": { "type": "string", "pattern": "^[A-Za-z0-9._-]+\\.(wav|mp3|m4a|ogg|mp4|webm|png|jpg|jpeg|webp)$" },
+        "uri": { "type": "string", "pattern": "^https://" },
+        "title": { "$ref": "#/$defs/text" }, "alternative": { "$ref": "#/$defs/text" }, "transcript": { "$ref": "#/$defs/text" },
+        "duration": { "type": "number", "exclusiveMinimum": 0 }
+      }
+    },
+    "text": { "type": "string", "minLength": 1, "pattern": "\\S" },
+    "glosses": {
+      "description": "Koppintásos jelentés (S23, T16; PRESIDENT 2026-11-15): a francia szöveg szavai és kifejezései a szövegkörnyezet szerinti magyar jelentéssel. surface: a szövegben betű szerint álló (ragozott) alak; lemma: alapalak; meaning: az adott mondatbeli jelentés, nem szótári felsorolás; note: rövid magyar megjegyzés. A névelő, a tulajdonnév és a biztosan ismert alapszó nem kell.",
+      "type": "array", "minItems": 1,
+      "items": { "type": "object", "additionalProperties": false, "required": ["surface", "lemma", "meaning"],
+        "properties": { "surface": { "$ref": "#/$defs/text" }, "lemma": { "$ref": "#/$defs/text" }, "meaning": { "$ref": "#/$defs/text" }, "note": { "$ref": "#/$defs/text" } } }
+    },
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "file": { "type": "string", "pattern": "^[A-Za-z0-9._-]+\\.md$" },
+    "range": {
+      "type": "object", "additionalProperties": false, "required": ["min", "max"],
+      "properties": { "min": { "type": "number", "minimum": 0 }, "max": { "type": "number", "minimum": 0 } }
+    },
+    "position": {
+      "type": "object", "additionalProperties": false, "required": ["row", "column"],
+      "properties": { "row": { "type": "integer", "minimum": 1, "maximum": 5 }, "column": { "type": "integer", "minimum": 1, "maximum": 4 } }
+    },
+    "manuscriptRef": {
+      "description": "Forrás-hivatkozás: melyik review-zott kéziratfájl melyik szakaszából való a szöveg.",
+      "type": "object", "additionalProperties": false, "required": ["file", "anchor"],
+      "properties": { "file": { "$ref": "#/$defs/file" }, "anchor": { "$ref": "#/$defs/text" } }
+    },
+    "review": {
+      "description": "Review-kötés: a REVIEW_PASS melyik kéziratláncra vonatkozik (fájl-hash), és a blokk tartalmának hash-e (a review mező nélkül, kanonikus JSON).",
+      "type": "object", "additionalProperties": false,
+      "required": ["status", "reviewPass", "manuscripts", "contentSha256"],
+      "properties": {
+        "status": { "const": "REVIEW_PASS" },
+        "reviewPass": { "$ref": "#/$defs/file" },
+        "manuscripts": {
+          "type": "array", "minItems": 1,
+          "items": {
+            "type": "object", "additionalProperties": false, "required": ["file", "sha256"],
+            "properties": { "file": { "$ref": "#/$defs/file" }, "sha256": { "$ref": "#/$defs/sha256" }, "role": { "enum": ["review-pass", "manuscript", "overlay", "revision"] } }
+          }
+        },
+        "contentSha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "brief": {
+      "description": "A blokk saját briefje, amelyhez a modellek és a tanulói eszközök igazodnak (brief-megfelelési kapu, CL-08).",
+      "type": "object", "additionalProperties": false, "required": ["register", "requiredLanguage", "manuscriptRef"],
+      "properties": {
+        "register": { "enum": ["vous", "tu", "neutral"] },
+        "wordRange": { "$ref": "#/$defs/range" },
+        "requiredContent": { "type": "array", "items": { "$ref": "#/$defs/text" } },
+        "requiredLanguage": { "type": "array", "items": { "$ref": "#/$defs/phrase" } },
+        "writingTools": { "type": "array", "items": { "$ref": "#/$defs/phrase" } },
+        "manuscriptRef": { "$ref": "#/$defs/manuscriptRef" }
+      }
+    },
+    "phrase": {
+      "type": "object", "additionalProperties": false, "required": ["text"],
+      "properties": { "text": { "$ref": "#/$defs/text" }, "alternatives": { "type": "array", "items": { "$ref": "#/$defs/text" } } }
+    },
+    "stimulus": {
+      "oneOf": [
+        {
+          "type": "object", "additionalProperties": false, "required": ["type", "text", "language", "manuscriptRef"],
+          "properties": {
+            "type": { "const": "text" }, "id": { "$ref": "#/$defs/id" }, "reveal": { "description": "Lépésenkénti felfedés: a reveal: \"tap\" jelölésű tartalmi elemek az oldalon egy sorozatot alkotnak (a tartalom sorrendjében); a tanuló egyenként, koppintásra fedi fel őket, felvétel közben is. A még fel nem fedett elem nem látszik.", "const": "tap" }, "role": { "$ref": "#/$defs/role" }, "title": { "$ref": "#/$defs/text" },
+            "text": { "$ref": "#/$defs/text" }, "language": { "enum": ["fr", "hu"] }, "glosses": { "$ref": "#/$defs/glosses" }, 
+            "manuscriptRef": { "$ref": "#/$defs/manuscriptRef" }, "sourceRefs": { "$ref": "#/$defs/refs" }
+          }
+        },
+        {
+          "type": "object", "additionalProperties": false, "required": ["type", "entries", "language", "manuscriptRef"],
+          "properties": {
+            "type": { "const": "list" }, "id": { "$ref": "#/$defs/id" }, "reveal": { "description": "Lépésenkénti felfedés: a reveal: \"tap\" jelölésű tartalmi elemek az oldalon egy sorozatot alkotnak (a tartalom sorrendjében); a tanuló egyenként, koppintásra fedi fel őket, felvétel közben is. A még fel nem fedett elem nem látszik.", "const": "tap" }, "role": { "$ref": "#/$defs/role" }, "title": { "$ref": "#/$defs/text" },
+            "entries": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/text" } }, "language": { "enum": ["fr", "hu"] }, "glosses": { "$ref": "#/$defs/glosses" }, 
+            "manuscriptRef": { "$ref": "#/$defs/manuscriptRef" }, "sourceRefs": { "$ref": "#/$defs/refs" }
+          }
+        },
+        {
+          "type": "object", "additionalProperties": false, "required": ["type", "columns", "rows", "language", "manuscriptRef"],
+          "properties": {
+            "type": { "const": "table" }, "id": { "$ref": "#/$defs/id" }, "reveal": { "description": "Lépésenkénti felfedés: a reveal: \"tap\" jelölésű tartalmi elemek az oldalon egy sorozatot alkotnak (a tartalom sorrendjében); a tanuló egyenként, koppintásra fedi fel őket, felvétel közben is. A még fel nem fedett elem nem látszik.", "const": "tap" }, "role": { "$ref": "#/$defs/role" }, "title": { "$ref": "#/$defs/text" },
+            "columns": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/text" } },
+            "rows": { "type": "array", "minItems": 1, "items": { "type": "array", "items": { "$ref": "#/$defs/text" } } },
+            "language": { "enum": ["fr", "hu"] }, "glosses": { "$ref": "#/$defs/glosses" }, 
+            "manuscriptRef": { "$ref": "#/$defs/manuscriptRef" }, "sourceRefs": { "$ref": "#/$defs/refs" }
+          }
+        },
+        {
+          "type": "object", "additionalProperties": false, "required": ["type", "id", "text", "language", "manuscriptRef"],
+          "properties": {
+            "type": { "const": "model" }, "id": { "$ref": "#/$defs/id" }, "title": { "$ref": "#/$defs/text" },
+            "text": { "$ref": "#/$defs/text" }, "language": { "enum": ["fr", "hu"] },
+            "declaredWords": { "type": "integer", "minimum": 1 }, "glosses": { "$ref": "#/$defs/glosses" }, 
+            "manuscriptRef": { "$ref": "#/$defs/manuscriptRef" }
+          }
+        },
+        {
+          "type": "object", "additionalProperties": false, "required": ["type", "mediaRef", "manuscriptRef"],
+          "properties": {
+            "type": { "const": "media" }, "mediaRef": { "$ref": "#/$defs/text" },
+            "manuscriptRef": { "$ref": "#/$defs/manuscriptRef" }, "sourceRefs": { "$ref": "#/$defs/refs" }
+          }
+        },
+        {
+          "description": "Szókártya (v2 gloss): felszíni alak, szótári alak, jelentés; opcionálisan példamondat és kiejtés (deklarált média).",
+          "type": "object", "additionalProperties": false, "required": ["type", "surface", "lemma", "meaning", "language", "manuscriptRef"],
+          "properties": {
+            "type": { "const": "gloss" }, "surface": { "$ref": "#/$defs/text" }, "lemma": { "$ref": "#/$defs/text" }, "meaning": { "$ref": "#/$defs/text" },
+            "language": { "enum": ["fr", "hu"] }, "example": { "$ref": "#/$defs/text" }, "exampleTranslation": { "$ref": "#/$defs/text" }, "mediaRef": { "$ref": "#/$defs/id" },
+            "manuscriptRef": { "$ref": "#/$defs/manuscriptRef" }, "sourceRefs": { "$ref": "#/$defs/refs" }
+          }
+        }
+      ]
+    },
+    "role": { "enum": ["situation", "brief", "lesson", "example", "tools", "checklist", "rubric", "note"] },
+    "refs": { "type": "array", "items": { "$ref": "#/$defs/text" }, "uniqueItems": true },
+    "option": {
+      "type": "object", "additionalProperties": false, "required": ["id", "label"],
+      "properties": { "id": { "$ref": "#/$defs/id" }, "label": { "$ref": "#/$defs/text" } }
+    },
+    "field": {
+      "type": "object", "additionalProperties": false, "required": ["id", "label"],
+      "properties": { "id": { "$ref": "#/$defs/id" }, "label": { "$ref": "#/$defs/text" } }
+    },
+    "normalization": {
+      "description": "Szabályként normalizált egyenértékűség a gépelt válaszban (szerződés 2.0.2). pricesFr: minden szokásos francia árírás egyenlő (3,60 € = 3,60 euros = 3 € 60 = trois euros soixante), a pénznem kötelező; numbersFr: a szám betűvel és számjeggyel is írható (douze = 12). Az alakokat nem kell felsorolni.",
+      "type": "object", "additionalProperties": false,
+      "properties": { "pricesFr": { "type": "boolean" }, "numbersFr": { "type": "boolean" } }
+    },
+    "response": {
+      "oneOf": [
+        { "type": "object", "additionalProperties": false, "required": ["type", "options"],
+          "properties": { "type": { "const": "single" }, "options": { "type": "array", "minItems": 2, "items": { "$ref": "#/$defs/option" } } } },
+        { "type": "object", "additionalProperties": false, "required": ["type", "options", "selection"],
+          "properties": { "type": { "const": "multiple" }, "options": { "type": "array", "minItems": 2, "items": { "$ref": "#/$defs/option" } }, "selection": { "$ref": "#/$defs/range" } } },
+        { "type": "object", "additionalProperties": false, "required": ["type", "lines"],
+          "properties": { "type": { "const": "text" }, "lines": { "enum": ["single", "multi"] }, "sentences": { "$ref": "#/$defs/range" }, "normalization": { "$ref": "#/$defs/normalization" } } },
+        { "type": "object", "additionalProperties": false, "required": ["type", "fields"],
+          "properties": { "type": { "const": "fields" }, "fields": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/field" } }, "bank": { "type": "array", "items": { "$ref": "#/$defs/option" } }, "normalization": { "$ref": "#/$defs/normalization" } } },
+        { "type": "object", "additionalProperties": false, "required": ["type", "tokens"],
+          "properties": { "type": { "const": "abx" }, "tokens": { "type": "array", "minItems": 3, "maxItems": 3, "items": {
+            "type": "object", "additionalProperties": false, "required": ["role", "mediaRef", "speaker", "category"],
+            "properties": { "role": { "enum": ["A", "B", "X"] }, "mediaRef": { "$ref": "#/$defs/id" }, "speaker": { "$ref": "#/$defs/id" }, "category": { "$ref": "#/$defs/id" } } } },
+            "window": { "type": "object", "additionalProperties": false, "required": ["size", "required"], "properties": { "size": { "type": "integer", "minimum": 1 }, "required": { "type": "integer", "minimum": 1 } } } } },
+        { "type": "object", "additionalProperties": false, "required": ["type", "text", "spans"],
+          "properties": { "type": { "const": "correction" }, "mode": { "enum": ["marked", "find"], "description": "marked: a hibahelyek látszanak (könnyebb); find: a tanuló keresi meg és jelöli ki (nehezebb)." }, "text": { "$ref": "#/$defs/text" }, "spans": { "type": "array", "minItems": 1, "items": {
+            "type": "object", "additionalProperties": false, "required": ["id", "start", "end"],
+            "properties": { "id": { "$ref": "#/$defs/id" }, "start": { "type": "integer", "minimum": 0 }, "end": { "type": "integer", "minimum": 1 } } } } } },
+        { "type": "object", "additionalProperties": false, "required": ["type", "left", "right"],
+          "properties": { "type": { "const": "pairs" }, "left": { "type": "array", "minItems": 2, "items": { "$ref": "#/$defs/option" } }, "right": { "type": "array", "minItems": 2, "items": { "$ref": "#/$defs/option" } } } },
+        { "type": "object", "additionalProperties": false, "required": ["type", "tokens"],
+          "properties": { "type": { "const": "order" }, "tokens": { "type": "array", "minItems": 2, "items": { "$ref": "#/$defs/option" } } } },
+        { "type": "object", "additionalProperties": false, "required": ["type", "wordRange"],
+          "properties": { "type": { "const": "writing" }, "wordRange": { "$ref": "#/$defs/range" }, "readOnlyPreviousRef": { "$ref": "#/$defs/id" } } },
+        { "type": "object", "additionalProperties": false, "required": ["type"],
+          "properties": { "type": { "const": "speech" }, "durationRange": { "$ref": "#/$defs/range" }, "recordingMaxSeconds": { "description": "A felvétel technikai felső határa másodpercben, ha a durationRange (a tanuló beszédideje, ez a tipp) ennél rövidebb, pl. ha a felvétel közben más szövege is elhangzik. Nem lehet kisebb a durationRange.max-nál. Hiányában a felvétel a durationRange.max-nál áll le.", "type": "number", "minimum": 1 }, "transcriptAllowed": { "type": "boolean" }, "writtenAlternative": { "description": "Hangüzenet helyett írott válasz is egyenértékű (pl. „Válassz egy módot: hangüzenet vagy írott üzenet”): az app a jegyzetmezőt teljes írott válaszként kínálja, nem csak mikrofon nélküli tartaléknak.", "type": "boolean" } } }
+      ]
+    },
+    "solution": {
+      "description": "Kulcs és alternatívák. exact: zárt válasz (minden elfogadott alak felsorolva); choice: opció-azonosítók (order válasznál a kulcs a sorrend, alternativeOrders a további elfogadott sorrendek); samples: jelentésalapú kulcs mintamegoldásokkal; rubric: nyílt produkció; none: formatív, nincs kulcs.",
+      "oneOf": [
+        { "type": "object", "additionalProperties": false, "required": ["type", "key", "alternatives"],
+          "properties": {
+            "type": { "const": "exact" },
+            "key": { "anyOf": [{ "$ref": "#/$defs/text" }, { "type": "object", "additionalProperties": { "$ref": "#/$defs/text" } }] },
+            "alternatives": { "type": "array", "items": { "$ref": "#/$defs/text" } },
+            "rejected": { "$ref": "#/$defs/rejectedList" } } },
+        { "type": "object", "additionalProperties": false, "required": ["type", "keyOptionIds"],
+          "properties": { "type": { "const": "choice" }, "keyOptionIds": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/id" } },
+            "alternativeOrders": { "description": "Csak order válasznál: további elfogadott sorrendek (mind a tokenek teljes permutációja, egymástól és a kulcstól különböző). A fordító ezeket a kulcs után a v2 answers-be teszi.",
+              "type": "array", "minItems": 1, "items": { "type": "array", "minItems": 2, "items": { "$ref": "#/$defs/id" } } } } },
+        { "type": "object", "additionalProperties": false, "required": ["type", "key"],
+          "properties": { "type": { "const": "abx" }, "key": { "enum": ["A", "B"] } } },
+        { "type": "object", "additionalProperties": false, "required": ["type", "keyPairs"],
+          "properties": { "type": { "const": "pairs" }, "keyPairs": { "type": "array", "minItems": 1, "items": {
+            "type": "object", "additionalProperties": false, "required": ["left", "right"],
+            "properties": { "left": { "$ref": "#/$defs/id" }, "right": { "$ref": "#/$defs/id" } } } } } },
+        { "type": "object", "additionalProperties": false, "required": ["type", "samples", "keyDescription"],
+          "properties": {
+            "type": { "const": "samples" },
+            "samples": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/text" } },
+            "keyDescription": { "$ref": "#/$defs/text" },
+            "alternatives": { "type": "array", "items": { "$ref": "#/$defs/text" } },
+            "rejected": { "$ref": "#/$defs/rejectedList" } } },
+        { "type": "object", "additionalProperties": false, "required": ["type", "criteria"],
+          "properties": {
+            "type": { "const": "rubric" },
+            "criteria": { "type": "array", "minItems": 1, "items": {
+              "type": "object", "additionalProperties": false, "required": ["label"],
+              "properties": { "label": { "$ref": "#/$defs/text" }, "points": { "type": "integer", "minimum": 0 }, "requirements": { "type": "array", "items": { "$ref": "#/$defs/text" } } } } },
+            "notSufficient": { "type": "array", "items": { "$ref": "#/$defs/text" } },
+            "keyDescription": { "description": "Szerkesztői leírás: mit fogad el a kulcs (osztályok, határok). Hűségkapu igen, a tanuló nem látja.", "$ref": "#/$defs/text" },
+            "rejected": { "$ref": "#/$defs/rejectedList" },
+            "samples": { "description": "Mintaválaszok a nyílt feladathoz: a tanuló csak beadás után látja, a kritériumok mellett. Tanulói szöveg (a hűség- és a meta-token kapu is nézi).", "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/text" } } } },
+        { "type": "object", "additionalProperties": false, "required": ["type"],
+          "properties": { "type": { "const": "none" } } }
+      ]
+    },
+    "rejectedList": {
+      "type": "array",
+      "items": { "type": "object", "additionalProperties": false, "required": ["text"],
+        "properties": { "text": { "$ref": "#/$defs/text" }, "reason": { "$ref": "#/$defs/text" }, "feedbackRef": { "$ref": "#/$defs/text" } } }
+    },
+    "feedback": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "correct": { "$ref": "#/$defs/text" },
+        "incorrect": { "$ref": "#/$defs/text" },
+        "closure": { "description": "Támogatott zárás szövege (retry.closure: supported): a lánc utolsó itemjén kötelező; a megoldással együtt („Nézzük meg együtt.” …). A lánc többi tagján megengedett (ha a változatsor rövidül), de nem jelenik meg.", "$ref": "#/$defs/text" },
+        "targeted": { "type": "array", "items": {
+          "type": "object", "additionalProperties": false, "required": ["id", "text"],
+          "properties": { "id": { "$ref": "#/$defs/text" }, "text": { "$ref": "#/$defs/text" }, "trigger": { "$ref": "#/$defs/text" } } } }
+      }
+    },
+    "evaluation": {
+      "type": "object", "additionalProperties": false, "required": ["mode"],
+      "properties": {
+        "mode": { "enum": ["exact", "reference", "semantic", "dual-gate", "human", "formative"] },
+        "aiAdvisoryOnly": { "type": "boolean" },
+        "scoring": { "enum": ["scored", "formative-required", "not-scored"] }
+      }
+    },
+    "item": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "capability", "variant", "prompt", "response", "solution", "evaluation", "manuscriptRef"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "capability": { "type": "string", "pattern": "^CAP-[a-z-]+$" },
+        "variant": { "type": "string", "pattern": "^PV-[a-z-]+$" },
+        "instruction": { "$ref": "#/$defs/text" },
+        "prompt": { "$ref": "#/$defs/text" },
+        "glosses": { "description": "Koppintásos jelentés (S23) a feladat francia szövegéhez: prompt, opciók, mezőcímkék, hangátirat. A surface betű szerint szerepeljen az item valamelyik tanulói szövegében.", "$ref": "#/$defs/glosses" },
+        "response": { "$ref": "#/$defs/response" },
+        "solution": { "$ref": "#/$defs/solution" },
+        "feedback": { "$ref": "#/$defs/feedback" },
+        "evaluation": { "$ref": "#/$defs/evaluation" },
+        "targetRefs": { "type": "array", "items": { "$ref": "#/$defs/id" }, "uniqueItems": true },
+        "mediaRefs": { "type": "array", "items": { "$ref": "#/$defs/id" }, "uniqueItems": true },
+        "recallFrom": { "description": "Visszautalás: ugyanennek a blokknak egy korábbi oldalán lévő item azonosítója; az app ennél az itemnél megmutatja a tanuló ottani válaszát (pl. „Au début, vous aviez choisi : …”). Csak single, multiple, text vagy writing válaszra mutathat.", "$ref": "#/$defs/id" },
+        "sourceRefs": { "$ref": "#/$defs/refs" },
+        "evidence": {
+          "description": "Felidézéses (memoriter) bizonyíték: modalitás, segítség nélküliség és a kanonikus szöveg (v2: CAP-recall-*).",
+          "type": "object", "additionalProperties": false, "required": ["modality", "assistance"],
+          "properties": { "modality": { "enum": ["written", "spoken", "listening", "phonetic", "visual"] }, "assistance": { "enum": ["uncued", "cued", "assisted"] }, "canonicalText": { "$ref": "#/$defs/text" } }
+        },
+        "retry": {
+          "description": "Újrapróba-változat(ok) mesterszintű tesztben (completion.mode: mastery): ha a tanuló az itemet elrontja, afterItems item múlva az első változatot kapja (új mondat, ugyanarra a célra). Ha a változatot is elrontja, a következő változat jön (az utolsó után ugyanaz újra). A változat teljes item: ugyanaz a capability, választípus és cél (targetRefs), saját kulccsal, visszajelzéssel és kézirat-hivatkozással; maga nem lehet kötelező, és nem lehet újrapróbája.",
+          "type": "object", "additionalProperties": false, "required": ["items"],
+          "properties": {
+            "afterItems": { "type": "integer", "minimum": 1, "maximum": 10 },
+            "items": { "description": "A változatok sorrendben. Üres csak támogatott zárásnál lehet (az alapitem rossz válasza után rögtön a zárás jön).", "type": "array", "items": { "$ref": "#/$defs/item" } },
+            "page": { "description": "A változatok oldala (pl. a p08 pótlóoldal), az alapitem oldala után; hiányában az alapitem oldala. Az oldalon a változatok az alapitemek blokkbeli sorrendjében állnak.", "$ref": "#/$defs/id" },
+            "maxVariants": { "description": "Legfeljebb ennyi változat (1–2); csak támogatott zárásnál. A változatok száma nem lehet több.", "type": "integer", "minimum": 1, "maximum": 2 },
+            "closure": { "description": "supported: ha az utolsó változat is rossz (vagy nincs változat), támogatott zárás jön: az app kiírja a tanuló utolsó válaszát („Ezt válaszoltad”), a lánc utolsó itemjének feedback.closure szövegét, és a tanuló még egyszer beírja a választ; az item megoldottnak számít (resolvedWithSupport), pontot nem ér. Csak resolved teljesítésnél.", "const": "supported" }
+          }
+        },
+        "manuscriptRef": { "$ref": "#/$defs/manuscriptRef" }
+      }
+    },
+    "page": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "template", "variant", "title", "content", "items", "manuscriptRef"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "template": { "type": "string", "pattern": "^PAGE-[a-z-]+$" },
+        "variant": { "type": "string", "pattern": "^PV-[a-z-]+$" },
+        "title": { "$ref": "#/$defs/text" },
+        "instruction": { "$ref": "#/$defs/text" },
+        "visibleAfter": { "$ref": "#/$defs/id" },
+        "content": { "type": "array", "items": { "$ref": "#/$defs/stimulus" } },
+        "items": { "type": "array", "items": { "$ref": "#/$defs/item" } },
+        "manuscriptRef": { "$ref": "#/$defs/manuscriptRef" }
+      }
+    },
+    "paths": {
+      "description": "Választható út (v2 2.0.4, block.paths): a choicePage oldalon a tanuló választ; minden opciónak saját oldalai vannak (pages, a választóoldal után, diszjunktak). A többi oldal közös. A teljesítés a közös és a választott út kötelező itemjeiből áll; minden útnak legyen saját kötelező iteme, és az utak kötelező itemszáma egyezzen (egyenértékű teljesítés; eltérésnél figyelmeztetés). A label tanulói szöveg (hűségkapu).",
+      "type": "object", "additionalProperties": false, "required": ["choicePage", "options"],
+      "properties": {
+        "choicePage": { "$ref": "#/$defs/id" },
+        "options": { "type": "array", "minItems": 2, "items": {
+          "type": "object", "additionalProperties": false, "required": ["id", "label", "pages"],
+          "properties": {
+            "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+            "label": { "$ref": "#/$defs/text" },
+            "pages": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/id" }, "uniqueItems": true },
+            "recommended": { "type": "boolean" } } } }
+      }
+    },
+    "completion": {
+      "type": "object", "additionalProperties": false, "required": ["mode", "requiredRefs"],
+      "properties": {
+        "mode": { "description": "mastery: minden kötelező (alap)item legyen önállóan helyes, első próbára vagy az újrapróba-változatával (retry); az első próba pontszáma változatlan marad. Csak tesztblokkban (v2 2.0.3). resolved: minden kötelező (alap)item legyen megoldva: önállóan helyesen, a változatával, vagy támogatott zárással (retry.closure: supported, nem pont). Csak leckeblokkban (v2 2.0.4).", "enum": ["all-items", "acknowledge", "all-targets", "mastery", "resolved"] },
+        "requiredRefs": { "type": "array", "items": { "$ref": "#/$defs/id" }, "uniqueItems": true }
+      }
+    }
+  }
+}

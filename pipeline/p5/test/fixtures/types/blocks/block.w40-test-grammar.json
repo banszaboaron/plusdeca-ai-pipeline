@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "p5-block-1.0.0",
+  "contractVersion": "2.0.0",
+  "id": "w40-test-grammar",
+  "week": 40,
+  "kind": "assessment",
+  "assessmentKind": "grammar",
+  "title": "Test de grammaire",
+  "prerequisites": [],
+  "estimatedMinutes": {
+    "min": 3,
+    "max": 5
+  },
+  "pages": [
+    {
+      "id": "w40-test-grammar-p01",
+      "template": "PAGE-closed",
+      "variant": "PV-closed-mixed",
+      "title": "Test de grammaire",
+      "instruction": "Réponds à chaque question. La correction s’affiche à la fin.",
+      "manuscriptRef": {
+        "file": "w40-test-grammar.review-pass.md",
+        "anchor": "## `w40-test-grammar-p01` — Test de grammaire"
+      },
+      "content": [],
+      "items": [
+        {
+          "id": "w40-test-grammar-i01",
+          "capability": "CAP-choice-single",
+          "variant": "PV-choice-one",
+          "prompt": "Je voudrais ___ café, s’il vous plaît.",
+          "response": {
+            "type": "single",
+            "options": [
+              {
+                "id": "a",
+                "label": "un"
+              },
+              {
+                "id": "b",
+                "label": "du"
+              }
+            ]
+          },
+          "solution": {
+            "type": "choice",
+            "keyOptionIds": [
+              "a"
+            ]
+          },
+          "evaluation": {
+            "mode": "exact"
+          },
+          "manuscriptRef": {
+            "file": "w40-test-grammar.review-pass.md",
+            "anchor": "### `w40-test-grammar-i01`"
+          }
+        },
+        {
+          "id": "w40-test-grammar-i02",
+          "capability": "CAP-typed-short",
+          "variant": "PV-typed-short",
+          "prompt": "Complète : Il ne reste plus ___ pain.",
+          "response": {
+            "type": "text",
+            "lines": "single"
+          },
+          "solution": {
+            "type": "exact",
+            "key": "de",
+            "alternatives": []
+          },
+          "evaluation": {
+            "mode": "exact"
+          },
+          "manuscriptRef": {
+            "file": "w40-test-grammar.review-pass.md",
+            "anchor": "### `w40-test-grammar-i02`"
+          }
+        },
+        {
+          "id": "w40-test-grammar-i03",
+          "capability": "CAP-transformation",
+          "variant": "PV-transform-sentence",
+          "prompt": "Remplace par en : Je prends deux croissants.",
+          "response": {
+            "type": "text",
+            "lines": "single"
+          },
+          "solution": {
+            "type": "exact",
+            "key": "J’en prends deux.",
+            "alternatives": []
+          },
+          "evaluation": {
+            "mode": "exact"
+          },
+          "manuscriptRef": {
+            "file": "w40-test-grammar.review-pass.md",
+            "anchor": "### `w40-test-grammar-i03`"
+          }
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "mode": "all-items",
+    "requiredRefs": [
+      "w40-test-grammar-i01",
+      "w40-test-grammar-i02",
+      "w40-test-grammar-i03"
+    ]
+  },
+  "review": {
+    "status": "REVIEW_PASS",
+    "reviewPass": "w40-test-grammar.review-pass.md",
+    "manuscripts": [
+      {
+        "file": "w40-test-grammar.review-pass.md",
+        "sha256": "83f579e087dbcead45ab827ee841e3d5f4a6f8ee01ed3e40a5ea4b8065ddc680",
+        "role": "review-pass"
+      }
+    ],
+    "contentSha256": "2d7b8a3b2ed95fe57fb270490c34941fb8e73f099e4fe734f4838fa7f2651b16"
+  }
+}

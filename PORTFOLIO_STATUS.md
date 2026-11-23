@@ -1,75 +1,52 @@
-# Portfolio status — 2026-11-22
+# Portfolio status — 2026-11-23
 
-Handoff for the portfolio version of Plusdeça. Local repository only: **nothing is committed, pushed or published.**
+Handoff for the public portfolio version of Plusdeça.
 
-## Scope chosen and why
+## What the repository contains
 
-**Component:** asynchronous LLM feedback on open written answers. In production this lives in the private
-`plusdeca` repo: `webapp/src/ellenorzes.js`, `webapp/server/ellenorzes-prompt.mjs` and `webapp/tools/ellenorzo.mjs`.
-
-Why this component, and not the authoring chain:
-- It answers the target question end to end: an LLM produces feedback, code validates it, two checkers cross-check it,
-  and the learner corrects and resubmits.
-- It is small enough to extract without the course content (which stays private) or the orchestration history.
-- It can be measured on a fixed answer set: false accept and false reject, revision rounds, latency, cost.
-- The authoring chain (writer → reviewers → independent solver → deterministic gates) is described in
-  `docs/architecture.md` but not extracted: it depends on the private course content and on long runs.
-
-## What was done
-
-| Item | Where |
-|---|---|
-| Separate repository, no history from the private repo | `C:\Users\bansz\projects\plusdeca-feedback-portfolio` |
-| Production pipeline code vendored unchanged (hash-checked) | `vendor/`, `vendor/PROVENANCE.md` |
-| Demo data written for this repository: 4 tasks, 1 lesson text, 33 labelled answers | `data/` |
-| Offline replay vs. live mode, labelled in every output | `lib/checkers.mjs`, `scripts/*.mjs` |
-| One recorded live run: 56 `claude -p` calls | `results/2026-11-22-claude/` |
-| Metrics: filter, false accept/reject, error detection, quote grounding, agreement, revision rounds, latency, cost | `lib/metrics.mjs`, `report.md` |
-| Teacher rating packet, blind + feedback review (unrated) | `teacher-packet/` |
-| English README, architecture page, screenshots (1280 px and 390 px) | `README.md`, `docs/` |
-
-The private `plusdeca` repo, its worktrees, the CEO chain, the scheduled checker and the live app were only read,
-not changed. No e-mail, notification, push or publication. The live experiment ran from the Claude subscription
-(56 calls, $1.53 notional), and no paid API key was used.
-
-## Validation report (actually run, 2026-11-22)
-
-| Check | Command | Result |
+| Part | Source in the private repo | Changes |
 |---|---|---|
-| Offline tests | `npm test` | 12/12 pass, including: vendored hashes, filter on all 33 answers, merge and fail-safe paths, stale-replay refusal, replay reproduces `metrics.json` exactly, offline demo |
-| Live run | `node scripts/eval.mjs --live --out results/2026-11-22-claude` | 56/56 calls returned valid schema output; model `claude-opus-5-5`, CLI 2.1.289 |
-| Replay = live | `npm run eval` | identical `metrics.json` (also asserted by a test) |
-| Demo | `npm run demo`, `npm run html` | filtered → revise (3/5, 6 errors) → pass (5/5) |
-| Secret / personal-data scan | grep for keys, tokens, e-mail, internal service names | nothing found. The vendored comments mention the author's first name and the production architecture (queue, Worker), with no credentials or endpoints |
+| `pipeline/editorial/p4-planning/ceo/` | Orchestrator, role cards, prompt templates, tests (`64c3a47`) | Private integrations removed (e-mail, relay, dashboard, survey, bug tracker, TTS, detached runs); console notifications; reference example switched to U21 |
+| `pipeline/.codex/`, `pipeline/.claude/` | Compiled role agents | Unchanged; `build-agents.mjs --check` passes |
+| `pipeline/p5/` | Gates, schema, compiler, contract copy, tests | French-only version (`cec3828^` + `335c62a`, `300d20b`); private blocks, weeks, media and frozen handoffs removed |
+| `pipeline/examples/w01-u-2-1/` | Two real CEO runs of U21 (`javitas-U21-2026-11-01`, `t27-U21-2026-11-15`) | Step outputs, reports, decisions, outputs; prompts left out (they embed private references); local paths replaced |
+| `docs/week1-run-stats.*` | `report.json` of the 40 week-1 runs | Counts only |
+| `feedback-eval/` | Writing-feedback component (published 2026-11-22) | Moved into its own folder |
 
-Main numbers (full table in the README): merged verdicts 25/25 on the non-contested set, injected errors 21/21,
-verbatim quotes 60/60, A/B verdict agreement 28/28, median 7.3 s per call, $0.055 notional per checked answer.
+Decisions by Áron: one repository, renamed to cover the whole pipeline; one real week-1 unit may be public;
+role cards stay in Hungarian with an English description ([docs/agents.md](docs/agents.md)). Earlier: no third-party
+text or audio, no live-app screenshots, the second course and its learner left out, "a domain expert reviews selected parts".
 
-## Not proven (state this in interviews too)
+## Validation (actually run, 2026-11-23)
 
-- The eval set is at **ceiling**. The answers and labels were written with Claude, the same family as the checker,
-  so the numbers show consistent rubric application on clear cases, not accuracy on real learner writing.
-- No teacher reference yet. The only human-review statement is: "a domain expert reviews selected parts" of the course.
-- No learning effect, no learner study. The course's 40-week plan is a plan: week 1 runs in the app.
-- The production pair is Claude + Codex. The repository measured two Claude calls only.
-- One run, one model, 4 tasks: no variance across runs or models.
+| Check | Result |
+|---|---|
+| `npm test` (root) | Orchestrator 119/119, gates 69/69, example 4/4, feedback 12/12. 57 orchestrator tests and 6 gate test files that need private content are skipped by name and listed in `pipeline/PRIVATE_CONTENT_TESTS.md` |
+| Private baseline | 253/253 orchestrator and 155/156 (1 skipped) gate tests pass in the private repo at `64c3a47` |
+| Dry run of the weekly chain | `ceo.mjs run het --dry-run` builds every prompt and CLI command, no model call |
+| Gates on U21 | Run 2 output: `GATE_PASS`; run 1 output: `GATE_FAIL` with CL-27 only (rule added later); tampering with one string: CL-01 fails |
+| Scan | No keys or tokens; no e-mail address, private domain, relay name or trigger id; no second-course reference; no ClimbAlong or LOGIMA material; media files are generated test tones only |
+
+## Not proven
+
+- LLM reviewers are not a ground truth; reviewer finding counts are as reported, not audited.
+- No learning outcome; no teacher rating yet; weeks 2–40 are a plan.
+- The orchestrator cannot run a real week from this copy (private references, logged-in CLIs).
+- The feedback eval set is at ceiling (see `feedback-eval/`).
 
 ## Open items
 
-1. **Áron:** read the README and the diff; decide the GitHub repo name and visibility. Suggested name:
-   `plusdeca-feedback-eval`. Creating the repo and pushing happen only on your explicit request.
-2. **Teacher:** fill in `teacher-packet/A-blind-rating.csv`, then `B-feedback-review.csv` (about 1 hour in total).
-   After that, add teacher-referenced metrics (small code change, no new model call).
-3. **Next experiment (needs your approval):** `eval-set.v2` with real, consented answers of your own from the app,
-   plus borderline cases, and a Claude + Codex comparison.
-4. A short video was not made; the screenshots cover the walkthrough. A 30–60 s screen recording of
-   `npm run demo` plus `docs/demo.html` can be added.
+1. Rename the GitHub repository (suggested `plusdeca-ai-pipeline`; the old URL redirects) and push. Only on request.
+2. The teacher packet in `feedback-eval/teacher-packet/` is unrated.
+3. Optional: a short screen recording of the dry run and the gates.
 
 ## CV bullets (English)
 
-- Built an evaluated LLM feedback pipeline for open French writing tasks: a deterministic pre-filter, two independent
-  LLM checkers with schema-constrained output, a strict merge and a learner revision loop, with offline replay
-  of recorded runs (Node.js, Claude CLI).
-- Designed a versioned eval set (33 labelled answers, injected errors, prompt-injection case) and measured false
-  accept/reject, error detection (21/21), quote grounding, checker agreement, latency (7 s median) and cost
-  ($0.05 per answer). Documented a ceiling effect and prepared a blind teacher-rating protocol as the next validation step.
+- Designed and built an LLM course-production pipeline in Node.js: an orchestrator that runs 17 role agents
+  (directors, writers, five reviewer types, an independent solver without the key) as isolated Codex/Claude CLI
+  sessions with bounded revision rounds and human escalation, followed by deterministic release gates (schema,
+  content-hash review binding, fidelity, playability, answer-key and language checks). It produced the first course
+  week: 23 blocks, 40 runs, 2,163 model calls.
+- Built and evaluated an LLM feedback pipeline for open French writing (filter, two schema-bound checkers, strict merge,
+  revision loop) on a versioned labelled set, measuring false accept/reject, error detection, quote grounding,
+  agreement, latency and cost, and documenting its ceiling effect and the teacher-rating protocol as the next step.

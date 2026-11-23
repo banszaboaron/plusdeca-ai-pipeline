@@ -1,0 +1,2139 @@
+{
+  "pipeline": "javitas",
+  "createdAt": "2026-11-15T18:56:21.364Z",
+  "calls": 67,
+  "steps": {
+    "u21-terv": {
+      "role": "GR",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "kind": "author",
+      "agent": "plusdeca-gr",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "PRESIDENT"
+      ],
+      "inputHash": "e21568f1149f1c56647397f3957afd9da11d97c08cb3530f4a72b9494e813476",
+      "promptBytes": 123473,
+      "contextBytes": 140376,
+      "status": "DONE",
+      "startedAt": "2026-11-15T18:56:41.337Z",
+      "finishedAt": "2026-11-15T19:00:09.008Z",
+      "ms": 207499,
+      "exitCode": 0,
+      "tokens": 117243,
+      "budget": {
+        "input": 2,
+        "output": 19428,
+        "cacheWrite": 68749,
+        "cacheRead": 29064,
+        "weighted": 185985,
+        "weekPct": 0.055,
+        "weekUsedAfter": 16
+      },
+      "outputBytes": 20366,
+      "summary": {
+        "status": "DRAFT_FOR_REVIEW"
+      }
+    },
+    "u21-terv-nave": {
+      "role": "NavE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "kind": "review",
+      "agent": "plusdeca-nave",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-terv"
+      ],
+      "inputHash": "9bba2a28ff2730f2bb621c19831853d0d12bd56c72b92037d46cb0cd2075f48b",
+      "promptBytes": 141876,
+      "contextBytes": 158162,
+      "status": "DONE",
+      "startedAt": "2026-11-15T19:00:09.037Z",
+      "finishedAt": "2026-11-15T19:02:39.922Z",
+      "ms": 150755,
+      "exitCode": 0,
+      "tokens": 121254,
+      "budget": {
+        "input": 2,
+        "output": 14756,
+        "cacheWrite": 77676,
+        "cacheRead": 28820,
+        "weighted": 173759,
+        "weekPct": 0.051,
+        "weekUsedAfter": 16
+      },
+      "outputBytes": 10965,
+      "summary": {
+        "verdict": "REVISION_REQUIRED",
+        "blocker": 0,
+        "major": 1,
+        "minor": 4
+      }
+    },
+    "u21-terv-ue": {
+      "role": "UE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "kind": "review",
+      "agent": "plusdeca-ue",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-terv"
+      ],
+      "inputHash": "f091d8225a85c192a60d9573c5a6c0d36cbe70f6dc4df243f255f77bb69e3afd",
+      "promptBytes": 141791,
+      "contextBytes": 157315,
+      "status": "DONE",
+      "startedAt": "2026-11-15T19:00:09.040Z",
+      "finishedAt": "2026-11-15T19:02:27.566Z",
+      "ms": 138238,
+      "exitCode": 0,
+      "tokens": 118823,
+      "budget": {
+        "input": 2,
+        "output": 12752,
+        "cacheWrite": 77642,
+        "cacheRead": 28427,
+        "weighted": 163657,
+        "weekPct": 0.048,
+        "weekUsedAfter": 16
+      },
+      "outputBytes": 12354,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 6
+      }
+    },
+    "u21-terv-rev1": {
+      "role": "GR",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "kind": "author",
+      "agent": "plusdeca-gr",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-terv",
+        "u21-terv-nave"
+      ],
+      "inputHash": "424862853c2410abd9d99041636c8fc61165c6cc5d62d1a521beb5ede19951c5",
+      "promptBytes": 155434,
+      "contextBytes": 172337,
+      "status": "DONE",
+      "startedAt": "2026-11-15T19:02:40.080Z",
+      "finishedAt": "2026-11-15T19:05:07.257Z",
+      "ms": 147028,
+      "exitCode": 0,
+      "tokens": 129807,
+      "budget": {
+        "input": 2,
+        "output": 16688,
+        "cacheWrite": 84053,
+        "cacheRead": 29064,
+        "weighted": 191415,
+        "weekPct": 0.056,
+        "weekUsedAfter": 17
+      },
+      "outputBytes": 30195,
+      "summary": {
+        "status": "DRAFT_FOR_REVIEW"
+      }
+    },
+    "u21-terv-nave-recheck1": {
+      "role": "NavE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "kind": "review",
+      "agent": "plusdeca-nave",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-terv-rev1"
+      ],
+      "inputHash": "6249bb936ae3668af50c1fe9ff44c9f49d930a06ff7a4bc9535e3ba3fc15c3fb",
+      "promptBytes": 162749,
+      "contextBytes": 179035,
+      "status": "DONE",
+      "startedAt": "2026-11-15T19:05:07.432Z",
+      "finishedAt": "2026-11-15T19:06:38.972Z",
+      "ms": 91342,
+      "exitCode": 0,
+      "tokens": 125048,
+      "budget": {
+        "input": 2,
+        "output": 8659,
+        "cacheWrite": 87567,
+        "cacheRead": 28820,
+        "weighted": 155638,
+        "weekPct": 0.046,
+        "weekUsedAfter": 17
+      },
+      "outputBytes": 8512,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 1
+      }
+    },
+    "u21-kezirat": {
+      "role": "U21",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "kind": "author",
+      "agent": "plusdeca-g-iro",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-terv-rev1"
+      ],
+      "inputHash": "0523a45a0b6a580cf46346bdf6a74e2f4aff17454aba588f48e82919a3d31129",
+      "promptBytes": 153526,
+      "contextBytes": 172404,
+      "status": "DONE",
+      "startedAt": "2026-11-15T19:06:38.999Z",
+      "finishedAt": "2026-11-15T19:11:16.952Z",
+      "ms": 277735,
+      "exitCode": 0,
+      "tokens": 145771,
+      "budget": {
+        "input": 2,
+        "output": 32757,
+        "cacheWrite": 83078,
+        "cacheRead": 29934,
+        "weighted": 270628,
+        "weekPct": 0.08,
+        "weekUsedAfter": 17
+      },
+      "outputBytes": 43800,
+      "summary": {
+        "status": "DRAFT_FOR_REVIEW"
+      }
+    },
+    "u21-kezirat-pe": {
+      "role": "PE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": "high",
+      "kind": "review",
+      "agent": "plusdeca-pe",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-kezirat"
+      ],
+      "inputHash": "00f89dc1d3d49acf44be0d301f09711bdeec57a09bbe4627895222d4fb19a468",
+      "promptBytes": 196366,
+      "contextBytes": 221365,
+      "status": "DONE",
+      "startedAt": "2026-11-15T19:11:17.095Z",
+      "finishedAt": "2026-11-15T19:14:20.086Z",
+      "ms": 182858,
+      "exitCode": 0,
+      "tokens": 448249,
+      "budget": {
+        "input": 8,
+        "output": 18260,
+        "cacheWrite": 116711,
+        "cacheRead": 313270,
+        "weighted": 268524,
+        "weekPct": 0.079,
+        "weekUsedAfter": 18
+      },
+      "outputBytes": 17438,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 4
+      }
+    },
+    "u21-kezirat-pe-2": {
+      "role": "PE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": "high",
+      "kind": "review",
+      "agent": "plusdeca-pe",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-kezirat"
+      ],
+      "inputHash": "00f89dc1d3d49acf44be0d301f09711bdeec57a09bbe4627895222d4fb19a468",
+      "promptBytes": 196366,
+      "contextBytes": 221365,
+      "status": "DONE",
+      "startedAt": "2026-11-15T19:11:17.096Z",
+      "finishedAt": "2026-11-15T19:14:22.528Z",
+      "ms": 185151,
+      "exitCode": 0,
+      "tokens": 451701,
+      "budget": {
+        "input": 8,
+        "output": 18689,
+        "cacheWrite": 118487,
+        "cacheRead": 314517,
+        "weighted": 273013,
+        "weekPct": 0.08,
+        "weekUsedAfter": 18
+      },
+      "outputBytes": 16933,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 8
+      }
+    },
+    "u21-kezirat-nave": {
+      "role": "NavE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "kind": "review",
+      "agent": "plusdeca-nave",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-kezirat"
+      ],
+      "inputHash": "1b3cb6b44b5b2f2dd846f318a2f6297a6146db476a1c1ae78a9faeb5926fecff",
+      "promptBytes": 195557,
+      "contextBytes": 211843,
+      "status": "DONE",
+      "startedAt": "2026-11-15T19:11:17.098Z",
+      "finishedAt": "2026-11-15T19:13:14.409Z",
+      "ms": 116837,
+      "exitCode": 0,
+      "tokens": 143576,
+      "budget": {
+        "input": 2,
+        "output": 12110,
+        "cacheWrite": 102644,
+        "cacheRead": 28820,
+        "weighted": 191739,
+        "weekPct": 0.056,
+        "weekUsedAfter": 17
+      },
+      "outputBytes": 7918,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 1
+      }
+    },
+    "u21-megoldas": {
+      "role": "MEGOLDASIRO",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "kind": "author",
+      "agent": "plusdeca-megoldasiro",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-kezirat"
+      ],
+      "inputHash": "26591f97891375ddce0ec7f5d862cda99d16d0bdd695351363b25d0bb106f84d",
+      "promptBytes": 187368,
+      "workFiles": [
+        "p5/schema/block.schema.json",
+        "p5/playable-types.json",
+        "p5/examples/block.w01-u-3-2.json",
+        "p5/examples/order-page.w01-u-1-1-p23.json",
+        "p5/blocks/w01/block.w01-u-5-1.json"
+      ],
+      "contextBytes": 204775,
+      "status": "DONE",
+      "startedAt": "2026-11-15T19:34:41.818Z",
+      "finishedAt": "2026-11-15T19:43:34.404Z",
+      "ms": 532344,
+      "exitCode": 0,
+      "tokens": 201115,
+      "budget": {
+        "input": 2,
+        "output": 73049,
+        "cacheWrite": 98854,
+        "cacheRead": 29210,
+        "weighted": 491736,
+        "weekPct": 0.145,
+        "weekUsedAfter": 20
+      },
+      "outputBytes": 117202,
+      "summary": {
+        "status": "DRAFT_FOR_REVIEW"
+      }
+    },
+    "u21-megoldas-solver": {
+      "role": "SOLVER",
+      "provider": "claude",
+      "model": null,
+      "effort": null,
+      "kind": "solver",
+      "agent": "plusdeca-solver",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-megoldas"
+      ],
+      "inputHash": "6cd6f210444b869df2dd2d0d168e2ece4bb3354aeb2f2c15acf16a95674b5fff",
+      "promptBytes": 7589,
+      "contextBytes": 9617,
+      "status": "DONE",
+      "startedAt": "2026-11-15T19:44:24.655Z",
+      "finishedAt": "2026-11-15T19:45:44.101Z",
+      "ms": 78778,
+      "exitCode": 0,
+      "tokens": 42469,
+      "budget": {
+        "input": 2,
+        "output": 6972,
+        "cacheWrite": 13492,
+        "cacheRead": 22003,
+        "weighted": 53927,
+        "weekPct": 0.016,
+        "weekUsedAfter": 21
+      },
+      "outputBytes": 4637,
+      "summary": null
+    },
+    "u21-megoldas-ue": {
+      "role": "UE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "kind": "review",
+      "agent": "plusdeca-ue",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-megoldas"
+      ],
+      "inputHash": "c5f349f22eaace7d65b2007cfd18ff8c9500d66bcd08d79918fb8a66c9df7e4e",
+      "promptBytes": 316586,
+      "workFiles": [
+        "p5/schema/block.schema.json",
+        "p5/playable-types.json",
+        "p5/examples/block.w01-u-3-2.json",
+        "p5/examples/order-page.w01-u-1-1-p23.json",
+        "p5/blocks/w01/block.w01-u-5-1.json"
+      ],
+      "contextBytes": 330560,
+      "sharedSession": {
+        "id": "kozos-faae461ffe6e",
+        "sessionId": "8782255f-4cf8-4928-b695-d3dc2f305389",
+        "agent": "plusdeca-ellenor"
+      },
+      "status": "DONE",
+      "startedAt": "2026-11-15T19:44:37.222Z",
+      "finishedAt": "2026-11-15T19:46:33.691Z",
+      "ms": 115022,
+      "exitCode": 0,
+      "tokens": 201558,
+      "budget": {
+        "input": 2,
+        "output": 10083,
+        "cacheWrite": 1918,
+        "cacheRead": 189555,
+        "weighted": 71770,
+        "weekPct": 0.021,
+        "weekUsedAfter": 21
+      },
+      "outputBytes": 8534,
+      "summary": {
+        "verdict": "REVISION_REQUIRED",
+        "blocker": 0,
+        "major": 1,
+        "minor": 2
+      }
+    },
+    "u21-megoldas-nye": {
+      "role": "NyE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "kind": "review",
+      "agent": "plusdeca-nye",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-megoldas"
+      ],
+      "inputHash": "60a2737a0b28ba272adf17baa2c1480873067aabf85c321ac55cc0b31005432c",
+      "promptBytes": 316385,
+      "workFiles": [
+        "p5/schema/block.schema.json",
+        "p5/playable-types.json",
+        "p5/examples/block.w01-u-3-2.json",
+        "p5/examples/order-page.w01-u-1-1-p23.json",
+        "p5/blocks/w01/block.w01-u-5-1.json"
+      ],
+      "contextBytes": 330359,
+      "sharedSession": {
+        "id": "kozos-faae461ffe6e",
+        "sessionId": "ab348763-e19e-43e5-a113-8a16306977db",
+        "agent": "plusdeca-ellenor"
+      },
+      "status": "DONE",
+      "startedAt": "2026-11-15T20:31:33.922Z",
+      "finishedAt": "2026-11-15T20:34:06.469Z",
+      "ms": 144576,
+      "exitCode": 0,
+      "tokens": 205656,
+      "budget": {
+        "input": 2,
+        "output": 14257,
+        "cacheWrite": 1844,
+        "cacheRead": 189553,
+        "weighted": 92547,
+        "weekPct": 0.027,
+        "weekUsedAfter": 22
+      },
+      "outputBytes": 10096,
+      "summary": {
+        "verdict": "REVISION_REQUIRED",
+        "blocker": 0,
+        "major": 1,
+        "minor": 3
+      }
+    },
+    "u21-megoldas-pe-2": {
+      "role": "PE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": "high",
+      "kind": "review",
+      "agent": "plusdeca-pe",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-megoldas"
+      ],
+      "inputHash": "36700f6469a470dd92392b9344bba91b80f38675263f86359bba765acd6e0dca",
+      "promptBytes": 326970,
+      "workFiles": [
+        "p5/schema/block.schema.json",
+        "p5/playable-types.json",
+        "p5/examples/block.w01-u-3-2.json",
+        "p5/examples/order-page.w01-u-1-1-p23.json",
+        "p5/blocks/w01/block.w01-u-5-1.json"
+      ],
+      "contextBytes": 340944,
+      "sharedSession": {
+        "id": "kozos-faae461ffe6e",
+        "sessionId": "ab348763-e19e-43e5-a113-8a16306977db",
+        "agent": "plusdeca-ellenor"
+      },
+      "status": "DONE",
+      "startedAt": "2026-11-15T20:31:33.939Z",
+      "finishedAt": "2026-11-15T20:33:34.745Z",
+      "ms": 111005,
+      "exitCode": 0,
+      "tokens": 206627,
+      "budget": {
+        "input": 2,
+        "output": 10312,
+        "cacheWrite": 6760,
+        "cacheRead": 189553,
+        "weighted": 78967,
+        "weekPct": 0.023,
+        "weekUsedAfter": 22
+      },
+      "outputBytes": 11914,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 2
+      }
+    },
+    "u21-megoldas-nave": {
+      "role": "NavE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "kind": "review",
+      "agent": "plusdeca-nave",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-megoldas"
+      ],
+      "inputHash": "73804d7d9e2fdecd59eb36d1fa032d19d80d6fac5b6d58f5e0382f0bc7f4e72f",
+      "promptBytes": 317355,
+      "workFiles": [
+        "p5/schema/block.schema.json",
+        "p5/playable-types.json",
+        "p5/examples/block.w01-u-3-2.json",
+        "p5/examples/order-page.w01-u-1-1-p23.json",
+        "p5/blocks/w01/block.w01-u-5-1.json"
+      ],
+      "contextBytes": 331329,
+      "sharedSession": {
+        "id": "kozos-faae461ffe6e",
+        "sessionId": "8782255f-4cf8-4928-b695-d3dc2f305389",
+        "agent": "plusdeca-ellenor"
+      },
+      "status": "DONE",
+      "startedAt": "2026-11-15T19:44:37.234Z",
+      "finishedAt": "2026-11-15T19:46:27.700Z",
+      "ms": 105995,
+      "exitCode": 0,
+      "tokens": 200924,
+      "budget": {
+        "input": 2,
+        "output": 9046,
+        "cacheWrite": 2321,
+        "cacheRead": 189555,
+        "weighted": 67089,
+        "weekPct": 0.02,
+        "weekUsedAfter": 22
+      },
+      "outputBytes": 8861,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 2
+      }
+    },
+    "u21-megoldas-pe": {
+      "role": "PE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": "high",
+      "kind": "review",
+      "agent": "plusdeca-pe",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-megoldas"
+      ],
+      "inputHash": "36700f6469a470dd92392b9344bba91b80f38675263f86359bba765acd6e0dca",
+      "promptBytes": 326970,
+      "workFiles": [
+        "p5/schema/block.schema.json",
+        "p5/playable-types.json",
+        "p5/examples/block.w01-u-3-2.json",
+        "p5/examples/order-page.w01-u-1-1-p23.json",
+        "p5/blocks/w01/block.w01-u-5-1.json"
+      ],
+      "contextBytes": 340944,
+      "sharedSession": {
+        "id": "kozos-faae461ffe6e",
+        "sessionId": "ab348763-e19e-43e5-a113-8a16306977db",
+        "agent": "plusdeca-ellenor"
+      },
+      "status": "DONE",
+      "startedAt": "2026-11-15T20:31:33.888Z",
+      "finishedAt": "2026-11-15T20:34:06.692Z",
+      "ms": 148350,
+      "exitCode": 0,
+      "tokens": 620178,
+      "budget": {
+        "input": 8,
+        "output": 13491,
+        "cacheWrite": 17603,
+        "cacheRead": 589076,
+        "weighted": 148374,
+        "weekPct": 0.044,
+        "weekUsedAfter": 22
+      },
+      "outputBytes": 12968,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 3
+      }
+    },
+    "u21-megoldas-he": {
+      "role": "HE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "kind": "review",
+      "agent": "plusdeca-he",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-megoldas"
+      ],
+      "inputHash": "ae4b070de579ef3afa1999bb0dfd978361fa0c893cadcc5a4a80f4b62f248a47",
+      "promptBytes": 315990,
+      "workFiles": [
+        "p5/schema/block.schema.json",
+        "p5/playable-types.json",
+        "p5/examples/block.w01-u-3-2.json",
+        "p5/examples/order-page.w01-u-1-1-p23.json",
+        "p5/blocks/w01/block.w01-u-5-1.json"
+      ],
+      "contextBytes": 329964,
+      "sharedSession": {
+        "id": "kozos-faae461ffe6e",
+        "sessionId": "8782255f-4cf8-4928-b695-d3dc2f305389",
+        "agent": "plusdeca-ellenor"
+      },
+      "status": "DONE",
+      "startedAt": "2026-11-15T19:44:37.239Z",
+      "finishedAt": "2026-11-15T19:46:35.379Z",
+      "ms": 110643,
+      "exitCode": 0,
+      "tokens": 200374,
+      "budget": {
+        "input": 2,
+        "output": 9174,
+        "cacheWrite": 1643,
+        "cacheRead": 189555,
+        "weighted": 66881,
+        "weekPct": 0.02,
+        "weekUsedAfter": 22
+      },
+      "outputBytes": 7220,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 5
+      }
+    },
+    "u21-megoldas-rev1": {
+      "role": "MEGOLDASIRO",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "kind": "author",
+      "agent": "plusdeca-megoldasiro",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-megoldas",
+        "u21-megoldas-nye",
+        "u21-megoldas-ue",
+        "u21-megoldas-solver"
+      ],
+      "inputHash": "fe9b83ed8710ce386ec27de40774637b5c3f1e8c42e241c1ada68dd0049c620f",
+      "promptBytes": 328525,
+      "workFiles": [
+        "p5/schema/block.schema.json",
+        "p5/playable-types.json",
+        "p5/examples/block.w01-u-3-2.json",
+        "p5/examples/order-page.w01-u-1-1-p23.json",
+        "p5/blocks/w01/block.w01-u-5-1.json"
+      ],
+      "contextBytes": 345932,
+      "status": "DONE",
+      "startedAt": "2026-11-15T20:34:06.732Z",
+      "finishedAt": "2026-11-15T20:43:27.134Z",
+      "ms": 560239,
+      "exitCode": 0,
+      "tokens": 270940,
+      "budget": {
+        "input": 2,
+        "output": 76207,
+        "cacheWrite": 165521,
+        "cacheRead": 29210,
+        "weighted": 590859,
+        "weekPct": 0.174,
+        "weekUsedAfter": 22
+      },
+      "outputBytes": 128208,
+      "summary": {
+        "status": "DRAFT_FOR_REVIEW"
+      }
+    },
+    "u21-megoldas-solver-recheck1": {
+      "role": "SOLVER",
+      "provider": "claude",
+      "model": null,
+      "effort": null,
+      "kind": "solver",
+      "agent": "plusdeca-solver",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-megoldas-rev1"
+      ],
+      "inputHash": "0640516a05cfa6126b872bb858c698c82d9251018f46e5c2d81a45be79308405",
+      "promptBytes": 13931,
+      "contextBytes": 15959,
+      "status": "DONE",
+      "startedAt": "2026-11-15T20:43:27.167Z",
+      "finishedAt": "2026-11-15T20:44:07.212Z",
+      "ms": 39924,
+      "exitCode": 0,
+      "tokens": 42301,
+      "budget": {
+        "input": 2,
+        "output": 3837,
+        "cacheWrite": 16459,
+        "cacheRead": 22003,
+        "weighted": 41961,
+        "weekPct": 0.012,
+        "weekUsedAfter": 23
+      },
+      "outputBytes": 3940,
+      "summary": null
+    },
+    "u21-megoldas-ue-recheck1": {
+      "role": "UE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "kind": "review",
+      "agent": "plusdeca-ue",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-megoldas-rev1"
+      ],
+      "inputHash": "399abf0be61a93659fcd0d8780e0cd416d525c4feb0ba66271832669c86c8ec6",
+      "promptBytes": 341445,
+      "workFiles": [
+        "p5/schema/block.schema.json",
+        "p5/playable-types.json",
+        "p5/examples/block.w01-u-3-2.json",
+        "p5/examples/order-page.w01-u-1-1-p23.json",
+        "p5/blocks/w01/block.w01-u-5-1.json"
+      ],
+      "contextBytes": 355419,
+      "sharedSession": {
+        "id": "kozos-0aed4b7ae245",
+        "sessionId": "8dab90db-a42b-42de-bd67-deeaa7a9c42a",
+        "agent": "plusdeca-ellenor"
+      },
+      "status": "DONE",
+      "startedAt": "2026-11-15T20:43:36.285Z",
+      "finishedAt": "2026-11-15T20:44:55.772Z",
+      "ms": 79362,
+      "exitCode": 0,
+      "tokens": 211606,
+      "budget": {
+        "input": 2,
+        "output": 7584,
+        "cacheWrite": 5923,
+        "cacheRead": 198097,
+        "weighted": 65135,
+        "weekPct": 0.019,
+        "weekUsedAfter": 23
+      },
+      "outputBytes": 9493,
+      "summary": {
+        "verdict": "REVISION_REQUIRED",
+        "blocker": 0,
+        "major": 1,
+        "minor": 2
+      }
+    },
+    "u21-megoldas-nye-recheck1": {
+      "role": "NyE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "kind": "review",
+      "agent": "plusdeca-nye",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-megoldas-rev1"
+      ],
+      "inputHash": "17909f02e0c8b87c3461fb56ac6870f30276d891c7a8833115e00bd19b92052a",
+      "promptBytes": 342806,
+      "workFiles": [
+        "p5/schema/block.schema.json",
+        "p5/playable-types.json",
+        "p5/examples/block.w01-u-3-2.json",
+        "p5/examples/order-page.w01-u-1-1-p23.json",
+        "p5/blocks/w01/block.w01-u-5-1.json"
+      ],
+      "contextBytes": 356780,
+      "sharedSession": {
+        "id": "kozos-0aed4b7ae245",
+        "sessionId": "8dab90db-a42b-42de-bd67-deeaa7a9c42a",
+        "agent": "plusdeca-ellenor"
+      },
+      "status": "DONE",
+      "startedAt": "2026-11-15T20:43:36.286Z",
+      "finishedAt": "2026-11-15T20:45:08.264Z",
+      "ms": 91707,
+      "exitCode": 0,
+      "tokens": 214147,
+      "budget": {
+        "input": 2,
+        "output": 9471,
+        "cacheWrite": 6577,
+        "cacheRead": 198097,
+        "weighted": 75388,
+        "weekPct": 0.022,
+        "weekUsedAfter": 23
+      },
+      "outputBytes": 9398,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 3
+      }
+    },
+    "u21-megoldas-rev2": {
+      "role": "MEGOLDASIRO",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "kind": "author",
+      "agent": "plusdeca-megoldasiro",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-megoldas-rev1",
+        "u21-megoldas-ue-recheck1",
+        "u21-megoldas-solver-recheck1"
+      ],
+      "inputHash": "1389097a9664db301d3a63ffd6f0cd93cafb27c1005a82748c4c071a5c0d83e2",
+      "promptBytes": 329676,
+      "workFiles": [
+        "p5/schema/block.schema.json",
+        "p5/playable-types.json",
+        "p5/examples/block.w01-u-3-2.json",
+        "p5/examples/order-page.w01-u-1-1-p23.json",
+        "p5/blocks/w01/block.w01-u-5-1.json"
+      ],
+      "contextBytes": 347083,
+      "status": "DONE",
+      "startedAt": "2026-11-15T20:45:08.292Z",
+      "finishedAt": "2026-11-15T20:53:01.465Z",
+      "ms": 473057,
+      "exitCode": 0,
+      "tokens": 263577,
+      "budget": {
+        "input": 2,
+        "output": 68089,
+        "cacheWrite": 166276,
+        "cacheRead": 29210,
+        "weighted": 551213,
+        "weekPct": 0.162,
+        "weekUsedAfter": 23
+      },
+      "outputBytes": 131774,
+      "summary": {
+        "status": "DRAFT_FOR_REVIEW"
+      }
+    },
+    "u21-megoldas-solver-recheck2": {
+      "role": "SOLVER",
+      "provider": "claude",
+      "model": null,
+      "effort": null,
+      "kind": "solver",
+      "agent": "plusdeca-solver",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-megoldas-rev2"
+      ],
+      "inputHash": "227214779212c1290b8d2984da561971c2720ab25252a00e40c44896a80acfb3",
+      "promptBytes": 13162,
+      "contextBytes": 15190,
+      "status": "DONE",
+      "startedAt": "2026-11-15T20:53:01.507Z",
+      "finishedAt": "2026-11-15T20:53:27.611Z",
+      "ms": 25880,
+      "exitCode": 0,
+      "tokens": 40587,
+      "budget": {
+        "input": 2,
+        "output": 2450,
+        "cacheWrite": 16132,
+        "cacheRead": 22003,
+        "weighted": 34617,
+        "weekPct": 0.01,
+        "weekUsedAfter": 25
+      },
+      "outputBytes": 3702,
+      "summary": null
+    },
+    "u21-megoldas-ue-recheck2": {
+      "role": "UE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "kind": "review",
+      "agent": "plusdeca-ue",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-megoldas-rev2"
+      ],
+      "inputHash": "ac1ecc08d0e4686c796c3cceedcee07121f3885f2f4184195b31bd91f834e869",
+      "promptBytes": 348109,
+      "workFiles": [
+        "p5/schema/block.schema.json",
+        "p5/playable-types.json",
+        "p5/examples/block.w01-u-3-2.json",
+        "p5/examples/order-page.w01-u-1-1-p23.json",
+        "p5/blocks/w01/block.w01-u-5-1.json"
+      ],
+      "contextBytes": 363633,
+      "status": "DONE",
+      "startedAt": "2026-11-15T20:53:01.714Z",
+      "finishedAt": "2026-11-15T20:54:29.586Z",
+      "ms": 87675,
+      "exitCode": 0,
+      "tokens": 216902,
+      "budget": {
+        "input": 2,
+        "output": 8493,
+        "cacheWrite": 187453,
+        "cacheRead": 20954,
+        "weighted": 278879,
+        "weekPct": 0.082,
+        "weekUsedAfter": 25
+      },
+      "outputBytes": 9810,
+      "summary": {
+        "verdict": "REVISION_REQUIRED",
+        "blocker": 0,
+        "major": 1,
+        "minor": 1
+      }
+    },
+    "u21-kezirat-e1": {
+      "role": "U21",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "kind": "author",
+      "agent": "plusdeca-g-iro",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-kezirat",
+        "u21-megoldas-rev2",
+        "PRESIDENT"
+      ],
+      "inputHash": "0451216cfb9cecf77bf1e2c54f4ea74cba57ea10ff8ba4020d41510153c570a3",
+      "promptBytes": 56697,
+      "contextBytes": 80048,
+      "status": "DONE",
+      "startedAt": "2026-11-16T09:41:59.519Z",
+      "finishedAt": "2026-11-16T09:47:07.019Z",
+      "ms": 307205,
+      "exitCode": 0,
+      "tokens": 107167,
+      "budget": {
+        "input": 2,
+        "output": 38405,
+        "cacheWrite": 47806,
+        "cacheRead": 20954,
+        "weighted": 253880,
+        "weekPct": 0.075,
+        "weekUsedAfter": 36
+      },
+      "outputBytes": 54934,
+      "summary": {
+        "status": "DRAFT_FOR_REVIEW"
+      }
+    },
+    "u21-kezirat-e1-nave": {
+      "role": "NavE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "kind": "review",
+      "agent": "plusdeca-nave",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-kezirat-e1"
+      ],
+      "inputHash": "2a4a242e052c001d30b9fd3cd3e79116119a096ff4fb3ea4e9ca7e361a71bb18",
+      "promptBytes": 116561,
+      "contextBytes": 132048,
+      "sharedSession": {
+        "id": "kozos-8b0153794a4a",
+        "sessionId": "b38764a1-5bc6-4d10-8f22-5df9706cdd26",
+        "agent": "plusdeca-ellenor"
+      },
+      "status": "DONE",
+      "startedAt": "2026-11-16T09:47:15.318Z",
+      "finishedAt": "2026-11-16T09:49:12.947Z",
+      "ms": 116835,
+      "exitCode": 0,
+      "tokens": 104937,
+      "budget": {
+        "input": 2,
+        "output": 11255,
+        "cacheWrite": 6691,
+        "cacheRead": 86989,
+        "weighted": 73340,
+        "weekPct": 0.022,
+        "weekUsedAfter": 37
+      },
+      "outputBytes": 9179,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 2
+      }
+    },
+    "u21-kezirat-e1-pe": {
+      "role": "PE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": "high",
+      "kind": "review",
+      "agent": "plusdeca-pe",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-kezirat-e1"
+      ],
+      "inputHash": "87992fe3c502aafb414c610d893df6b76115941ebd46b5bafeb135a3d494bc63",
+      "promptBytes": 155745,
+      "contextBytes": 171232,
+      "sharedSession": {
+        "id": "kozos-8b0153794a4a",
+        "sessionId": "b38764a1-5bc6-4d10-8f22-5df9706cdd26",
+        "agent": "plusdeca-ellenor"
+      },
+      "status": "DONE",
+      "startedAt": "2026-11-16T09:47:15.327Z",
+      "finishedAt": "2026-11-16T09:49:46.533Z",
+      "ms": 149877,
+      "exitCode": 0,
+      "tokens": 126711,
+      "budget": {
+        "input": 2,
+        "output": 14758,
+        "cacheWrite": 24962,
+        "cacheRead": 86989,
+        "weighted": 113693,
+        "weekPct": 0.033,
+        "weekUsedAfter": 37
+      },
+      "outputBytes": 13444,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 6
+      }
+    },
+    "u21-kezirat-e1-nye": {
+      "role": "NyE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "kind": "review",
+      "agent": "plusdeca-nye",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-kezirat-e1"
+      ],
+      "inputHash": "21498bf9c2c5138ad384fe55080ec8729e28407427bc9152f7340b8b83bac60c",
+      "promptBytes": 107672,
+      "contextBytes": 123159,
+      "sharedSession": {
+        "id": "kozos-8b0153794a4a",
+        "sessionId": "b38764a1-5bc6-4d10-8f22-5df9706cdd26",
+        "agent": "plusdeca-ellenor"
+      },
+      "status": "DONE",
+      "startedAt": "2026-11-16T09:47:15.315Z",
+      "finishedAt": "2026-11-16T09:49:31.050Z",
+      "ms": 135313,
+      "exitCode": 0,
+      "tokens": 103121,
+      "budget": {
+        "input": 2,
+        "output": 13786,
+        "cacheWrite": 2344,
+        "cacheRead": 86989,
+        "weighted": 80561,
+        "weekPct": 0.024,
+        "weekUsedAfter": 37
+      },
+      "outputBytes": 9785,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 2
+      }
+    },
+    "u21-megoldas-e1": {
+      "role": "MEGOLDASIRO",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "kind": "author",
+      "agent": "plusdeca-megoldasiro",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-kezirat-e1",
+        "u21-megoldas-rev2"
+      ],
+      "inputHash": "11f3bb26a952cf85d5484a625a027128519fc786dec8bb01e5fe21a9446ffca6",
+      "promptBytes": 349738,
+      "workFiles": [
+        "p5/schema/block.schema.json",
+        "p5/playable-types.json",
+        "p5/examples/block.w01-u-3-2.json",
+        "p5/examples/order-page.w01-u-1-1-p23.json",
+        "p5/blocks/w01/block.w01-u-5-1.json"
+      ],
+      "contextBytes": 370176,
+      "status": "DONE",
+      "startedAt": "2026-11-16T09:49:47.402Z",
+      "finishedAt": "2026-11-16T09:59:29.649Z",
+      "ms": 581209,
+      "exitCode": 0,
+      "tokens": 287205,
+      "budget": {
+        "input": 2,
+        "output": 80913,
+        "cacheWrite": 175743,
+        "cacheRead": 30547,
+        "weighted": 627300,
+        "weekPct": 0.185,
+        "weekUsedAfter": 37
+      },
+      "outputBytes": 136839,
+      "summary": {
+        "status": "DRAFT_FOR_REVIEW"
+      }
+    },
+    "u21-megoldas-e1-ue": {
+      "role": "UE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "kind": "review",
+      "agent": "plusdeca-ue",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-megoldas-e1"
+      ],
+      "inputHash": "acd3885819af8669d1745147617ea58c8223851f8abe16256816a3b70c139af6",
+      "promptBytes": 369075,
+      "workFiles": [
+        "p5/schema/block.schema.json",
+        "p5/playable-types.json",
+        "p5/examples/block.w01-u-3-2.json",
+        "p5/examples/order-page.w01-u-1-1-p23.json",
+        "p5/blocks/w01/block.w01-u-5-1.json"
+      ],
+      "contextBytes": 384562,
+      "sharedSession": {
+        "id": "kozos-3e27a52fff4e",
+        "sessionId": "ab557abb-0b3f-47be-8ed2-93c180ee581e",
+        "agent": "plusdeca-ellenor"
+      },
+      "status": "DONE",
+      "startedAt": "2026-11-16T09:59:40.409Z",
+      "finishedAt": "2026-11-16T10:01:07.337Z",
+      "ms": 84891,
+      "exitCode": 0,
+      "tokens": 225708,
+      "budget": {
+        "input": 2,
+        "output": 7554,
+        "cacheWrite": 7060,
+        "cacheRead": 211092,
+        "weighted": 67706,
+        "weekPct": 0.02,
+        "weekUsedAfter": 39
+      },
+      "outputBytes": 8071,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 2
+      }
+    },
+    "u21-megoldas-e1-nye": {
+      "role": "NyE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "kind": "review",
+      "agent": "plusdeca-nye",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-megoldas-e1"
+      ],
+      "inputHash": "23b9734d86c9b3dbd317927f9e46ee11e96149b1de08922d918cafaff362a9e4",
+      "promptBytes": 368462,
+      "workFiles": [
+        "p5/schema/block.schema.json",
+        "p5/playable-types.json",
+        "p5/examples/block.w01-u-3-2.json",
+        "p5/examples/order-page.w01-u-1-1-p23.json",
+        "p5/blocks/w01/block.w01-u-5-1.json"
+      ],
+      "contextBytes": 383949,
+      "sharedSession": {
+        "id": "kozos-3e27a52fff4e",
+        "sessionId": "ab557abb-0b3f-47be-8ed2-93c180ee581e",
+        "agent": "plusdeca-ellenor"
+      },
+      "status": "DONE",
+      "startedAt": "2026-11-16T09:59:40.406Z",
+      "finishedAt": "2026-11-16T10:01:10.540Z",
+      "ms": 89146,
+      "exitCode": 0,
+      "tokens": 226728,
+      "budget": {
+        "input": 2,
+        "output": 8876,
+        "cacheWrite": 6758,
+        "cacheRead": 211092,
+        "weighted": 73939,
+        "weekPct": 0.022,
+        "weekUsedAfter": 39
+      },
+      "outputBytes": 11387,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 2
+      }
+    },
+    "u21-megoldas-e1-pe": {
+      "role": "PE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": "high",
+      "kind": "review",
+      "agent": "plusdeca-pe",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-megoldas-e1"
+      ],
+      "inputHash": "6268a24d320e441b232948ccae5977ede68697e5569ce78d5ac357c323fb6141",
+      "promptBytes": 396729,
+      "workFiles": [
+        "p5/schema/block.schema.json",
+        "p5/playable-types.json",
+        "p5/examples/block.w01-u-3-2.json",
+        "p5/examples/order-page.w01-u-1-1-p23.json",
+        "p5/blocks/w01/block.w01-u-5-1.json"
+      ],
+      "contextBytes": 412216,
+      "sharedSession": {
+        "id": "kozos-3e27a52fff4e",
+        "sessionId": "a23c929d-f19d-49a2-bfff-a7d1df8b0520",
+        "agent": "plusdeca-ellenor"
+      },
+      "status": "DONE",
+      "startedAt": "2026-11-16T10:05:23.908Z",
+      "finishedAt": "2026-11-16T10:07:29.891Z",
+      "ms": 125713,
+      "exitCode": 0,
+      "tokens": 243634,
+      "budget": {
+        "input": 2,
+        "output": 12605,
+        "cacheWrite": 19934,
+        "cacheRead": 211093,
+        "weighted": 109054,
+        "weekPct": 0.032,
+        "weekUsedAfter": 40
+      },
+      "outputBytes": 12610,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 1
+      }
+    },
+    "u21-megoldas-e1-rev1": {
+      "role": "MEGOLDASIRO",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "kind": "author",
+      "agent": "plusdeca-megoldasiro",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-megoldas-e1",
+        "u21-megoldas-e1-solver"
+      ],
+      "inputHash": "d8b0308a16579b19a69ef8a2c1f46fb21c9679422533104dae4702cd9fa3e143",
+      "promptBytes": 491022,
+      "workFiles": [
+        "p5/schema/block.schema.json",
+        "p5/playable-types.json",
+        "p5/examples/block.w01-u-3-2.json",
+        "p5/examples/order-page.w01-u-1-1-p23.json",
+        "p5/blocks/w01/block.w01-u-5-1.json"
+      ],
+      "contextBytes": 511460,
+      "status": "DONE",
+      "startedAt": "2026-11-16T10:07:30.130Z",
+      "finishedAt": "2026-11-16T10:14:55.472Z",
+      "ms": 445069,
+      "exitCode": 0,
+      "tokens": 338274,
+      "budget": {
+        "input": 2,
+        "output": 65521,
+        "cacheWrite": 242204,
+        "cacheRead": 30547,
+        "weighted": 633417,
+        "weekPct": 0.186,
+        "weekUsedAfter": 40
+      },
+      "outputBytes": 135463,
+      "summary": {
+        "status": "DRAFT_FOR_REVIEW"
+      }
+    },
+    "u21-megoldas-e1-rev1-dontes": {
+      "role": "MEGOLDASIRO",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "kind": "author",
+      "agent": "plusdeca-megoldasiro",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-megoldas-e1-rev1",
+        "PRESIDENT"
+      ],
+      "inputHash": "1c46d285f6eae2a9d5886f692c9d4697dadbd9ce192695094feef38c88b0abed",
+      "promptBytes": 479155,
+      "workFiles": [
+        "p5/schema/block.schema.json",
+        "p5/playable-types.json",
+        "p5/examples/block.w01-u-3-2.json",
+        "p5/examples/order-page.w01-u-1-1-p23.json",
+        "p5/blocks/w01/block.w01-u-5-1.json"
+      ],
+      "contextBytes": 496562,
+      "status": "RUNNING",
+      "startedAt": "2026-11-15T22:37:49.495Z"
+    },
+    "u21-megoldas-e1-solver": {
+      "role": "SOLVER",
+      "provider": "claude",
+      "model": null,
+      "effort": null,
+      "kind": "solver",
+      "agent": "plusdeca-solver",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-megoldas-e1"
+      ],
+      "inputHash": "95ede3c968f94696b607b7370e9b78008261b2a11ea3e14d1b8718a986465d3e",
+      "promptBytes": 14104,
+      "contextBytes": 16132,
+      "status": "DONE",
+      "startedAt": "2026-11-16T10:05:13.840Z",
+      "finishedAt": "2026-11-16T10:05:47.152Z",
+      "ms": 32948,
+      "exitCode": 0,
+      "tokens": 41384,
+      "budget": {
+        "input": 2,
+        "output": 2886,
+        "cacheWrite": 16493,
+        "cacheRead": 22003,
+        "weighted": 37249,
+        "weekPct": 0.011,
+        "weekUsedAfter": 40
+      },
+      "outputBytes": 3798,
+      "summary": null
+    },
+    "u21-megoldas-e1-solver-recheck1": {
+      "role": "SOLVER",
+      "provider": "claude",
+      "model": null,
+      "effort": null,
+      "kind": "solver",
+      "agent": "plusdeca-solver",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-megoldas-e1-rev1"
+      ],
+      "inputHash": "914f0d4ae35bde1b54da1dfaf7952f08f73c49d682f8f8c7db48403179b35b08",
+      "promptBytes": 15870,
+      "contextBytes": 17898,
+      "status": "DONE",
+      "startedAt": "2026-11-16T10:14:55.505Z",
+      "finishedAt": "2026-11-16T10:15:16.072Z",
+      "ms": 20449,
+      "exitCode": 0,
+      "tokens": 41367,
+      "budget": {
+        "input": 2,
+        "output": 1998,
+        "cacheWrite": 17364,
+        "cacheRead": 22003,
+        "weighted": 33897,
+        "weekPct": 0.01,
+        "weekUsedAfter": 42
+      },
+      "outputBytes": 3083,
+      "summary": null
+    },
+    "u21-megoldas-e1-nye-recheck1": {
+      "role": "NyE",
+      "provider": "claude-web",
+      "model": null,
+      "effort": null,
+      "kind": "review",
+      "agent": "plusdeca-nye",
+      "agentMode": "claude-agent",
+      "inputs": [
+        "u21-megoldas-e1-rev1"
+      ],
+      "inputHash": "c21985b7e09c79baf1d76d74b642fe70024d88ea561857e6dce08e582bb90182",
+      "promptBytes": 367213,
+      "workFiles": [
+        "p5/schema/block.schema.json",
+        "p5/playable-types.json",
+        "p5/examples/block.w01-u-3-2.json",
+        "p5/examples/order-page.w01-u-1-1-p23.json",
+        "p5/blocks/w01/block.w01-u-5-1.json"
+      ],
+      "contextBytes": 384017,
+      "status": "DONE",
+      "startedAt": "2026-11-16T10:14:55.631Z",
+      "finishedAt": "2026-11-16T10:15:53.021Z",
+      "ms": 57232,
+      "exitCode": 0,
+      "tokens": 223166,
+      "budget": {
+        "input": 2,
+        "output": 5641,
+        "cacheWrite": 188517,
+        "cacheRead": 29006,
+        "weighted": 266754,
+        "weekPct": 0.078,
+        "weekUsedAfter": 42
+      },
+      "outputBytes": 9102,
+      "summary": {
+        "verdict": "REVIEW_PASS",
+        "blocker": 0,
+        "major": 0,
+        "minor": 3
+      }
+    }
+  },
+  "order": [
+    "u21-terv",
+    "u21-terv-nave",
+    "u21-terv-ue",
+    "u21-terv-rev1",
+    "u21-terv-nave-recheck1",
+    "u21-kezirat",
+    "u21-kezirat-pe",
+    "u21-kezirat-pe-2",
+    "u21-kezirat-nave",
+    "u21-megoldas",
+    "u21-megoldas-solver",
+    "u21-megoldas-ue",
+    "u21-megoldas-nye",
+    "u21-megoldas-pe-2",
+    "u21-megoldas-nave",
+    "u21-megoldas-pe",
+    "u21-megoldas-he",
+    "u21-megoldas-rev1",
+    "u21-megoldas-solver-recheck1",
+    "u21-megoldas-ue-recheck1",
+    "u21-megoldas-nye-recheck1",
+    "u21-megoldas-rev2",
+    "u21-megoldas-solver-recheck2",
+    "u21-megoldas-ue-recheck2",
+    "u21-kezirat-e1",
+    "u21-kezirat-e1-nave",
+    "u21-kezirat-e1-pe",
+    "u21-kezirat-e1-nye",
+    "u21-megoldas-e1",
+    "u21-megoldas-e1-ue",
+    "u21-megoldas-e1-nye",
+    "u21-megoldas-e1-pe",
+    "u21-megoldas-e1-rev1",
+    "u21-megoldas-e1-rev1-dontes",
+    "u21-megoldas-e1-solver",
+    "u21-megoldas-e1-solver-recheck1",
+    "u21-megoldas-e1-nye-recheck1"
+  ],
+  "waiting": null,
+  "updatedAt": "2026-11-16T10:15:53.217Z",
+  "plan": [
+    {
+      "id": "u21-terv",
+      "role": "GR",
+      "agent": "plusdeca-gr",
+      "label": "U21 javítási terv (GR) — NavE + UE"
+    },
+    {
+      "id": "u21-kezirat",
+      "role": "U21",
+      "agent": "plusdeca-g-iro",
+      "label": "U21 új kézirat — PE ×2 + NavE"
+    },
+    {
+      "id": "u21-megoldas",
+      "role": "MEGOLDASIRO",
+      "agent": "plusdeca-megoldasiro",
+      "label": "U21 megoldás — PE ×2 + NavE + NyE + HE + UE + megoldó"
+    },
+    {
+      "id": "u21-egyesites",
+      "role": "P5",
+      "agent": null,
+      "label": "U21 review-pass + P5-kapu"
+    }
+  ],
+  "meta": {
+    "label": "Javítás — U21 (Nyelvtan — Du, des, de : forme ou sens ?)",
+    "week": 1,
+    "blocks": {
+      "U21": "PENDING"
+    },
+    "estimate": {
+      "alap": 15,
+      "jellemzo": 22,
+      "legrosszabb": 58
+    }
+  },
+  "reruns": [
+    {
+      "step": "u21-megoldas",
+      "at": "2026-11-15T19:34:41.800Z",
+      "reason": "bemenet megváltozott"
+    },
+    {
+      "step": "u21-megoldas-nye",
+      "at": "2026-11-15T19:43:34.506Z",
+      "reason": "bemenet megváltozott"
+    },
+    {
+      "step": "u21-megoldas-nave",
+      "at": "2026-11-15T19:43:34.508Z",
+      "reason": "bemenet megváltozott"
+    },
+    {
+      "step": "u21-megoldas-ue",
+      "at": "2026-11-15T19:43:34.515Z",
+      "reason": "bemenet megváltozott"
+    },
+    {
+      "step": "u21-kezirat-e1",
+      "at": "2026-11-16T09:41:59.511Z",
+      "reason": "bemenet megváltozott"
+    },
+    {
+      "step": "u21-kezirat-e1-nye",
+      "at": "2026-11-16T09:47:07.204Z",
+      "reason": "bemenet megváltozott"
+    },
+    {
+      "step": "u21-kezirat-e1-nave",
+      "at": "2026-11-16T09:47:07.218Z",
+      "reason": "bemenet megváltozott"
+    },
+    {
+      "step": "u21-kezirat-e1-pe",
+      "at": "2026-11-16T09:47:07.223Z",
+      "reason": "bemenet megváltozott"
+    },
+    {
+      "step": "u21-megoldas-e1",
+      "at": "2026-11-16T09:49:46.583Z",
+      "reason": "bemenet megváltozott"
+    },
+    {
+      "step": "u21-megoldas-e1-ue",
+      "at": "2026-11-16T09:59:29.824Z",
+      "reason": "bemenet megváltozott"
+    },
+    {
+      "step": "u21-megoldas-e1-nye",
+      "at": "2026-11-16T09:59:29.830Z",
+      "reason": "bemenet megváltozott"
+    },
+    {
+      "step": "u21-megoldas-e1-pe",
+      "at": "2026-11-16T10:05:13.836Z",
+      "reason": "bemenet megváltozott"
+    },
+    {
+      "step": "u21-megoldas-e1-rev1",
+      "at": "2026-11-16T10:07:30.066Z",
+      "reason": "bemenet megváltozott"
+    }
+  ],
+  "sharedWarmups": [
+    {
+      "id": "kozos-faae461ffe6e",
+      "at": "2026-11-15T19:43:47.207Z",
+      "ok": true,
+      "sessionId": "9897e8c1-b82d-456b-a526-8564d46bca24",
+      "budget": {
+        "input": 2,
+        "output": 167,
+        "cacheWrite": 168601,
+        "cacheRead": 20954,
+        "weighted": 213684,
+        "weekPct": 0.063,
+        "weekUsedAfter": 21
+      }
+    },
+    {
+      "id": "kozos-faae461ffe6e",
+      "at": "2026-11-15T19:44:37.156Z",
+      "ok": true,
+      "sessionId": "8782255f-4cf8-4928-b695-d3dc2f305389",
+      "budget": {
+        "input": 2,
+        "output": 165,
+        "cacheWrite": 10191,
+        "cacheRead": 179364,
+        "weighted": 31502,
+        "weekPct": 0.009,
+        "weekUsedAfter": 21
+      }
+    },
+    {
+      "id": "kozos-faae461ffe6e",
+      "at": "2026-11-15T20:31:33.510Z",
+      "ok": true,
+      "sessionId": "ab348763-e19e-43e5-a113-8a16306977db",
+      "budget": {
+        "input": 2,
+        "output": 167,
+        "cacheWrite": 10189,
+        "cacheRead": 179364,
+        "weighted": 31510,
+        "weekPct": 0.009,
+        "weekUsedAfter": 22
+      }
+    },
+    {
+      "id": "kozos-0aed4b7ae245",
+      "at": "2026-11-15T20:43:36.272Z",
+      "ok": true,
+      "sessionId": "8dab90db-a42b-42de-bd67-deeaa7a9c42a",
+      "budget": {
+        "input": 2,
+        "output": 119,
+        "cacheWrite": 170365,
+        "cacheRead": 27732,
+        "weighted": 216326,
+        "weekPct": 0.064,
+        "weekUsedAfter": 23
+      }
+    },
+    {
+      "id": "kozos-b5c46bab1c8a",
+      "at": "2026-11-15T20:58:14.563Z",
+      "ok": true,
+      "sessionId": "d41112a1-a99f-4397-b537-5cdecacae5ad",
+      "budget": {
+        "input": 2,
+        "output": 132,
+        "cacheWrite": 57137,
+        "cacheRead": 27732,
+        "weighted": 74856,
+        "weekPct": 0.022,
+        "weekUsedAfter": 25
+      }
+    },
+    {
+      "id": "kozos-be9b23838baf",
+      "at": "2026-11-15T21:08:24.184Z",
+      "ok": true,
+      "sessionId": "054033ea-3132-477b-907b-948c2b3e1cc6",
+      "budget": {
+        "input": 2,
+        "output": 163,
+        "cacheWrite": 178003,
+        "cacheRead": 27732,
+        "weighted": 226094,
+        "weekPct": 0.066,
+        "weekUsedAfter": 26
+      }
+    },
+    {
+      "id": "kozos-8b0153794a4a",
+      "at": "2026-11-16T09:47:15.285Z",
+      "ok": true,
+      "sessionId": "b38764a1-5bc6-4d10-8f22-5df9706cdd26",
+      "budget": {
+        "input": 2,
+        "output": 169,
+        "cacheWrite": 66035,
+        "cacheRead": 20954,
+        "weighted": 85486,
+        "weekPct": 0.025,
+        "weekUsedAfter": 37
+      }
+    },
+    {
+      "id": "kozos-3e27a52fff4e",
+      "at": "2026-11-16T09:59:40.370Z",
+      "ok": true,
+      "sessionId": "ab557abb-0b3f-47be-8ed2-93c180ee581e",
+      "budget": {
+        "input": 2,
+        "output": 165,
+        "cacheWrite": 182687,
+        "cacheRead": 28405,
+        "weighted": 232026,
+        "weekPct": 0.068,
+        "weekUsedAfter": 39
+      }
+    },
+    {
+      "id": "kozos-3e27a52fff4e",
+      "at": "2026-11-16T10:05:23.891Z",
+      "ok": true,
+      "sessionId": "a23c929d-f19d-49a2-bfff-a7d1df8b0520",
+      "budget": {
+        "input": 2,
+        "output": 169,
+        "cacheWrite": 10196,
+        "cacheRead": 200897,
+        "weighted": 33682,
+        "weekPct": 0.01,
+        "weekUsedAfter": 40
+      }
+    }
+  ],
+  "discarded": [
+    {
+      "id": "u21-megoldas-solver",
+      "at": "2026-11-15T19:44:24.033Z",
+      "reason": "kézi újrafuttatás (--ujrafuttat)",
+      "record": {
+        "role": "SOLVER",
+        "provider": "claude",
+        "model": null,
+        "effort": null,
+        "kind": "solver",
+        "agent": "plusdeca-solver",
+        "agentMode": "claude-agent",
+        "inputs": [
+          "u21-megoldas"
+        ],
+        "inputHash": "87e1ffe71a8173781229c7eebad83065572e3f27707854278508dd839758beb1",
+        "promptBytes": 7210,
+        "contextBytes": 9238,
+        "status": "DONE",
+        "startedAt": "2026-11-15T19:24:07.771Z",
+        "finishedAt": "2026-11-15T19:25:22.596Z",
+        "ms": 74322,
+        "exitCode": 0,
+        "tokens": 41816,
+        "budget": {
+          "input": 2,
+          "output": 6573,
+          "cacheWrite": 14287,
+          "cacheRead": 20954,
+          "weighted": 52821,
+          "weekPct": 0.016,
+          "weekUsedAfter": 19
+        },
+        "outputBytes": 4578,
+        "summary": null
+      }
+    },
+    {
+      "id": "u21-megoldas-nave",
+      "at": "2026-11-15T19:44:24.041Z",
+      "reason": "kézi újrafuttatás (--ujrafuttat)",
+      "record": {
+        "role": "NavE",
+        "provider": "claude-web",
+        "model": null,
+        "effort": null,
+        "kind": "review",
+        "agent": "plusdeca-nave",
+        "agentMode": "claude-agent",
+        "inputs": [
+          "u21-megoldas"
+        ],
+        "inputHash": "73804d7d9e2fdecd59eb36d1fa032d19d80d6fac5b6d58f5e0382f0bc7f4e72f",
+        "promptBytes": 317355,
+        "workFiles": [
+          "p5/schema/block.schema.json",
+          "p5/playable-types.json",
+          "p5/examples/block.w01-u-3-2.json",
+          "p5/examples/order-page.w01-u-1-1-p23.json",
+          "p5/blocks/w01/block.w01-u-5-1.json"
+        ],
+        "contextBytes": 331329,
+        "sharedSession": {
+          "id": "kozos-faae461ffe6e",
+          "sessionId": "9897e8c1-b82d-456b-a526-8564d46bca24",
+          "agent": "plusdeca-ellenor"
+        },
+        "status": "RUNNING",
+        "startedAt": "2026-11-15T19:43:47.231Z"
+      }
+    },
+    {
+      "id": "u21-megoldas-nye",
+      "at": "2026-11-15T19:44:24.045Z",
+      "reason": "kézi újrafuttatás (--ujrafuttat)",
+      "record": {
+        "role": "NyE",
+        "provider": "claude-web",
+        "model": null,
+        "effort": null,
+        "kind": "review",
+        "agent": "plusdeca-nye",
+        "agentMode": "claude-agent",
+        "inputs": [
+          "u21-megoldas"
+        ],
+        "inputHash": "60a2737a0b28ba272adf17baa2c1480873067aabf85c321ac55cc0b31005432c",
+        "promptBytes": 316385,
+        "workFiles": [
+          "p5/schema/block.schema.json",
+          "p5/playable-types.json",
+          "p5/examples/block.w01-u-3-2.json",
+          "p5/examples/order-page.w01-u-1-1-p23.json",
+          "p5/blocks/w01/block.w01-u-5-1.json"
+        ],
+        "contextBytes": 330359,
+        "sharedSession": {
+          "id": "kozos-faae461ffe6e",
+          "sessionId": "9897e8c1-b82d-456b-a526-8564d46bca24",
+          "agent": "plusdeca-ellenor"
+        },
+        "status": "RUNNING",
+        "startedAt": "2026-11-15T19:43:47.229Z"
+      }
+    },
+    {
+      "id": "u21-megoldas-pe",
+      "at": "2026-11-15T19:44:24.050Z",
+      "reason": "kézi újrafuttatás (--ujrafuttat)",
+      "record": {
+        "role": "PE",
+        "provider": "claude-web",
+        "model": null,
+        "effort": "high",
+        "kind": "review",
+        "agent": "plusdeca-pe",
+        "agentMode": "claude-agent",
+        "inputs": [
+          "u21-megoldas"
+        ],
+        "inputHash": "2f4785763c5cb3a109eee5b31e59066672538b2edd93f32153e092c640661d8f",
+        "promptBytes": 193281,
+        "contextBytes": 218280,
+        "status": "DONE",
+        "startedAt": "2026-11-15T19:24:07.994Z",
+        "finishedAt": "2026-11-15T19:27:48.373Z",
+        "ms": 218909,
+        "exitCode": 0,
+        "tokens": 466093,
+        "budget": {
+          "input": 8,
+          "output": 20356,
+          "cacheWrite": 122424,
+          "cacheRead": 323305,
+          "weighted": 287149,
+          "weekPct": 0.084,
+          "weekUsedAfter": 20
+        },
+        "outputBytes": 11972,
+        "summary": {
+          "verdict": "REVIEW_PASS",
+          "blocker": 0,
+          "major": 0,
+          "minor": 2
+        }
+      }
+    },
+    {
+      "id": "u21-megoldas-he",
+      "at": "2026-11-15T19:44:24.056Z",
+      "reason": "kézi újrafuttatás (--ujrafuttat)",
+      "record": {
+        "role": "HE",
+        "provider": "claude-web",
+        "model": null,
+        "effort": null,
+        "kind": "review",
+        "agent": "plusdeca-he",
+        "agentMode": "claude-agent",
+        "inputs": [
+          "u21-megoldas"
+        ],
+        "inputHash": "a743e8d5d521d92342f549eb80dfbb1143dfc0189213eb08663cfb611c8879a9",
+        "promptBytes": 192329,
+        "contextBytes": 207300,
+        "status": "DONE",
+        "startedAt": "2026-11-15T19:24:07.995Z",
+        "finishedAt": "2026-11-15T19:26:30.377Z",
+        "ms": 140201,
+        "exitCode": 0,
+        "tokens": 145479,
+        "budget": {
+          "input": 2,
+          "output": 12595,
+          "cacheWrite": 111928,
+          "cacheRead": 20954,
+          "weighted": 204982,
+          "weekPct": 0.06,
+          "weekUsedAfter": 19
+        },
+        "outputBytes": 6721,
+        "summary": {
+          "verdict": "REVIEW_PASS",
+          "blocker": 0,
+          "major": 0,
+          "minor": 1
+        }
+      }
+    },
+    {
+      "id": "u21-megoldas-pe-2",
+      "at": "2026-11-15T19:44:24.061Z",
+      "reason": "kézi újrafuttatás (--ujrafuttat)",
+      "record": {
+        "role": "PE",
+        "provider": "claude-web",
+        "model": null,
+        "effort": "high",
+        "kind": "review",
+        "agent": "plusdeca-pe",
+        "agentMode": "claude-agent",
+        "inputs": [
+          "u21-megoldas"
+        ],
+        "inputHash": "2f4785763c5cb3a109eee5b31e59066672538b2edd93f32153e092c640661d8f",
+        "promptBytes": 193281,
+        "contextBytes": 218280,
+        "status": "DONE",
+        "startedAt": "2026-11-15T19:24:07.995Z",
+        "finishedAt": "2026-11-15T19:28:04.182Z",
+        "ms": 232725,
+        "exitCode": 0,
+        "tokens": 160325,
+        "budget": {
+          "input": 2,
+          "output": 22307,
+          "cacheWrite": 10180,
+          "cacheRead": 127836,
+          "weighted": 137046,
+          "weekPct": 0.04,
+          "weekUsedAfter": 19
+        },
+        "outputBytes": 16956,
+        "summary": {
+          "verdict": "REVIEW_PASS",
+          "blocker": 0,
+          "major": 0,
+          "minor": 5
+        }
+      }
+    },
+    {
+      "id": "u21-megoldas-ue",
+      "at": "2026-11-15T19:44:24.066Z",
+      "reason": "kézi újrafuttatás (--ujrafuttat)",
+      "record": {
+        "role": "UE",
+        "provider": "claude-web",
+        "model": null,
+        "effort": null,
+        "kind": "review",
+        "agent": "plusdeca-ue",
+        "agentMode": "claude-agent",
+        "inputs": [
+          "u21-megoldas"
+        ],
+        "inputHash": "c5f349f22eaace7d65b2007cfd18ff8c9500d66bcd08d79918fb8a66c9df7e4e",
+        "promptBytes": 316586,
+        "workFiles": [
+          "p5/schema/block.schema.json",
+          "p5/playable-types.json",
+          "p5/examples/block.w01-u-3-2.json",
+          "p5/examples/order-page.w01-u-1-1-p23.json",
+          "p5/blocks/w01/block.w01-u-5-1.json"
+        ],
+        "contextBytes": 330560,
+        "sharedSession": {
+          "id": "kozos-faae461ffe6e",
+          "sessionId": "9897e8c1-b82d-456b-a526-8564d46bca24",
+          "agent": "plusdeca-ellenor"
+        },
+        "status": "RUNNING",
+        "startedAt": "2026-11-15T19:43:47.234Z"
+      }
+    },
+    {
+      "id": "u21-megoldas-rev1",
+      "at": "2026-11-15T19:44:24.072Z",
+      "reason": "kézi újrafuttatás (--ujrafuttat)",
+      "record": {
+        "role": "MEGOLDASIRO",
+        "provider": "claude-web",
+        "model": null,
+        "effort": null,
+        "kind": "author",
+        "agent": "plusdeca-megoldasiro",
+        "agentMode": "claude-agent",
+        "inputs": [
+          "u21-megoldas",
+          "u21-megoldas-nave",
+          "u21-megoldas-nye",
+          "u21-megoldas-ue",
+          "u21-megoldas-solver"
+        ],
+        "inputHash": "4effa393f1dd3e7ebe26e7e167687fbde9e481b43b2d07cbe2a459e6988f0b22",
+        "promptBytes": 238207,
+        "workFiles": [
+          "p5/schema/block.schema.json",
+          "p5/playable-types.json",
+          "p5/examples/block.w01-u-3-2.json",
+          "p5/examples/order-page.w01-u-1-1-p23.json",
+          "p5/blocks/w01/block.w01-u-5-1.json"
+        ],
+        "contextBytes": 255614,
+        "status": "RUNNING",
+        "startedAt": "2026-11-15T19:29:07.434Z"
+      }
+    },
+    {
+      "id": "u21-megoldas-e1-solver",
+      "at": "2026-11-16T10:05:12.917Z",
+      "reason": "kézi újrafuttatás (--ujrafuttat)",
+      "record": {
+        "role": "SOLVER",
+        "provider": "claude",
+        "model": null,
+        "effort": null,
+        "kind": "solver",
+        "agent": "plusdeca-solver",
+        "agentMode": "claude-agent",
+        "inputs": [
+          "u21-megoldas-e1"
+        ],
+        "inputHash": "1681ba588ec8d7b28126d392837738a3fecb381bc5040be689d1dd39a1269c4d",
+        "promptBytes": 13394,
+        "contextBytes": 15422,
+        "status": "DONE",
+        "startedAt": "2026-11-15T21:08:06.362Z",
+        "finishedAt": "2026-11-15T21:08:48.825Z",
+        "ms": 41926,
+        "exitCode": 0,
+        "tokens": 41464,
+        "budget": {
+          "input": 2,
+          "output": 3253,
+          "cacheWrite": 16206,
+          "cacheRead": 22003,
+          "weighted": 38725,
+          "weekPct": 0.011,
+          "weekUsedAfter": 26
+        },
+        "outputBytes": 3728,
+        "summary": null
+      }
+    }
+  ],
+  "outcome": "COMPLETED"
+}

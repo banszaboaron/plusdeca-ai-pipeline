@@ -1,0 +1,144 @@
+{
+  "schemaVersion": "p5-block-1.0.0",
+  "contractVersion": "2.0.0",
+  "id": "w40-u-1-1",
+  "week": 40,
+  "kind": "lesson",
+  "title": "Associer les mots",
+  "position": {
+    "row": 1,
+    "column": 1
+  },
+  "prerequisites": [],
+  "estimatedMinutes": {
+    "min": 2,
+    "max": 4
+  },
+  "pages": [
+    {
+      "id": "w40-u-1-1-p01",
+      "template": "PAGE-structured",
+      "variant": "PV-matching-text",
+      "title": "Associer les mots",
+      "instruction": "Associe chaque mot à sa traduction.",
+      "manuscriptRef": {
+        "file": "w40-u-1-1.review-pass.md",
+        "anchor": "## `w40-u-1-1-p01` — Associer les mots"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Une formule de petit-déjeuner contient souvent une boisson et une viennoiserie.",
+          "language": "fr",
+          "role": "situation",
+          "reveal": "tap",
+          "manuscriptRef": {
+            "file": "w40-u-1-1.review-pass.md",
+            "anchor": "## `w40-u-1-1-p01` — Associer les mots"
+          }
+        }
+      ],
+      "items": [
+        {
+          "id": "w40-u-1-1-i01",
+          "capability": "CAP-matching",
+          "variant": "PV-matching-text",
+          "prompt": "Associe chaque mot français à sa traduction hongroise.",
+          "response": {
+            "type": "pairs",
+            "left": [
+              {
+                "id": "l1",
+                "label": "une boisson"
+              },
+              {
+                "id": "l2",
+                "label": "une viennoiserie"
+              },
+              {
+                "id": "l3",
+                "label": "un plateau"
+              },
+              {
+                "id": "l4",
+                "label": "une tasse"
+              }
+            ],
+            "right": [
+              {
+                "id": "r3",
+                "label": "tálca"
+              },
+              {
+                "id": "r1",
+                "label": "ital"
+              },
+              {
+                "id": "r4",
+                "label": "csésze"
+              },
+              {
+                "id": "r2",
+                "label": "péksütemény"
+              }
+            ]
+          },
+          "solution": {
+            "type": "pairs",
+            "keyPairs": [
+              {
+                "left": "l1",
+                "right": "r1"
+              },
+              {
+                "left": "l2",
+                "right": "r2"
+              },
+              {
+                "left": "l3",
+                "right": "r3"
+              },
+              {
+                "left": "l4",
+                "right": "r4"
+              }
+            ]
+          },
+          "feedback": {
+            "targeted": [
+              {
+                "id": "i01-1",
+                "text": "Relis le mot : une tasse se boit, un plateau se porte."
+              }
+            ]
+          },
+          "evaluation": {
+            "mode": "exact"
+          },
+          "manuscriptRef": {
+            "file": "w40-u-1-1.review-pass.md",
+            "anchor": "### `w40-u-1-1-i01`"
+          }
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "mode": "all-items",
+    "requiredRefs": [
+      "w40-u-1-1-i01"
+    ]
+  },
+  "review": {
+    "status": "REVIEW_PASS",
+    "reviewPass": "w40-u-1-1.review-pass.md",
+    "manuscripts": [
+      {
+        "file": "w40-u-1-1.review-pass.md",
+        "sha256": "21a28fbb25a0337731a35d968aa242121da0657b3e7ae8511cdf4ad7d2c45ab3",
+        "role": "review-pass"
+      }
+    ],
+    "contentSha256": "006de20b20e02e43d43a9a5be45b1b049ef046007affabdfc2ce14b199349f0a"
+  }
+}

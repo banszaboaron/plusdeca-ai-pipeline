@@ -1,0 +1,762 @@
+# U21 (w01-u-2-1, GI2): *Du, des, de : forme ou sens ?* – javított kézirat (1. javítási kör)
+
+**Szerep:** blokkíró a nyelvtan oszlopban, Kézirat fázis, javítási kör.
+
+**Bemenet:**
+- a saját előző kéziratom (DRAFT_FOR_REVIEW);
+- a PE két független futása (PE-01–PE-13 és PE-K01–PE-K08);
+- a GR elfogadott terve (2. javított változat);
+- a javítási brief és a tanári kifogások;
+- a PRESIDENT folytatása (2026-11-01): a 0.1 kapu bizonyítéka.
+
+**Hatókör:** a p01–p09 teljes tanulói szövege és az i01–i08 itemek a meglévő ID-kkal. Csak azt írtam át, amit a findingok indokolnak. Kulcsot, feedbacket és végleges rubrikát nem írok.
+
+**Hang és videó:** az egységhez nem tartozik felvétel. Hallott szöveget nem írok, és hangdöntési pont sincs.
+
+**A terv kapui:**
+- **0.1 – teljesült.** A kanonikus napló szerint a B3 (`w01-u-2-1-i04`) esetében `changed: []`: a kanonikus és a régi `week-01.json` azonos az U21-re. A B4, a B6 és a C1 az U41-et és az U43-at érinti. A mért alakok így a kapott CL-alaphoz mérve helyesek.
+- **0.2 – részben teljesült.** Árforrás nincs, ezért az egységben nincs ár.
+- **0.3 – nem teljesült.** Az OQLF-lapot csak keresési kivonatként láttam, a NyE még nem nyitotta meg.
+
+**A közös keret:**
+- **Helyszín:** *Le Pain Perché*, kitalált boulangerie-pâtisserie Lyonban, a Croix-Rousse platóján. Pultja és két asztala van.
+- **Szereplők:**
+  - *je*: a tanuló;
+  - Camille: a lakótárs; a *nous* mindig a tanulót és Camille-t jelenti;
+  - *la boulangère* (és az üzlet Instagram-fiókja);
+  - Léo: 11 órára jön brunchra.
+
+**Idővonal (frissítve):**
+
+| Időpont | Mozzanat | Oldal / item |
+|---|---|---|
+| szombat este | Instagram-poszt: a holnapi ardoise; ajánló rovat; a pékség honlapja | p04, i03, s003, s005 |
+| szombat 19:40 | foglalás Instagram-üzenetben, a piszkozat javítása | p07, i06 |
+| vasárnap 8:00–8:15 | kávé egyedül; SMS Léónak | i02 |
+| 8:25 | Camille a szüleitől érkezik metróval | s002 |
+| 8:30 | sor a pékség előtt | p05, i04 |
+| 8:45 | a pultnál | p06, i05-1, i05-2, s004, s006 |
+| 9:05 | otthon kávé, cukor nélkül | i05-3 |
+| 9:15 | vissza a pékségbe: a dobozban csak két szelet flan van | i05-4 |
+| 10:00 | Léo SMS-e a kávéról | p02 |
+| 10:15 | Léo a piacon keresztül indul | p09 |
+| 10:40 | szendvicsek készítése a brunchra | s001 |
+| 11:00 | brunch | – |
+
+**Szószámolás:** szóközzel elválasztott egységek. Az elidált alak egy szó, a számjegy egy szó; a beszélő neve és a ___ nem számít.
+
+---
+
+## p01 – *Ce que tu vas préciser*
+
+**Tanulói cím:** *Ce que tu vas préciser*
+**Tanulói instrukció:** *Lis les objectifs, puis passe à la première activité.*
+
+#### Tanulói tartalom
+
+**Hol vagyunk?** Ebben a blokkban szerepet játszol: Lyonban laksz a lakótársaddal, Camille-lal, a Croix-Rousse negyedben. Vasárnap 11-re brunchra jön a barátotok, Léo. Szombat este pékséget választasz és foglalsz. Vasárnap reggel sorba állsz a *Pain Perché* előtt, rendelsz a pultnál, és közben üzeneteket váltasz Léóval.
+
+A determinánsokat és az *en*-t már ismered. Most négy olyan döntést pontosítasz, amelyben a forma a jelentésen múlik:
+
+- reconnaître si `du` veut dire « une quantité de… » ou « de + le » ;
+- écrire `de belles tartes`, mais `des petits pains`, quand l'expression est un nom de produit ;
+- distinguer `beaucoup de gens` et `beaucoup des habitués du quartier` ;
+- placer `en` au bon endroit : avant le verbe conjugué, avant l'infinitif, avant l'auxiliaire.
+
+**Petit repère :** la bonne forme dépend de ce que tu veux dire, pas seulement du mot qui suit.
+
+#### Szerzői megjegyzés
+
+- Item nélküli tájékozódó oldal.
+- A régi példák itemkulcsok voltak, ezért nem kerültek vissza (terv 3.5).
+- Eredetjelölés: SAJÁT SZÖVEG.
+
+---
+
+## p02 – *Deux valeurs de du*
+
+**Tanulói cím:** *Deux valeurs de du*
+**Tanulói instrukció:** *Lis l'échange et l'explication, puis explique la différence avec tes propres mots.*
+**Helyzetjelző:** *Dimanche, 10 h 00, à la maison. Léo t'écrit.*
+
+#### Az üzenetváltás
+
+> **Léo :** Petite question pour tout à l'heure : je ramène du café ou vous en avez ?
+> **Toi :** On a du café, t'inquiète ! Et merci encore pour l'adresse.
+> **Léo :** Alors, verdict ?
+> **Toi :** Top ! J'ai parlé du café de la place à Camille, elle veut y aller la semaine prochaine.
+
+Szószám: 43
+
+#### Magyar magyarázat
+
+Az üzenetváltásban a *café* szó kétszer áll *du* után, de a két *du* mást jelent:
+
+- `On a du café` – valamennyi kávé van itthon. Ez **partitív** *du*.
+- `J'ai parlé du café de la place` – a *parler de* után a *le café* (a téren lévő kávézó) összevonódik: *de + le = du*.
+
+A `du` alak tehát két szerkezetből jöhet:
+
+1. **Partitív `du`**: valamennyi, nem pontosan megadott mennyiség valamiből. Jellemzően az *avoir*, a *boire*, a *commander*, a *manger* és hasonló igék tárgyaként áll.
+2. **Összevont `de + le = du`**: egy *de*-t kívánó szerkezet (*parler de*, *se souvenir de*, *près de*…) után határozott, hímnemű főnév áll.
+
+A döntést a mondat szerkezete hozza meg: van-e előtte *de*-t kívánó ige vagy elöljáró. A főnév szótári jelentése nem dönt.
+
+#### Természetes példák
+
+- `Le dimanche, je bois du café au comptoir, debout.`
+- `Camille commande toujours du thé vert.`
+- `Tu te souviens du serveur ? Il connaît tout le quartier.`
+
+#### Kontraszt
+
+- `Je bois de café.` – Hibás: állító mondatban nincs olyan elem (tagadás vagy mennyiségszó), amely a *de*-t indokolná.
+- `On parle de café.` – Helyes, de mást jelent: általában a kávéról mint témáról beszélünk.
+- `On parle du café.` – Egy konkrét kávéról vagy kávézóról beszélünk, amelyet mindketten ismerünk.
+
+### w01-u-2-1-i01
+
+**Subitem:** `w01-u-2-1-i01-s001`
+**Tanulói instrukció:** *Explique brièvement la valeur de du dans les deux phrases.*
+**Stimulus:**
+
+1. `Le dimanche, Camille et moi, on achète du pain de seigle : il se garde plusieurs jours.`
+2. `Le Pain Perché est juste à côté du parc de la Cerisaie.`
+
+**Válaszmód:** rövid, kétrészes metanyelvi válasz magyarul vagy franciául (`1 = … ; 2 = …`).
+
+#### Szerzői megjegyzés
+
+- **Mit mér:** `w01-g-det-partitive-mass` és `w01-g-det-semantic-contrast`.
+- **Elvárt jelentés:**
+  - 1. mondat: partitív (az *acheter* tárgya, előtte nincs *de*-t kívánó elem);
+  - 2. mondat: *de + le* (*à côté de* + *le parc*).
+- **Változás:** az 1. mondatban *Camille et moi, on achète* áll (PE NOTE).
+- **K9:** egyik mondat sem kétértelmű a jelenet nélkül sem.
+- **3.5:** az *acheter* és a park nem szerepel a magyarázatban.
+- **Várható tévedések:** „mindkettő partitív”; „az 1. mondat is *de + le*”.
+
+---
+
+## p03 – *Choisir entre du, de, de la et des*
+
+**Tanulói cím:** *Choisir entre du, de, de la et des*
+**Tanulói instrukció:** *Choisis la forme qui correspond au contexte.*
+
+#### Magyar magyarázat
+
+Ha egy *de*-t kívánó ige (*revenir de*, *sortir de*) vagy szerkezet (*le prix de*, *le goût de*) után hímnemű, határozott főnév áll, a *de le* összevonódik: *du*. Nőnemű főnév előtt *de la* áll, többes számban *des* (*de + les*).
+
+#### Példák
+
+- `Camille revient du marché avec un sac de pommes.`
+- `Le dimanche, Léo sort du lit vers dix heures.`
+- `Le prix du croissant a encore augmenté cette année.`
+
+#### Kontraszt
+
+- `Je voudrais du jus d'orange.` – partitív: valamennyi narancslét kérek.
+- `Je n'aime pas le goût du jus d'orange en bouteille.` – *de + le*: a palackozott narancslé íze.
+
+### w01-u-2-1-i02
+
+**Tanulói instrukció:** *Choisis la bonne réponse.*
+**Stimulus:**
+
+*Dimanche, 8 h 15. Tu viens de passer vingt minutes dans le café que Léo t'a conseillé. Tu lui écris un SMS :*
+
+`Je reviens ___ café que tu m'as conseillé. Le serveur est adorable, merci !`
+
+**Opciótervezet:** A. `du` · B. `de` · C. `de la` · D. `des`
+
+#### Szerzői megjegyzés
+
+- **Mit mér:** `w01-g-det-semantic-contrast`. Elvárt válasz: A.
+- **N12:** a bővítményben nincs *du*.
+- **Distractorok:**
+  - B: kihagyja a névelőt;
+  - C: rossz nem;
+  - D: többes szám, illetve *de + les*.
+- **Keret:** a p02 (10:00) erre a kávézóra utal vissza (*le café de la place*), de ott más igével (*parler de*). Az item kulcsa nem másolható ki a p02-ből (3.5).
+
+---
+
+## p04 – *De belles tartes, des petits pains*
+
+**Tanulói cím:** *De belles tartes, des petits pains*
+**Tanulói instrukció:** *Lis la règle et l'ardoise, puis complète la phrase.*
+**Helyzetjelző:** *Samedi soir. Tu cherches une boulangerie pour demain matin. Sur Instagram, le Pain Perché publie la photo de son ardoise de demain.*
+
+#### Az ardoise (fotó az Instagram-posztban)
+
+```
+LE PAIN PERCHÉ — demain dimanche
+PAINS           tradition · campagne · seigle (à la coupe)
+PETITS PAINS    céréales · lait
+VIENNOISERIES   croissant au beurre · pain au chocolat · chausson aux pommes · mini-viennoiseries (le sachet)
+PÂTISSERIES     flan (à la part) · cannelés · tarte du jour
+FORMULE PETIT-DÉJ   boisson chaude + jus d'orange + viennoiserie
+```
+
+#### Magyar magyarázat
+
+Gondozott írott franciában a többes számú *des* rendszerint *de/d'* alakra rövidül, ha a főnév előtt melléknév áll:
+
+- `des tartes` → `de belles tartes`
+- `des miches` → `de grosses miches`
+
+Kivétel, ha a melléknév és a főnév együtt egy fogalmat nevez meg, összeforrt kifejezésként. Ilyenkor a *des* megmarad: `des petits pois`, `des grands-parents`, a pékségben pedig `des petits pains`. A *petits pains* nem „kicsi kenyereket” jelent, hanem egy termékfajtát. Ezért van saját rovata a táblán.
+
+Beszélt nyelvben gyakori a *des belles tartes* is, de gondozott írott szövegben (ajánló, bemutatkozó szöveg) a *de belles tartes* a mérce. A gyakori, rövid melléknevekkel (*de bons…*, *de beaux…*) a *de* a hétköznapi beszédben is természetes.
+
+#### Példák
+
+- `Le Pain Perché fait de belles tartes aux fruits de saison.`
+- `Même si la boutique est minuscule, on y trouve de grosses miches de campagne.`
+- `Le dimanche, ils ont aussi des petits pains au lait.`
+
+#### Kontraszt
+
+- `Ils font des belles tartes.` – Beszédben előfordul; gondozott írásban: *de belles tartes*.
+- `Ils vendent de petits pains.` – Lehetséges, de mást jelent: kis méretű kenyereket, nem a *petits pains* terméket.
+
+#### Kulturális háttér
+
+A francia tábla külön rovatban tartja a következő termékeket:
+- *pains*: kenyerek;
+- *petits pains*: egyszemélyes kis kenyerek, nagyjából a zsemle szerepében;
+- *viennoiseries*: vajas, leveles vagy kelt tészta, például croissant és pain au chocolat; a *mini-viennoiseries* zacskóban kapható;
+- *pâtisseries*: sütemények.
+
+A magyar „péksütemény” a kiflitől a kakaós csigáig mindezt egybefogja. A *formule petit-déjeuner* fix áras csomag: meleg ital, gyümölcslé és egy viennoiserie.
+
+### w01-u-2-1-i03
+
+**Tanulói instrukció:** *Complète avec la bonne forme.*
+**Stimulus:**
+
+*Samedi soir, tu compares deux boulangeries. Dans la rubrique « Nos adresses du dimanche » d'un guide de la Croix-Rousse, tu lis :*
+
+`Même si sa devanture ne paie pas de mine, le Pain Perché propose ___ excellents croissants au beurre et, dès 7 heures, ___ petits pains aux céréales encore tièdes.`
+
+Szószám: 27 (az idézett mondat)
+
+**Válaszmód:** a két hiány sorrendben, vagy a teljes mondat. Az ardoise az oldal tetején látható.
+
+#### Szerzői megjegyzés
+
+- **Mit mér:** `w01-g-de-adjective-standard` és a lexikalizált *des*. Elvárt válasz: `d'` és `des`.
+- **Változás:** *vitrine* → *devanture*, mert a *ne pas payer de mine* az üzletre és a homlokzatra illik (PE-2 JAVASLAT). A *même si* megmarad mint szintemelő, nem mért elem.
+- **K5:** az indok szemantikai, a tábla rovata alátámasztja.
+- **3.5:** az *excellent-*, a *croissants au beurre* és az *aux céréales* nem szerepel a magyarázatban.
+- **Várható tévedések:**
+  - *des excellents*;
+  - *de excellents*;
+  - *de petits pains*;
+  - a két alak felcserélése.
+
+---
+
+## p05 – *Beaucoup de ou beaucoup des ?*
+
+**Tanulói cím:** *Beaucoup de ou beaucoup des ?*
+**Tanulói instrukció:** *Complète les deux phrases en respectant le sens.*
+**Helyzetjelző:** *Dimanche, 8 h 30. Camille et toi, vous faites la queue devant le Pain Perché.*
+
+#### Magyar magyarázat
+
+- A **`beaucoup de`** nyitott mennyiséget jelöl: sok valamiből, előre meg nem határozott csoportból.
+- A **`beaucoup des`** a *beaucoup de + les* összevont alakja: sok egy megnevezett, határozott csoport tagjai közül. A csoportot rendszerint egy bővítmény azonosítja (*du dimanche*, *du quartier*, *de la vitrine*…).
+
+Nem a többes szám dönt, hanem az, hogy a csoport meg van-e nevezve.
+
+#### Példák
+
+- `Le dimanche matin, il y a beaucoup de monde devant les boulangeries.`
+- `Beaucoup de gens attendent dehors, même sous la pluie.`
+- `Beaucoup des habitués du dimanche ont réservé la veille, tandis que les autres font la queue.`
+
+#### Kontraszt
+
+- `Beaucoup des gens attendent dehors.` – Hibás: nincs megnevezett csoport.
+- `Beaucoup d'habitués viennent tôt.` – Sok törzsvendég jön korán (nyitott mennyiség).
+- `Beaucoup des habitués du dimanche viennent tôt.` – A vasárnapi törzsvendégek közül sokan korán jönnek.
+
+### w01-u-2-1-i04
+
+**Tanulói instrukció:** *Complète avec beaucoup de ou beaucoup des.*
+**Stimulus:**
+
+*Dans la file, Camille regarde la vitrine :*
+
+`« Bonne nouvelle : il reste encore ___ viennoiseries. Par contre, regarde : ___ tartes de la vitrine sont déjà réservées. »`
+
+Szószám: 16
+
+**Válaszmód:** a két kifejezés sorrendben, vagy a teljes mondat.
+
+#### Szerzői megjegyzés
+
+- **Mit mér:** `w01-g-de-quantity` és `w01-g-de-quantity-subset`. Elvárt válasz: *beaucoup de*, majd *beaucoup des*.
+- **B3:** mindkét alakot az instrukció adja meg. A kanonikus napló szerint az instrukció már a javított változat.
+- **PE-K07:** az írott *ont déjà une étiquette « Réservé »* helyett az élőszóbeli *sont déjà réservées* áll. Ezzel a beágyazott idézőjel is eltűnt.
+- **A *de la vitrine* marad, nem *en vitrine*:** az *en vitrine* mellett a *beaucoup de tartes en vitrine* is helyes lenne („sok kirakatban lévő torta”), így két helyes válasz lenne (K2). A *les tartes de la vitrine* élőszóban is természetes.
+- **3.5:** a kirakat termékei szerepelnek itt, a p05 példái emberekről szólnak.
+
+---
+
+## p06 – *Où placer en ?*
+
+**Tanulói cím:** *Où placer en ?*
+**Tanulói instrukció:** *Lis la scène et la règle, puis transforme les phrases avec en.*
+**Helyzetjelző:** *Dimanche, 8 h 45. C'est enfin votre tour au comptoir du Pain Perché.*
+
+#### A pultnál
+
+> **La boulangère :** Bonjour ! Qu'est-ce qu'il vous faut ?
+> **Toi :** Bonjour ! Je vais vous prendre une tradition pas trop cuite, s'il vous plaît.
+> **Camille :** Et quatre cannelés pour moi !
+> **La boulangère :** Très bien. Et avec ceci ?
+
+Szószám: 28
+
+*Je vais vous prendre…*: a pultnál teljesen természetes rendelési fordulat. Figyeld meg: a *vous* névmás az infinitif elé kerül. Az *en* ugyanígy viselkedik.
+
+#### Magyar magyarázat
+
+Az *en* egy korábban említett mennyiségre utal vissza (*du…, de la…, des…, de…*, számnév + főnév).
+
+1. **Ragozott ige mellett** az *en* a ragozott ige elé kerül.
+   `Camille mange de la confiture tous les matins.` → `Camille en mange tous les matins.`
+2. **Infinitif mellett** ahhoz az infinitifhez kerül, amelynek a tárgyát helyettesíti. A szám megmarad.
+   `La boulangère va commander six sacs de farine.` → `Elle va en commander six.`
+3. **Tagadásban** a *ne… pas* a ragozott igét fogja közre, az *en* közvetlenül az ige előtt áll.
+   `Camille ne boit pas de café.` → `Camille n'en boit pas.`
+4. **Passé composé-ban** az *en* a segédige elé kerül. A szám megmarad, a főnév nem.
+   `Au comptoir, Camille a pris quatre cannelés.` → `Camille en a pris quatre.`
+
+A szám után nem kell melléknév: elég az *en* és a szám.
+
+#### Ellenpéldák
+
+- `Elle va commander en six.` – Hibás: az *en* az infinitif elé kerül.
+- `Camille a en pris quatre.` – Hibás: passé composé-ban az *en* a segédige elé kerül.
+- `Camille en a pris quatre cannelés.` – Hibás: az *en* már helyettesíti a főnevet.
+- `Camille ne boit pas en.` – Hibás: az *en* a ragozott ige előtt áll.
+
+### w01-u-2-1-i05
+
+**Subitem:** `w01-u-2-1-i05-s001`
+**Tanulói instrukció:** *Remplace le complément de quantité par en. Écris quatre réponses complètes.*
+**Stimulus (négy mező, mindegyik előtt egysoros helyzet):**
+
+1. *8 h 45. La boulangère : « Il me reste du pain de seigle, à la coupe. Ça vous tente ? » Tu acceptes :* `Je prends du pain de seigle.`
+2. *8 h 45. La boulangère te donne les deux pains au chocolat que tu as réservés hier soir : « Et avec ceci ? Les croissants sortent du four. » Tu réponds :* `Je vais prendre deux croissants.`
+3. *9 h 05, à la maison. Camille te prépare un café et te tend le sucre. Tu refuses :* `Je ne veux pas de sucre.`
+4. *9 h 15. À la maison, vous avez ouvert la boîte de flan : il n'y a que deux parts. Tu retournes au Pain Perché et tu expliques poliment à la boulangère :* `Nous avons acheté trois parts de flan.`
+
+**Válaszmód:** négy teljes francia mondat, külön mezőben.
+
+#### Szerzői megjegyzés
+
+- **Mit mér:** `w01-g-en-partitive-reference`, `w01-g-en-position-finite-infinitive` és `w01-g-en-quantity-retention`.
+- **Elvárt mondatok (változatlanok):**
+  - *J'en prends.*
+  - *Je vais en prendre deux.*
+  - *Je n'en veux pas.*
+  - *Nous en avons acheté trois.*
+- **1. mező (PE-10, PE-K08):** ajánlatra adott elfogadásban a *J'en prends* önmagában természetes. A mennyiséget a vágás előtt kérdezik meg.
+- **2. mező (PE-07, PE-K08):** az eladó kimondja a terméket (*Les croissants*), így az *en* előzménye egyértelmű. A szombati foglalás (i06) két pain au chocolat-ra szólt, és ez itt teljesül, így nincs ellentmondás.
+- **3. mező (PE-05):** 9:05-kor csak egy kávé, nem reggeli. A B4 alapesete marad (*pas de sucre*).
+- **4. mező (PE-11, PE-K02):** a *nous* a régi baráti SMS helyett udvarias, magázó helyzetben áll: reklamáció a pultnál, ahol természetes. A mozzanat valódi helyesbítés, és összefügg az s006-tal (8:45: *trois parts*). A kulcs nem változott, ezért CEO-döntés nem kell.
+- **Megoldásírónak:**
+  - a 3. mezőben a *Non, je n'en veux pas* teljes értékű;
+  - a 2. mezőben a p06 *Je vais vous prendre* hídja miatt a *Je vais vous en prendre deux* helyes, fogadja el;
+  - a 4. mezőben az *On en a acheté trois* regiszterváltás; az elfogadásáról ő dönt.
+- **3.5:** a p06 példái más igét, alanyt és számot használnak.
+
+---
+
+## p07 – *Clinique d'erreurs*
+
+**Tanulói cím:** *Clinique d'erreurs*
+**Tanulói instrukció:** *Corrige les deux phrases fausses sans changer le sens.*
+**Helyzetjelző:** *Samedi, 19 h 40. Sur Instagram, tu as demandé au Pain Perché si on peut réserver pour demain. On te répond. Tu prépares ta réponse et tu la relis avant de l'envoyer.*
+
+#### Magyar emlékeztető
+
+Két tipikus hiba:
+
+1. infinitif mellett az *en* az infinitif után vagy a szám elé csúszik;
+2. az *en* mellett megismétlődik a helyettesített főnévi csoport vagy annak determinánsa.
+
+#### Példák
+
+- ✗ `Tu vas goûter en un ?` → ✓ `Tu vas en goûter un ?`
+- ✗ `Les cookies, il ne faut pas en garder des pour le lendemain : ils sèchent.` → ✓ `Les cookies, il ne faut pas en garder pour le lendemain : ils sèchent.`
+- ✗ `Il reste des cookies ? Oui, j'en ai gardé un cookie pour toi.` → ✓ `Oui, j'en ai gardé un pour toi.`
+
+### w01-u-2-1-i06
+
+**Tanulói instrukció:** *Corrige les deux phrases fausses de ton brouillon. Écris seulement les deux phrases corrigées.*
+**Stimulus:**
+
+> **Toi :** Bonjour ! Est-ce que vous prenez des réservations pour demain matin ?
+> **Le Pain Perché :** Bonsoir ! Oui : le dimanche, on réserve les pains au chocolat, et les chouquettes par sachet de vingt. Combien pour vous ?
+>
+> **Ton brouillon :** Bonsoir et merci ! Pour les pains au chocolat, c'est parfait. Je vais prendre en deux. Les chouquettes, vingt, c'est beaucoup pour trois personnes. Nous ne voulons pas en acheter des. Nous passerons vers 8 h 45. Bonne soirée !
+
+Szószám: 68 (a te kérdésed 10, a pékség válasza 20, a piszkozat 38)
+
+**Válaszmód:** két javított teljes mondat.
+
+#### Szerzői megjegyzés
+
+- **Mit mér:** `w01-g-en-position-finite-infinitive` és `w01-g-en-partitive-reference` hibajavításban.
+- **Elvárt javítás (változatlan):** *Je vais en prendre deux.* / *Nous ne voulons pas en acheter.*
+- **Új keret (PE-K02, PE-11, PE-K05):** a piszkozat nem Léónak írt SMS, hanem foglalási üzenet a pékségnek. Ebben a regiszterben a *nous* természetes.
+  - Pragmatika: a pékség maga kérdez a chouquette-ről, ezért a visszautasításnak oka van: húsz darab sok három embernek. A visszautasítás így nem hívja Léót arra, hogy ő vegyen chouquette-et.
+  - A régi „non + nous ne voulons pas” ismétlés helyett az ok szerepel.
+- **Eltérés a terv p07-sorától (jelölve):** Léo helyett a pékség a címzett. A terv N7-es feltételei teljesülnek:
+  - mindkét előzmény megszámlálható viennoiserie;
+  - a szám (2) illik a három emberhez;
+  - van valódi indok;
+  - a „már megvettük” indok nem fordul elő.
+- **PE-07:** a két pain au chocolat foglalása vasárnap az i05-2-ben teljesül.
+- **3.5, PE-K06:** a p07 példái más főnevet (*cookies*) és más igét (*goûter*, *garder*) használnak. A téves *durcissent* és az öt croissant kikerült.
+- **Megoldásírónak:** a *nous n'en voulons pas* jelentésben közeli, de nem a kért javítás, mert a *vouloir acheter* szerkezet eltűnik.
+
+---
+
+## p08 – *Six rappels mélangés*
+
+**Tanulói cím:** *Six rappels mélangés*
+**Tanulói instrukció:** *Complète ou transforme chaque phrase. Les six phrases ne testent pas toutes la même règle.*
+
+#### Magyar emlékeztető
+
+Vegyes előhívás a hétvége hat pillanatából:
+- partitív *du*;
+- összevont *de + le*;
+- *d'* elöl álló melléknév előtt;
+- *des petits pains*;
+- *beaucoup de*;
+- *en* infinitif előtt, a számmal.
+
+### w01-u-2-1-i07
+
+**Tanulói instrukció:** *Réponds aux six questions.*
+**Válaszmód:** s001–s005: egy rövid beírt elem; s006: teljes mondat.
+
+### w01-u-2-1-i07-s001
+
+*Dimanche, 10 h 40. Vous préparez des tartines pour le brunch. Camille : « Et sur celles de Léo, tu mets quoi ? » Toi : « Il adore le sucré : je mets ___ miel. »*
+
+#### Szerzői megjegyzés
+
+- **Mit mér:** `w01-g-det-partitive-mass`. Elvárt alak: *du*.
+- **PE-05:** a mozzanat átkerült a brunch előkészítésébe, így nincs 9:30-as reggeli.
+- **K1:** az *un miel* nem természetes; a tartalomra kérdező kérdés a *le miel*-t gyengíti. A független megoldó próbálja be.
+- **K13:** a hiány előtt és után nincs másik *du*.
+- **3.5:** a *mettre* + *miel* nem szerepel a magyarázatokban.
+
+### w01-u-2-1-i07-s002
+
+*Dimanche, 8 h 25. Camille a dormi chez ses parents. Elle t'écrit : « J'arrive en métro ! » Tu l'attends à la sortie ___ métro Croix-Rousse.*
+
+#### Szerzői megjegyzés
+
+- **Mit mér:** `w01-g-det-semantic-contrast`. Elvárt alak: *du*.
+- **PE-04:** a metrót egy félmondat indokolja.
+- **K13:** új hely; a hiány körül nincs más *du*.
+- **Megoldásírónak:** a *de métro* elutasítását a megoldó próbálja be.
+
+### w01-u-2-1-i07-s003
+
+*Samedi soir, sur le site du Pain Perché, rubrique « Notre maison » : « Chaque samedi, nous cuisons ___ immenses tourtes de seigle, vendues à la coupe. »*
+
+#### Szerzői megjegyzés
+
+- **Mit mér:** `w01-g-de-adjective-standard`. Elvárt alak: *d'*.
+- **Regiszter:** gondozott bemutatkozó szöveg.
+- **Distractorok:** a *les* nem helyes, mert kínálatot vezet be.
+- **3.5:** más melléknév és más főnév, mint az i03-ban és a p04-ben.
+- **Keret:** a szombati tourte-ból vágnak vasárnap (i05-1).
+
+### w01-u-2-1-i07-s004
+
+*Dimanche, 8 h 45. Tu regardes la rubrique « Petits pains » de l'ardoise. La boulangère : « Et ce matin, on a fait ___ petits pains aux noix, ils sont encore tout chauds. »*
+
+#### Szerzői megjegyzés
+
+- **Mit mér:** a lexikalizált *des petits pains* alakot (a manifestben: `w01-g-de-adjective-standard`). Elvárt alak: *des*.
+- **PE-09:** a *noix* lekerült az ardoise-ról, és az *aussi* kikerült. Így a termék új bejelentés, nem ismert csoport, és a *les* nem védhető. A metanyelvi „trois noms” is eltűnt.
+- **3.5:** az *aux noix* bővítmény más, mint az i03 és a p04 bővítménye.
+
+### w01-u-2-1-i07-s005
+
+*Samedi soir, même rubrique « Notre maison » : « Notre boutique est minuscule, mais nous proposons chaque jour beaucoup ___ variétés de pain. »*
+
+#### Szerzői megjegyzés
+
+- **Mit mér:** `w01-g-de-quantity`. Elvárt alak: *de*.
+- **B3:** a *beaucoup* a stimulusban áll, és a csoportnak nincs meghatározó bővítménye.
+- **3.5:** a *variétés* új főnév.
+
+### w01-u-2-1-i07-s006
+
+*Dimanche, 8 h 45. La boulangère : « Le flan, c'est à la part. Combien de parts ? » Tu réponds :* `Je vais prendre trois parts de flan.` *→ Transforme avec en.*
+
+#### Szerzői megjegyzés
+
+- **Mit mér:** `w01-g-en-position-finite-infinitive` és `w01-g-en-quantity-retention`.
+- **Elvárt mondat:** *Je vais en prendre trois.*
+- **B6:** a szám után nincs melléknév.
+- **Keret:** 9:15-kor a dobozban csak kettő van (i05-4).
+- **Megoldásírónak:** a *Je vais vous en prendre trois* helyes (PE NOTE).
+- **3.5:** a p06-ban nincs *en prendre*.
+
+---
+
+## p09 – *Production guidée : la réponse à Léo*
+
+**Tanulói cím:** *Production guidée : la réponse à Léo*
+**Tanulói instrukció:** *Écris un court message cohérent de 6 à 8 phrases.*
+
+#### Magyar előkészítés
+
+Ez a záróprodukció. Nem kulcsszavakat kell felsorolnod, hanem egy valódi üzenetet kell írnod, amelyben a blokk kontrasztjai jelentés szerint, a helyükön állnak. Barátnak írt üzenetben is természetes a *de bons…*, *de beaux…*, *de grosses…*: a gyakori, rövid melléknevekkel a *de* a hétköznapi nyelvben is megmarad.
+
+### w01-u-2-1-i08
+
+**Subitem:** `w01-u-2-1-i08-s001`
+**Tanulói instrukció:** *Écris 6 à 8 phrases. Dis à Léo ce que vous avez déjà, ce qu'il doit apporter (et combien), où l'acheter et pourquoi.*
+**Stimulus:**
+
+*Dimanche, 10 h 15. Léo t'écrit : « Je pars de chez moi ! Je passe par le marché de la Croix-Rousse : il vous manque quelque chose pour le brunch ? » Réponds-lui.*
+
+- **Címzett:** Léo, francia barát.
+- **Regiszter:** informális, de nem szleng (SMS, tegeződés).
+- **Cél:** megírni, mi van már meg, mit hozzon Léo és mennyit, honnan, és miért onnan.
+- **Terjedelem:** 6–8 összefüggő mondat.
+
+**Mit tartalmazzon az üzenet (tartalmi elemek):**
+
+1. mit vettetek már Camille-lal;
+2. mit hozzon Léo, mennyiséggel, és legalább egy tételt meghatározatlan mennyiségben (pl. sajtot, gyümölcslét);
+3. honnan: egy *du*-val megnevezhető helyről (bolt, stand vagy pékség, pl. *le stand du…*, *la boulangerie du…*);
+4. egy nyitott mennyiség vagy tömeg (a piac, a sor, a kínálat);
+5. egy megnevezett csoport egy része;
+6. miért azt a helyet ajánlod.
+
+**Ellenőrizd beadás előtt (nyelvi kritériumok):**
+
+1. Van-e egy *du*, amely „valamennyit” jelent, és egy másik, amely *de + le*? (pl. *du sel* ↔ *le prix du sel*)
+2. Van-e *de/d'* + elöl álló melléknév + többes számú főnév? (pl. *de jolies assiettes*)
+3. Van-e *des petits pains*?
+4. Van-e *beaucoup de* nyitott mennyiségre, és *beaucoup des* egy megnevezett csoport részére? (pl. *beaucoup de voitures* ↔ *beaucoup des voitures du parking*)
+5. Van-e *en* ragozott ige előtt? (pl. *Paul en boit*)
+6. Van-e *en* infinitif előtt, a számmal együtt? (pl. *elle va en couper deux*)
+
+**Beírandó válasz formája:** szabad szöveg, 6–8 mondat.
+
+#### Modellszöveg A – lelkes ajánlás (a beadás után látható)
+
+`Oui, merci, tu es un amour ! Côté boulangerie, on a tout : au Pain Perché, on a pris une tradition, du seigle et des viennoiseries, il y en a largement pour trois. Par contre, on n'a plus d'œufs pour les œufs brouillés : tu peux en prendre six au marché ? Va chez la productrice à côté du kiosque, celle qui vend aussi de beaux fromages de chèvre : ses œufs sont extra. Il y a toujours beaucoup de monde le dimanche, mais beaucoup des producteurs du boulevard prennent la carte maintenant : pas besoin de passer au distributeur. Si tu vois du jus d'orange pressé, prends-en une bouteille. Et si tu as encore faim, la boulangerie du boulevard fait des petits pains aux figues incroyables !`
+
+Szószám: 121 (7 mondat)
+
+#### Modellszöveg B – óvatos „igen, de…” (a beadás után látható)
+
+`Oui, mais pas de pain ni de viennoiseries : avec Camille, on en a acheté pour dix ! Ce qui nous manque, c'est du fromage. Va au stand du fromager, tout au bout du marché, même s'il y a la queue : il a de bons chèvres frais et il te fait goûter. Tu peux en prendre deux ? Il y a beaucoup de fromagers sur le boulevard, mais beaucoup des habitués du quartier ne jurent que par lui. Et évite la boulangerie du coin de la rue : elle fait des petits pains aux olives à tomber, tu vas craquer. À tout de suite !`
+
+Szószám: 100 (7 mondat)
+
+#### Szerzői megjegyzés
+
+- **Mit mér:** `w01-g-integrated-writing`; a hat nyelvi `allCriteria` változatlan. A rubrikát a megoldásíró véglegesíti.
+- **Lefedés:**
+
+| Kritérium | A modell | B modell |
+|---|---|---|
+| partitív *du* | *du seigle*, *du jus d'orange* | *du fromage* |
+| összevont *du* | *du kiosque*, *du boulevard* | *du fromager*, *du marché*, *du quartier*, *du coin* |
+| *de/d'* + elöl álló melléknév | *de beaux fromages* | *de bons chèvres* |
+| *des petits pains* | *aux figues* | *aux olives* |
+| *beaucoup de* / *beaucoup des* | *monde* / *producteurs du boulevard* | *fromagers* / *habitués du quartier* |
+| *en* ragozott ige előtt | *il y en a* | *on en a acheté* |
+| *en* infinitif előtt, számmal | *en prendre six* | *en prendre deux* |
+
+- **Az *en* előzményei:**
+  - *il y en a* → *une tradition, du seigle et des viennoiseries*;
+  - *en prendre six* → *d'œufs*;
+  - *prends-en* → *du jus d'orange*;
+  - *on en a acheté* → *pain, viennoiseries*;
+  - *en prendre deux* → *chèvres frais*.
+- **Keretpróba (PE-K03, PE-02, PE-05):** egyik modell sem kér kenyeret vagy viennoiserie-t, mert ezek megvannak (p06, i05-1, i05-2). A hiány a brunch sós része: tojás, sajt, gyümölcslé. A régi A modell „elfogyott rozskenyér” mondata és a B modell hibás *Ils* referenciája kikerült.
+- **A *beaucoup*-mondatok helyzetből jönnek:**
+  - A: zsúfolt piac, de kártyával lehet fizetni, gyakorlati tanács;
+  - B: sok sajtos, mégis ezt ajánlja, ez az indoklás.
+- **Szint:** *même si* (B), *il y en a largement pour trois*, *ne jurer que par*, *à tomber*, indokolt választás. Ezek nem mért elemek.
+- **Mikropéldák:** a tanulói mikropéldák témán kívüliek, változatlanok.
+
+---
+
+## VÁLTOZÁSNAPLÓ (a régi `week-01.json`-kézirathoz képest)
+
+**Mi változott**
+
+- **Helyzet:**
+  - az elszigetelt mondatok helyett egy keret: a *Pain Perché* a Croix-Rousse-on, szombat estétől vasárnap 11-ig;
+  - minden oldalon egysoros helyzetjelző;
+  - valódi mozzanatok: foglalás, sor, rendelés, reklamáció, brunch-előkészítés.
+- **Szereplők:** tanuló, Camille (*nous* = tanuló + Camille), a boulangère és a pékség Instagram-fiókja, Léo.
+- **Műfajok:**
+  - baráti SMS (p02, i02, p09);
+  - foglalási üzenet a pékségnek (i06);
+  - pultnál folyó párbeszéd és reklamáció (p06, i05);
+  - ajánló rovat és bemutatkozó szöveg (i03, s003, s005);
+  - Instagram-ardoise (p04).
+- **Szint:**
+  - helyesbítés (i05-4 reklamáció, i06 piszkozat);
+  - értékelő műfaj (i03);
+  - indokolt választás (p09);
+  - *même si* és *tandis que* ott, ahol a helyzet hozza.
+- **Kultúra:**
+  - ardoise-kategóriák és háromsoros magyar összevetés (p04);
+  - rendelési fordulatok: *Je vais vous prendre…*, *Et avec ceci ?*, *pas trop cuite*, *à la coupe*.
+- **Itemek:**
+  - minden ID és feladattípus maradt;
+  - a mért alakok és a kulcsmondatok változatlanok;
+  - a kiinduló mondatok főnevei a kerethez igazodtak.
+- **Metanyelv:** az i04, az s001 és az s005 metanyelvi stimulusai helyett a helyzet dönt (F2).
+- **Kimásolhatóság (F4, N11):** az új példák a 3.5 mátrix szerint mást használnak.
+- **p09:**
+  - a tartalmi elemek a terv szerint, a 3. elem kiszélesítve: bolt, stand vagy pékség (PE-K03, jelölve);
+  - két új, keretkoherens modell.
+- **Eltérések a terv idővonalától (jelölve):**
+  - i05-3: 9:05, otthon;
+  - i05-4: 9:15, reklamáció a pultnál (a 10:15-ös SMS helyett);
+  - s001: 10:40, a brunch előkészítése;
+  - i06: a pékségnek írt foglalás a Léónak írt SMS helyett.
+- **Időkeret:** 34–45 perc (becslés).
+
+**Tanári kifogásonként**
+
+| Kifogás | Kezelés |
+|---|---|
+| „pas bien structuré, pas intéressant, ne sonne pas français” | Egy keret, valódi tét és hiteles műfajok. A gyártott p02-jelenet és a kritériumpipáló modellek kikerültek. A *nous* csak udvarias vagy írott helyzetben áll. |
+| „trop facile” (D4) | A mag pontosításként marad. A szintet a művelet emeli: helyesbítés, értékelés, indokolt választás. A fennmaradó rész a DONTESEK 10-28 következménye (PE NOTE). |
+| B3 | Az i04-ben a két alak meg van adva; a kanonikus napló szerint nincs teendő. Az s005-ben a *beaucoup* a stimulusban áll. |
+| B4 | Csak alapeset szerepel (*pas de sucre*). |
+| B6 | A szám után nincs melléknév. |
+| C1 | Nem szerepel; ha bekerül, csak *ça va me caler* formában. |
+| C4 | A p06-ban jelölés nélkül szerepel, hídként az *en* helyéhez. |
+| D1 | p06, i05, s004, s006. |
+| D2–D3 | p04. |
+| D5 | *ne pas payer de mine*, *il y en a largement*, *à la coupe*, *ne jurer que par*. Nem mért elemek, F-glosszát kapnak. |
+| EU Academy | NEM VIZSGÁLT. |
+
+**Mi maradt változatlan és miért:** a célok, az ID-k, a feladattípusok, a terjedelem, a mért alakok és kulcsmondatok, a magyarázatok szabályszerkezete és a p09 `allCriteria`-ja. Ezeket a brief és a terv rögzíti.
+
+---
+
+## Dispositionök (1. javítási kör)
+
+| Finding | Disposition | Indok és hely |
+|---|---|---|
+| PE-01 / PE-K01 (MAJOR) | FIXED | A p02-jelenet új. Léo valódi kérdést tesz fel (*je ramène du café ?*). A válaszban a partitív *on a du café* és az összevont *j'ai parlé du café de la place* ugyanazzal a főnévvel áll szemben. A magyarázat most azt írja le, ami a jelenetben van. Nincs ellentmondás az i02-vel, és a *revenir du café* a p02-ben nem szerepel (3.5). |
+| PE-02 / PE-K03 (MAJOR) | FIXED | Két új modell. Nem kérnek kenyeret, a hiány a brunch sós része. A *beaucoup*-mondatok helyzetből jönnek. Az *Ils* referencia és a „megevett rozskenyér” kikerült. |
+| PE-03 (MAJOR) | részben FIXED, a többi ESCALATED (nem blokkoló) | A modellek megmutatják, hogy a hat kritérium természetes informális üzenetben teljesíthető. A regiszter-ellentmondást az enyhíti, hogy a *de bons/beaux* a beszélt nyelvben is él; ezt egy tanulói tipp jelzi. A kritériumok lazítása mérésicél-változás, ezért lásd a DÖNTÉSI KÉRDÉS részt. A kézirat a jelenlegi kritériumokkal is működik. |
+| PE-K02 / PE-11 (MAJOR / MINOR) | FIXED | A PE (b) változata: a kulcs nem változott, a keretek igen. i05-4: udvarias reklamáció a pultnál. i06: foglalási üzenet a pékségnek. Mindkettőben természetes a *nous*. CEO-döntés nem kell. |
+| PE-04 | FIXED | s002: *Camille a dormi chez ses parents.* |
+| PE-05 | FIXED | s001 10:40-ra került (a brunch előkészítése), i05-3 csak kávé; az A modellben nincs elfogyott kenyér. |
+| PE-06 / PE-K04(1) | FIXED | Az ardoise a pékség Instagram-posztjában jelenik meg (*demain dimanche*). |
+| PE-K04(2) | FIXED | A p03 kontrasztja ár helyett *le goût du jus d'orange* lett. |
+| PE-07 / PE-K04(3) | FIXED | Szombaton két pain au chocolat-t foglal (i06), vasárnap ezeket kapja meg, és mellé két croissant-t vesz (i05-2). |
+| PE-08 / PE-K06 | FIXED | A p07 példái: *cookies… ils sèchent*, *j'en ai gardé un*; az i06-tól eltérő főnév. |
+| PE-09 | FIXED | A *noix* lekerült a tábláról, az *aussi* és a „trois noms” kikerült; *on a fait ___ petits pains aux noix*. |
+| PE-10 / PE-K08 | FIXED | i05-1: ajánlat-elfogadás (*Ça vous tente ?*). i05-2: az eladó kimondja a terméket (*Les croissants sortent du four*). |
+| PE-K05 | FIXED | i06: a pékség kérdez, a visszautasításnak oka van (húsz darab sok háromnak), és nincs ismétlés. |
+| PE-K07 | FIXED, részben REJECTED_WITH_REASON | Élőszóbeli *sont déjà réservées*. Az *en vitrine* javaslatot nem vettem át, mert mellette a *beaucoup de* is helyes lenne (két helyes válasz). |
+| PE-12 | FIXED | Léo természetes kérdést tesz fel; a „mit, mennyit, honnan, miért” az instrukcióba került. |
+| PE-13 | FIXED | A turistás példa helyett: *Beaucoup des habitués du dimanche ont réservé la veille, tandis que les autres font la queue.* |
+| PE NOTE: i01 *on* | FIXED | *Camille et moi, on achète…* |
+| PE NOTE: *Je vais vous en prendre* | továbbítva | A megoldásírónak (i05-2, s006). |
+| PE NOTE: nincs ár a táblán | REJECTED_WITH_REASON | A terv 0.2 szerint ár csak forrásból kerülhet be; forrás nincs. Az ardoise Instagram-fotóként ár nélkül is hihető. |
+| PE JAVASLAT: i03 *devanture* | FIXED | *vitrine* → *devanture*; a *même si* a szint miatt marad. |
+| PE J1, J2 | REJECTED_WITH_REASON | Az itemtípus (i02 QCM) és az itemszám rögzített (brief, terv 2.). Ha a GR engedi, a következő körben bevezethető. |
+
+## Változáslista (az előző kéziratomhoz képest)
+
+- **p01:** a „foglalsz” betoldás.
+- **p02:** új jelenet (43 szó) és új első magyarázó bekezdés; egy példa kikerült.
+- **p03:** a kontraszt 2. mondata.
+- **p04:** új helyzetjelző (Instagram), az ardoise fejléce és a *noix* törlése, egy mondat a *de bons* regiszteréről.
+- **i03:** *devanture*.
+- **p05:** a 3–4. példa összevonva és cserélve (*tandis que*).
+- **i04:** a 2. mondat (*sont déjà réservées*).
+- **i05:**
+  - 1. mező: új helyzet;
+  - 2. mező: új helyzet;
+  - 3. mező: időpont (9:05);
+  - 4. mező: új keret (reklamáció).
+- **p07:** új helyzetjelző és példák.
+- **i06:** új stimulus (foglalási üzenetváltás a pékséggel, 68 szó); kulcs változatlan.
+- **s001:** új helyzet (10:40).
+- **s002:** indoklás.
+- **s004:** új stimulus.
+- **p09:** új stimulus, instrukció, 3. tartalmi elem, előkészítő tipp, két új modell.
+- **Változatlan:** az összes ID, a feladattípusok, a mért alakok, a kulcsmondatok és az `allCriteria`.
+
+## Források és eredetjelölés
+
+- **[S1]** OQLF, *Des devant un adjectif antéposé*: https://vitrinelinguistique.oqlf.gouv.qc.ca/23496/la-grammaire/les-determinants/determinants-indefinis/des-devant-un-adjectif-antepose. Csak keresési kivonat, NEM MEGNYITOTT. A p04-et és az i03/s004 indokát alapozza meg. A NyE nyissa meg (0.3).
+- **[S2]** Observatoire de la franchise, *Quels produits vendre en boulangerie ?*. Keresési kivonat, NEM MEGNYITOTT. Az ardoise kategóriái.
+- **[S3]** visiterlyon.com, *Où prendre son petit-déjeuner à Lyon*. Keresési kivonat, NEM MEGNYITOTT. A formule összetétele; ár nem került elő.
+- **Újrahasznosított PE-bizonyíték:**
+  - chouquette: megpuhul (PE-1 forrásnapló);
+  - *une tradition pas trop cuite*: Paris Match, 2023 (PE-2 forrásnapló, kivonat);
+  - a *Le Pain Perché* név: a keresésben nem jelent meg létező lyoni üzletként.
+- **Eredetjelölés:**
+  - minden tanulói szöveg SAJÁT SZÖVEG;
+  - az ardoise és a kulturális sorok FORRÁSALAPÚ SAJÁT SZÖVEG;
+  - a pékség és a kiosk kitalált;
+  - a Parc de la Cerisaie, a Croix-Rousse metróállomás és a boulevard de la Croix-Rousse piaca valós helyszínek.
+
+## Hiányok, döntési kérdések, kockázatok
+
+- **Hiányzik:**
+  - az OQLF-lap megnyitása (NyE, 0.3);
+  - árforrás (0.2);
+  - EU Academy: NEM VIZSGÁLT.
+- **Az `objectives` metaadat:** ESCALATED (terv 2.1); a kéziratot nem érinti.
+- **A független megoldó figyelmébe:**
+  - K1: s001, *le miel*;
+  - K2: i04, *beaucoup de tartes de la vitrine*;
+  - s002: *de métro*;
+  - s004: *les*;
+  - i05-2 és s006: *vous en prendre*;
+  - K12: egyik item sem oldható meg kimásolással.
+- **F-glossza:** *ardoise, viennoiserie, formule, habitué, tradition, à la coupe, cannelé, flan, chouquette, tourte, devanture, ne pas payer de mine, ne jurer que par, à tomber*. A CEO egyeztesse a VR listájával.
+- **Recheck:** PE a p02-re, az i04–i06-ra, az s001/s002/s004-re és a p09 modelljeire. A PE-2 kérése szerint, mivel a p02 jelenete a PE javaslatára épül, ezt másik ellenőr nézze meg. NavE az idővonalra és a jelölt eltérésekre.
+
+# DÖNTÉSI KÉRDÉS (PE-03, nem blokkoló)
+
+**Kérdés:** a p09 hat nyelvi kritériuma 6–8 informális mondatban mind kötelező marad-e?
+
+| Lehetőség | Következmény |
+|---|---|
+| a) Marad (jelenlegi állapot) | Az új modellek szerint természetesen teljesíthető, de a tanulói szöveg könnyen pipálóvá válik. |
+| b) 8–10 mondat, változatlan kritériumok | Több hely a természetes kitöltésre; kis terhelésnövekedés. |
+| c) A *quantity_subset* opcionális bónusz | Természetesebb szöveg; a *beaucoup des*-t az i04 méri. Ez mérésicél-változás. |
+
+**Javaslatom:** az a) marad, a jelen kézirat erre készült. Ha az UE- vagy a tanári visszajelzés szerint a tanulói szövegek pipálók, akkor c). Ez a PRESIDENT hatásköre; a kézirat egyik lehetőséghez sem igényel újraírást, legfeljebb a rubrika változik.
+
+**Tanulság:** ha egy keretben a kötött kulcs alanya (*nous*) nem illik a műfajhoz → a kulcs módosítása helyett olyan mozzanatot kell keresni a keretben, ahol az alak természetes (reklamáció, foglalás) → így nem kell célváltozás vagy CEO-döntés → minden rögzített kulcsmondatos javítás.
+
+Az itemszintű ellenőrzőlistát (1–8) végigjártam. Tudatos kivétel a 7. pontnál: az i05-2 és az i06 kulcsa egyaránt *Je vais en prendre deux*. A terv 3.5 része ezt előhívásként megengedi.
+
+GEPI_OSSZEGZES
+status: DRAFT_FOR_REVIEW
+GEPI_OSSZEGZES_VEGE

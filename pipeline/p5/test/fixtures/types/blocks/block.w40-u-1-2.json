@@ -1,0 +1,149 @@
+{
+  "schemaVersion": "p5-block-1.0.0",
+  "contractVersion": "2.0.0",
+  "id": "w40-u-1-2",
+  "week": 40,
+  "kind": "lesson",
+  "title": "Corriger le message",
+  "position": {
+    "row": 2,
+    "column": 1
+  },
+  "prerequisites": [],
+  "estimatedMinutes": {
+    "min": 2,
+    "max": 4
+  },
+  "pages": [
+    {
+      "id": "w40-u-1-2-p01",
+      "template": "PAGE-structured",
+      "variant": "PV-correction-select-rewrite",
+      "title": "Corriger le message",
+      "instruction": "Corrige les deux formes signalées.",
+      "manuscriptRef": {
+        "file": "w40-u-1-2.review-pass.md",
+        "anchor": "## `w40-u-1-2-p01` — Corriger le message"
+      },
+      "content": [],
+      "items": [
+        {
+          "id": "w40-u-1-2-i01",
+          "capability": "CAP-correction",
+          "variant": "PV-correction-select-rewrite",
+          "prompt": "Le client a écrit ce message. Corrige chaque forme soulignée.",
+          "response": {
+            "type": "correction",
+            "text": "Je voudrais un café et deux croissant, mais il ne reste plus du pain.",
+            "spans": [
+              {
+                "id": "s1",
+                "start": 28,
+                "end": 37
+              },
+              {
+                "id": "s2",
+                "start": 61,
+                "end": 63
+              }
+            ]
+          },
+          "solution": {
+            "type": "exact",
+            "key": {
+              "s1": "croissants",
+              "s2": "de"
+            },
+            "alternatives": []
+          },
+          "feedback": {
+            "targeted": [
+              {
+                "id": "i01-1",
+                "text": "Après deux, le nom est au pluriel ; après ne… plus, on emploie de."
+              }
+            ]
+          },
+          "evaluation": {
+            "mode": "exact"
+          },
+          "manuscriptRef": {
+            "file": "w40-u-1-2.review-pass.md",
+            "anchor": "### `w40-u-1-2-i01`"
+          }
+        }
+      ]
+    },
+    {
+      "id": "w40-u-1-2-p02",
+      "template": "PAGE-structured",
+      "variant": "PV-correction-select-rewrite",
+      "title": "Trouver les erreurs",
+      "instruction": "Trouve toi-même les deux erreurs, puis corrige-les.",
+      "manuscriptRef": {
+        "file": "w40-u-1-2.review-pass.md",
+        "anchor": "## `w40-u-1-2-p02` — Trouver les erreurs"
+      },
+      "content": [],
+      "items": [
+        {
+          "id": "w40-u-1-2-i02",
+          "capability": "CAP-correction",
+          "variant": "PV-correction-select-rewrite",
+          "prompt": "Ce message contient deux erreurs. Trouve-les et corrige-les.",
+          "response": {
+            "type": "correction",
+            "mode": "find",
+            "text": "Nous avons pris des croissant et une café au comptoir.",
+            "spans": [
+              {
+                "id": "s1",
+                "start": 20,
+                "end": 29
+              },
+              {
+                "id": "s2",
+                "start": 33,
+                "end": 36
+              }
+            ]
+          },
+          "solution": {
+            "type": "exact",
+            "key": {
+              "s1": "croissants",
+              "s2": "un"
+            },
+            "alternatives": []
+          },
+          "evaluation": {
+            "mode": "exact"
+          },
+          "manuscriptRef": {
+            "file": "w40-u-1-2.review-pass.md",
+            "anchor": "### `w40-u-1-2-i02`"
+          }
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "mode": "all-items",
+    "requiredRefs": [
+      "w40-u-1-2-i01",
+      "w40-u-1-2-i02"
+    ]
+  },
+  "review": {
+    "status": "REVIEW_PASS",
+    "reviewPass": "w40-u-1-2.review-pass.md",
+    "manuscripts": [
+      {
+        "file": "w40-u-1-2.review-pass.md",
+        "sha256": "e272d37c418912c5fe2e7fb888f4a0f74a43d293cc8e2f55ae70b1abb7f423b0",
+        "role": "review-pass"
+      }
+    ],
+    "contentSha256": "23067373209ca1edca6433f5a899fdaba5cada64da187d3ed6255056bef3e8ce"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "_leiras": "A játszható típusok egyetlen forrása a P5-kapukhoz. A P1 (közös könyvtár) nincs lezárva, ezért a v1.1 csomagra vonatkozó szabályok az app jelenlegi renderelőjéből vannak kimásolva; a v2 rész a P1-katalógus másolata, futásra készséget nem állít. Frissítés: ha a render.js / answers.js / catalog.js változik, ezt a fájlt kell átírni (kód nem kell).",
+  "source": {
+    "branch": "origin/codex/p1-01-common-base",
+    "commit": "6167dfc",
+    "files": [
+      "app/src/ui/render.js (isSupportedBlock, informationalBlockKinds, renderUnit)",
+      "app/src/engine/answers.js (isClosedItem, hasUsableChoiceLabels)",
+      "app/src/content/interaction-profiles.js (materializeItems)",
+      "app/src/data/course-contract/catalog.js (v2 katalógus 1.0.0)"
+    ],
+    "copiedAt": "2026-10-06"
+  },
+  "v1": {
+    "closedItemTypes": ["single_select", "tfns", "source_closed", "typed", "sentence_builder", "reference", "typed_transformation", "typed_transformation_subitem", "cloze", "dictation", "completion"],
+    "gapItemTypes": ["multi_gap_word_bank", "text_correction", "dialogue_gap", "matching", "summary_cloze"],
+    "choiceItemTypes": ["single_select", "tfns", "source_closed"],
+    "tfnsBuiltInLabels": ["A", "B", "C"],
+    "supportedBlockKinds": ["retained_markdown", "source_text", "retry_queue", "reflection_choices", "reading_segment"],
+    "informationalBlockKinds": ["orientation", "objectives", "lesson", "brief", "rubric", "planner", "writing_brief", "writing_tools", "enrichment_policy", "models", "retrieval", "contrast", "cues", "rehearsal", "recovery", "non_counted", "chunk_card", "approved_manifest_page", "completion_summary"],
+    "_informational": "Az informationalBlockKinds blokkból az app csak a címet (vagy a „Tájékozódási oldal” feliratot) rajzolja ki; ha egy oldalon csak cím nélküli ilyen blokk van és nincs item, az oldal üres. A retry_queue blokkból csak a rule szövege jelenik meg; rule nélkül üres.",
+    "contentBlockKinds": ["retained_markdown", "source_text", "reading_segment", "reflection_choices", "vocabulary_intro", "vocabulary_cards", "vocabulary_pending"],
+    "vocabularyBlockKinds": ["vocabulary_intro", "vocabulary_cards", "vocabulary_pending"],
+    "specialUnits": [
+      { "unitId": "w01-u-1-4", "renderer": "renderSpeakingU14", "when": { "path": "speaking.delivery.contentStatus", "equals": "REVIEW_PASS" } },
+      { "unitId": "w01-u-2-1", "renderer": "renderGrammarU21", "when": { "path": "provenance.contentStatus", "equals": "REVIEW_PASS" } }
+    ],
+    "specialFunctionTypes": [
+      { "functionType": "vocabulary_active", "renderer": "renderActiveTypedUnit", "pagesWithBlockKinds": ["vocabulary_active_intro", "vocabulary_active_practice", "vocabulary_active_complete"] },
+      { "functionType": "vocabulary_active_preview", "renderer": "renderActiveTypedUnit", "pagesWithBlockKinds": ["vocabulary_active_intro", "vocabulary_active_practice", "vocabulary_active_complete"] },
+      { "functionType": "vocabulary_writing", "renderer": "renderVocabularyWritingUnit", "pagesWithBlockKinds": null }
+    ],
+    "testsWithoutPages": "Ce test n’est pas encore disponible dans cette version."
+  },
+  "v2": {
+    "catalogVersion": "1.0.0",
+    "runtimeReadinessClaimed": false,
+    "_variantExceptions": "Ezeken az oldalváltozatokon bármely képesség állhat (course-contract.js CAPABILITY_VARIANT kivétel); máshol az item képességének tartalmaznia kell az oldal változatát.",
+    "variantExceptions": ["PV-closed-mixed", "PV-closed-sequence", "PV-reading-source-question", "PV-reading-two-source"],
+    "capabilities": {
+      "CAP-choice-single": ["PV-choice-one", "PV-choice-tfns"],
+      "CAP-choice-multiple": ["PV-choice-many"],
+      "CAP-matching": ["PV-matching-text", "PV-matching-image"],
+      "CAP-typed-short": ["PV-typed-short", "PV-typed-two-fields"],
+      "CAP-gap-bank": ["PV-gap-bank", "PV-gap-dialogue", "PV-gap-summary"],
+      "CAP-ordering": ["PV-order-tokens", "PV-order-blocks"],
+      "CAP-correction": ["PV-correction-select-rewrite"],
+      "CAP-transformation": ["PV-transform-sentence", "PV-transform-register"],
+      "CAP-writing": ["PV-writing-short", "PV-writing-series", "PV-writing-long", "PV-writing-plan", "PV-writing-revision", "PV-writing-parallel"],
+      "CAP-speech-reference": ["PV-speech-reference"],
+      "CAP-speech-open": ["PV-speech-guided", "PV-speech-open", "PV-speech-review", "PV-speech-revision"],
+      "CAP-audio-recognition": ["PV-audio-choice", "PV-audio-typed"],
+      "CAP-dictation": ["PV-dictation-word", "PV-dictation-sentence", "PV-dictation-two-stage"],
+      "CAP-abx": ["PV-phonetics-abx"],
+      "CAP-recall-spoken": ["PV-memoriter-understand", "PV-memoriter-chunks", "PV-memoriter-spoken"],
+      "CAP-recall-written": ["PV-memoriter-written", "PV-memoriter-written-repair"],
+      "CAP-structured-form": ["PV-form-fields", "PV-table-response"],
+      "CAP-media-observation": ["PV-media-image", "PV-media-video", "PV-media-song"],
+      "CAP-matching-stream": ["PV-game-matching-stream"],
+      "CAP-memory-pairs": ["PV-game-memory"],
+      "CAP-letter-build": ["PV-game-letters"],
+      "CAP-flash-round": ["PV-game-flash"],
+      "CAP-map-placement": ["PV-map-placement"],
+      "CAP-diagram-links": ["PV-diagram-relations", "PV-diagram-process"],
+      "CAP-drawn-production": ["PV-drawn-card-writing", "PV-drawn-card-speaking"],
+      "CAP-review-mission": ["PV-mission-stations"]
+    },
+    "pageTemplates": {
+      "PAGE-intro": ["PV-intro-brief", "PV-intro-role", "PV-intro-prerequisites"],
+      "PAGE-explanation": ["PV-explain-rule", "PV-explain-contrast", "PV-explain-table", "PV-explain-error"],
+      "PAGE-reading": ["PV-reading-full", "PV-reading-segmented", "PV-reading-gloss", "PV-reading-source-question", "PV-reading-two-source"],
+      "PAGE-vocabulary": ["PV-vocabulary-single", "PV-vocabulary-form-pair"],
+      "PAGE-closed": ["PV-choice-one", "PV-choice-tfns", "PV-choice-many", "PV-typed-short", "PV-closed-sequence", "PV-closed-mixed", "PV-audio-choice", "PV-audio-typed"],
+      "PAGE-structured": ["PV-matching-text", "PV-matching-image", "PV-gap-bank", "PV-gap-dialogue", "PV-gap-summary", "PV-order-tokens", "PV-order-blocks", "PV-correction-select-rewrite", "PV-transform-sentence", "PV-transform-register", "PV-typed-two-fields", "PV-form-fields", "PV-table-response"],
+      "PAGE-writing": ["PV-writing-short", "PV-writing-series", "PV-writing-long", "PV-writing-plan", "PV-writing-revision", "PV-writing-parallel"],
+      "PAGE-speaking": ["PV-speech-reference", "PV-speech-guided", "PV-speech-open", "PV-speech-review", "PV-speech-revision"],
+      "PAGE-listening": ["PV-listening-full", "PV-listening-segmented", "PV-listening-transcript", "PV-phonetics-abx", "PV-dictation-word", "PV-dictation-sentence", "PV-dictation-two-stage"],
+      "PAGE-media": ["PV-media-image", "PV-media-video", "PV-media-song"],
+      "PAGE-memoriter": ["PV-memoriter-understand", "PV-memoriter-chunks", "PV-memoriter-spoken", "PV-memoriter-written", "PV-memoriter-written-repair"],
+      "PAGE-games": ["PV-game-matching-stream", "PV-game-memory", "PV-game-letters", "PV-game-flash", "PV-map-placement", "PV-diagram-relations", "PV-diagram-process", "PV-drawn-card-writing", "PV-drawn-card-speaking", "PV-mission-stations"],
+      "PAGE-feedback": ["PV-feedback-correct", "PV-feedback-incorrect", "PV-feedback-partial", "PV-feedback-pending", "PV-feedback-uncertain", "PV-feedback-repair", "PV-feedback-retry", "PV-feedback-summary"]
+    },
+    "responseByCapability": {
+      "CAP-choice-single": ["single"],
+      "CAP-choice-multiple": ["multiple"],
+      "CAP-matching": ["pairs"],
+      "CAP-typed-short": ["text", "fields"],
+      "CAP-gap-bank": ["fields"],
+      "CAP-ordering": ["order"],
+      "CAP-correction": ["correction"],
+      "CAP-transformation": ["text", "fields"],
+      "CAP-writing": ["writing", "text"],
+      "CAP-speech-reference": ["speech"],
+      "CAP-speech-open": ["speech"],
+      "CAP-audio-recognition": ["single", "text"],
+      "CAP-dictation": ["text"],
+      "CAP-abx": ["abx"],
+      "CAP-recall-spoken": ["speech"],
+      "CAP-recall-written": ["text", "writing"],
+      "CAP-structured-form": ["fields"]
+    }
+  }
+}

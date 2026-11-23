@@ -1,0 +1,190 @@
+{
+  "schemaVersion": "p5-block-1.0.0",
+  "contractVersion": "2.0.0",
+  "id": "w40-u-2-1",
+  "week": 40,
+  "kind": "lesson",
+  "title": "Écouter",
+  "position": {
+    "row": 1,
+    "column": 2
+  },
+  "prerequisites": [],
+  "estimatedMinutes": {
+    "min": 3,
+    "max": 5
+  },
+  "media": [
+    {
+      "id": "grave",
+      "kind": "audio",
+      "access": "local",
+      "file": "tone-330.wav",
+      "alternative": "Signal de test grave."
+    },
+    {
+      "id": "aigu",
+      "kind": "audio",
+      "access": "local",
+      "file": "tone-660.wav",
+      "alternative": "Signal de test aigu."
+    },
+    {
+      "id": "dictee",
+      "kind": "audio",
+      "access": "local",
+      "file": "tone-523.wav",
+      "alternative": "Signal de test pour la dictée.",
+      "transcript": "Je voudrais un café, s’il vous plaît."
+    }
+  ],
+  "pages": [
+    {
+      "id": "w40-u-2-1-p01",
+      "template": "PAGE-closed",
+      "variant": "PV-audio-choice",
+      "title": "Écouter et choisir",
+      "instruction": "Écoute le signal, puis choisis.",
+      "manuscriptRef": {
+        "file": "w40-u-2-1.review-pass.md",
+        "anchor": "## `w40-u-2-1-p01` — Écouter et choisir"
+      },
+      "content": [],
+      "items": [
+        {
+          "id": "w40-u-2-1-i01",
+          "capability": "CAP-audio-recognition",
+          "variant": "PV-audio-choice",
+          "prompt": "Le signal est-il grave ou aigu ?",
+          "mediaRefs": [
+            "grave"
+          ],
+          "response": {
+            "type": "single",
+            "options": [
+              {
+                "id": "a",
+                "label": "grave"
+              },
+              {
+                "id": "b",
+                "label": "aigu"
+              }
+            ]
+          },
+          "solution": {
+            "type": "choice",
+            "keyOptionIds": [
+              "a"
+            ]
+          },
+          "evaluation": {
+            "mode": "exact"
+          },
+          "manuscriptRef": {
+            "file": "w40-u-2-1.review-pass.md",
+            "anchor": "### `w40-u-2-1-i01`"
+          }
+        }
+      ]
+    },
+    {
+      "id": "w40-u-2-1-p02",
+      "template": "PAGE-closed",
+      "variant": "PV-audio-typed",
+      "title": "Écouter et écrire",
+      "instruction": "Écoute le signal, puis écris un mot.",
+      "manuscriptRef": {
+        "file": "w40-u-2-1.review-pass.md",
+        "anchor": "## `w40-u-2-1-p02` — Écouter et écrire"
+      },
+      "content": [],
+      "items": [
+        {
+          "id": "w40-u-2-1-i02",
+          "capability": "CAP-audio-recognition",
+          "variant": "PV-audio-typed",
+          "prompt": "Écris le mot qui décrit ce signal : grave ou aigu.",
+          "mediaRefs": [
+            "aigu"
+          ],
+          "response": {
+            "type": "text",
+            "lines": "single"
+          },
+          "solution": {
+            "type": "exact",
+            "key": "aigu",
+            "alternatives": []
+          },
+          "evaluation": {
+            "mode": "exact"
+          },
+          "manuscriptRef": {
+            "file": "w40-u-2-1.review-pass.md",
+            "anchor": "### `w40-u-2-1-i02`"
+          }
+        }
+      ]
+    },
+    {
+      "id": "w40-u-2-1-p03",
+      "template": "PAGE-listening",
+      "variant": "PV-dictation-sentence",
+      "title": "Dictée",
+      "instruction": "Écoute la phrase et écris-la.",
+      "manuscriptRef": {
+        "file": "w40-u-2-1.review-pass.md",
+        "anchor": "## `w40-u-2-1-p03` — Dictée"
+      },
+      "content": [],
+      "items": [
+        {
+          "id": "w40-u-2-1-i03",
+          "capability": "CAP-dictation",
+          "variant": "PV-dictation-sentence",
+          "prompt": "Écris la phrase entendue.",
+          "mediaRefs": [
+            "dictee"
+          ],
+          "response": {
+            "type": "text",
+            "lines": "single"
+          },
+          "solution": {
+            "type": "exact",
+            "key": "Je voudrais un café, s’il vous plaît.",
+            "alternatives": []
+          },
+          "evaluation": {
+            "mode": "exact"
+          },
+          "manuscriptRef": {
+            "file": "w40-u-2-1.review-pass.md",
+            "anchor": "### `w40-u-2-1-i03`"
+          }
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "mode": "all-items",
+    "requiredRefs": [
+      "w40-u-2-1-i01",
+      "w40-u-2-1-i02",
+      "w40-u-2-1-i03"
+    ]
+  },
+  "review": {
+    "status": "REVIEW_PASS",
+    "reviewPass": "w40-u-2-1.review-pass.md",
+    "manuscripts": [
+      {
+        "file": "w40-u-2-1.review-pass.md",
+        "sha256": "058209aa4f0dfc417eb14fd0a2ab9a28a3c3c4065cf8827e4869340dfb0c4302",
+        "role": "review-pass"
+      }
+    ],
+    "contentSha256": "f88617f06dea9dcc26b2661cd48fc9be9c88c3938bd4afb8a89bd618cd411352"
+  }
+}
